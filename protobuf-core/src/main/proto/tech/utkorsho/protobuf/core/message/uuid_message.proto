@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.core.message;
+
+option java_multiple_files = true;
+
+message UuidMessage {
+    string value = 1;
+}
+
+message UuidMessageList {
+    repeated UuidMessage uuids = 1;
+}
