@@ -19,15 +19,5 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Set up Maven settings
-        run: |
-          mkdir -p ~/.m2
-          echo "<settings><servers><server><id>github</id><username>${{ secrets.USERNAME }}</username><password>${{ secrets.ACTION_TOKEN }}</password></server></servers></settings>"
-          echo "<settings><servers><server><id>github</id><username>${{ secrets.USERNAME }}</username><password>${{ secrets.ACTION_TOKEN }}</password></server></servers></settings>" > ~/.m2/settings.xml
-
       - name: Build and Deploy
-        run: mvn clean deploy -X -DskipTests=true
-
-    env:
-      USERNAME: ${{ secrets.USERNAME }}
-      ACTION_TOKEN: ${{ secrets.ACTION_TOKEN }}
+        run: mvn clean --batch-mode deploy -X -s ./settings.xml
