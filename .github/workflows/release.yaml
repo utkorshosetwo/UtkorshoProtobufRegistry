@@ -1,0 +1,28 @@
+name: Deploy to GitHub Packages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Set up Maven settings
+        run: |
+          mkdir -p ~/.m2
+          echo "<settings><servers><server><id>github</id><username>${{ secrets.USERNAME }}</username><password>${{ secrets.ACTION_TOKEN }}</password></server></servers></settings>" > ~/.m2/settings.xml
+
+      - name: Build and Deploy
+        run: mvn clean deploy -DskipTests=true
