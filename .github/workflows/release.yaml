@@ -26,3 +26,7 @@ jobs:
 
       - name: Build and Deploy
         run: mvn clean deploy -X -DskipTests=true
+
+    env:
+      USERNAME: ${{ secrets.USERNAME }}
+      ACTION_TOKEN: ${{ secrets.ACTION_TOKEN }}
