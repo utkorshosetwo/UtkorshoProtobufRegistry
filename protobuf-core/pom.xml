@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>tech.utkorsho</groupId>
-        <artifactId>ProtobufRegistry</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <artifactId>protobuf-registry</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>protobuf-core</artifactId>
@@ -16,6 +16,11 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <scm>
+        <developerConnection>scm:git:https://github.com/utkorshose/UtkorshoProtobufRegistry</developerConnection>
+        <url>https://github.com/utkorshose/UtkorshoProtobufRegistry</url>
+    </scm>
 
     <dependencies>
         <dependency>
