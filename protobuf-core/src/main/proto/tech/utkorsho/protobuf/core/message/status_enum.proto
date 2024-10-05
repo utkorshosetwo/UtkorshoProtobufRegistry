@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.core.message;
+
+option java_multiple_files = true;
+
+enum Status {
+  ACTIVE = 0;
+  INACTIVE = 1;
+  DELETED = 2;
+}

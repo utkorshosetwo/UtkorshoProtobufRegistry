@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.utility.message.board;
+
+option java_multiple_files = true;
+
+message CreateBoardRequest {
+    string name = 1;
+}

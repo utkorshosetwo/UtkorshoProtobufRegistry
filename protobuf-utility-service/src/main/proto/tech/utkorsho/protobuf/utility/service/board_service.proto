@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.utility.service;
+
+option java_multiple_files = true;
+
+import "core/message/uuid_message.proto";
+import "utility/message/board/create_board_request.proto";
+
+service BoardService {
+  rpc createBoard (utility.message.board.CreateBoardRequest) returns (core.message.UuidMessage);
+}
