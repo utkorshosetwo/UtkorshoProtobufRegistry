@@ -8,7 +8,6 @@
         <artifactId>protobuf-registry</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-
     <artifactId>protobuf-core</artifactId>
 
     <properties>
@@ -37,5 +36,4 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
 </project>

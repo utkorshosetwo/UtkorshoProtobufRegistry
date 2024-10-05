@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package core.message;
+
+option java_multiple_files = true;
+
+message Name {
+  string value = 1;
+}
