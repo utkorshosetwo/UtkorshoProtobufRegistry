@@ -27,8 +27,8 @@
             <groupId>tech.utkorsho</groupId>
             <artifactId>protobuf-core</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-            <type>pom</type>
-            <scope>import</scope>
+<!--            <type>pom</type>-->
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
@@ -67,7 +67,6 @@
                     <protocArtifact>com.google.protobuf:protoc:3.25.3:exe:${os.detected.classifier}</protocArtifact>
                     <pluginId>grpc-java</pluginId>
                     <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.66.0:exe:${os.detected.classifier}</pluginArtifact>
-                    <protoSourceRoot>${project.basedir}/../protobuf-core/src/main/proto/core</protoSourceRoot>
                 </configuration>
                 <executions>
                     <execution>
