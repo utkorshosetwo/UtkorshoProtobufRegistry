@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package tech.utkorsho.protobuf.utility.message.level;
+package tech.utkorsho.protobuf.utility.message.version;
 
 option java_multiple_files = true;
 

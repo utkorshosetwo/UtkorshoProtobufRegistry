@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.utility.message.session;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "core/message/status_enum.proto";
+
+message SessionMessage {
+  string id = 1;
+  string session_name = 2;
+  string exam_year = 3;
+  core.message.Status status = 4;
+  google.protobuf.Timestamp created_at = 5;
+  google.protobuf.Timestamp updated_at = 6;
+}
+
+message SessionListMessage {
+  repeated SessionMessage sessions = 1;
+}
