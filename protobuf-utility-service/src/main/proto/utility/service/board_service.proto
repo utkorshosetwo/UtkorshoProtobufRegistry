@@ -11,4 +11,5 @@ import "utility/message/board/board_message.proto";
 
 service BoardService {
   rpc createBoard (message.board.CreateBoardRequest) returns (message.board.BoardMessage) {};
+  rpc createSteamBoard (stream message.board.CreateBoardRequest) returns (stream message.board.BoardMessage) {};
 }
