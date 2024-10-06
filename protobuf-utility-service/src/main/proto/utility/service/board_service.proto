@@ -7,7 +7,8 @@ option java_multiple_files = true;
 import "utility/message/board/create_board_request.proto";
 import "google/protobuf/empty.proto";
 import "core/message/uuid_message.proto";
+import "utility/message/board/board_message.proto";
 
 service BoardService {
-  rpc createBoard (message.board.CreateBoardRequest) returns (core.message.UuidMessage);
+  rpc createBoard (message.board.CreateBoardRequest) returns (message.board.BoardMessage) {};
 }
