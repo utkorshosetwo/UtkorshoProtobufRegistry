@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.utility.message.classes;
+
+option java_multiple_files = true;
+
+import "core/message/uuid_message.proto";
+import "core/message/status_enum.proto";
+import "google/protobuf/timestamp.proto";
+
+message ClassesMessage {
+  core.message.UuidMessage id = 1;
+  string classTitleEnglish = 2;
+  string classTitleBangla = 3;
+  core.message.Status status = 4;
+  core.message.UuidMessage createdBy = 5;
+  core.message.UuidMessage updatedBy = 6;
+  google.protobuf.Timestamp createdAt = 7;
+  google.protobuf.Timestamp updatedAt = 8;
+}

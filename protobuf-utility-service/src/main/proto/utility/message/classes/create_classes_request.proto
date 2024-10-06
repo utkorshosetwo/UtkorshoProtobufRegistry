@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.utility.message.classes;
+
+import "core/message/uuid_message.proto";
+
+
+message  CreateClassesRequest {
+  string classTitleEnglish = 1;
+  string classTitleBangla = 2;
+  core.message.UuidMessage levelId = 3;
+  repeated core.message.UuidMessage groupIds = 4;
+}
