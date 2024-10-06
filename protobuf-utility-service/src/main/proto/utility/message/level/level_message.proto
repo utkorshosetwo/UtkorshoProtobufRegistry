@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.utility.message.level;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "core/message/status_enum.proto";
+
+message LevelMessage {
+  string id = 1;
+  string name = 2;
+  core.message.Status status = 3;
+  google.protobuf.Timestamp created_at = 4;
+  google.protobuf.Timestamp updated_at = 5;
+}
+
+message LevelListMessage {
+  repeated LevelMessage levels = 1;
+}
