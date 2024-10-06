@@ -8,7 +8,7 @@
     <module>protobuf-core</module>
     <module>protobuf-utility-service</module>
   </modules>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.2-SNAPSHOT</version>
   <name>ProtobufRegistry</name>
 
   <properties>
