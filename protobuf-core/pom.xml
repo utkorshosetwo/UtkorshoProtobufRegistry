@@ -6,9 +6,10 @@
     <parent>
         <groupId>tech.utkorsho</groupId>
         <artifactId>protobuf-registry</artifactId>
-        <version>1.0.2-SNAPSHOT</version>
+        <version>1.0.3-SNAPSHOT</version>
     </parent>
     <artifactId>protobuf-core</artifactId>
+    <version>1.0.2-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
