@@ -9,9 +9,10 @@ import "core/message/status_enum.proto";
 import "core/message/uuid_message.proto";
 
 message SessionUpdateMessage {
-  string sessionName = 1;
-  string startYear = 2;
-  string endYear = 3;
-  string examYear = 4;
-  core.message.UuidMessage classId = 5;
+  string id = 1;
+  string sessionName = 2;
+  string startYear = 3;
+  string endYear = 4;
+  string examYear = 5;
+  core.message.UuidMessage classId = 6;
 }
