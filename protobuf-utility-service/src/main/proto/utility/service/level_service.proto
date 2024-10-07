@@ -6,20 +6,20 @@ package tech.utkorsho.protobuf.utility.service;
 
 import "google/protobuf/empty.proto";
 import "core/message/uuid_message.proto";
-import "utility/message/level/level_message.proto";
+import "utility/message/level/level_info_message.proto";
 import "utility/message/level/level_create_message.proto";
 import "utility/message/level/level_update_message.proto";
 
 service LevelService {
-  rpc createLevel(message.level.LevelCreateMessage) returns (message.level.LevelMessage) {}
+  rpc createLevel(message.level.LevelCreateMessage) returns (message.level.LevelInfoMessage) {}
 
-  rpc getLevels(google.protobuf.Empty) returns (message.level.LevelListMessage) {}
+  rpc getLevels(google.protobuf.Empty) returns (message.level.LevelInfoMessage) {}
 
-  rpc getLevelById(core.message.UuidMessage) returns (message.level.LevelMessage) {}
+  rpc getLevelById(core.message.UuidMessage) returns (message.level.LevelInfoMessage) {}
 
-  rpc updateLevel(utility.message.level.LevelUpdateMessage) returns (message.level.LevelMessage) {}
+  rpc updateLevel(utility.message.level.LevelUpdateMessage) returns (message.level.LevelInfoMessage) {}
 
   rpc deleteLevel(core.message.UuidMessage) returns (google.protobuf.Empty) {}
 
-  rpc getLevelByIds(core.message.UuidMessageList) returns (message.level.LevelListMessage) {}
+  rpc getLevelByIds(core.message.UuidMessageList) returns (message.level.LevelInfoMessage) {}
 }

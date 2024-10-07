@@ -7,15 +7,24 @@ option java_multiple_files = true;
 import "core/message/status_enum.proto";
 import "core/message/pagination_result.proto";
 import "utility/message/group/group_message.proto";
-import "utility/message/level/level_message.proto";
 
 message ClassInfoMessage {
+  message LevelInfoMessage {
+    string id = 1;
+    string name = 2;
+  }
+
+  message GroupInfoMessage {
+    string id = 1;
+    string name = 2;
+  }
+
   string id = 1;
   string classTitleEnglish = 2;
   string classTitleBangla = 3;
   core.message.Status status = 4;
-  repeated utility.message.group.GroupMessage groups = 5;
-  utility.message.level.LevelMessage level = 6;
+  repeated GroupInfoMessage groups = 5;
+  LevelInfoMessage level = 6;
 }
 
 message ClassInfoListMessage {

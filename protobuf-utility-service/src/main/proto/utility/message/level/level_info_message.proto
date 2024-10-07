@@ -7,14 +7,16 @@ option java_multiple_files = true;
 import "google/protobuf/timestamp.proto";
 import "core/message/status_enum.proto";
 
-message LevelMessage {
+message LevelInfoMessage {
   string id = 1;
   string name = 2;
   core.message.Status status = 3;
-//  google.protobuf.Timestamp created_at = 4;
-//  google.protobuf.Timestamp updated_at = 5;
+  message VersionInfoMessage {
+    string id = 1;
+    string name = 2;
+  }
 }
 
-message LevelListMessage {
-  repeated LevelMessage levels = 1;
+message LevelInfoListMessage {
+  repeated LevelInfoMessage levels = 1;
 }
