@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package tech.utkorsho.protobuf.utility.service;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "utility/message/group/group_message.proto";
+
+service GroupService {
+  rpc getGroups(google.protobuf.Empty) returns (protobuf.utility.message.group.GroupListMessage) {}
+
+  rpc getGroupById(core.message.UuidMessage) returns (protobuf.utility.message.group.GroupMessage) {}
+}

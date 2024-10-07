@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package tech.utkorsho.protobuf.utility.service;
+
+import "google/protobuf/empty.proto";
+import "utility/message/session/session_message.proto";
+import "core/message/uuid_message.proto";
+
+service SessionService {
+  rpc getSessions(google.protobuf.Empty) returns (message.session.SessionListMessage) {}
+
+  rpc getSessionById(core.message.UuidMessage) returns (message.session.SessionMessage) {}
+}

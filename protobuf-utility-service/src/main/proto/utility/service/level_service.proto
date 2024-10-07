@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package tech.utkorsho.protobuf.utility.service;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "utility/message/level/level_message.proto";
+
+service LevelService {
+  rpc getLevels(google.protobuf.Empty) returns (message.level.LevelListMessage) {}
+
+  rpc getLevelById(core.message.UuidMessage) returns (message.level.LevelMessage) {}
+}
