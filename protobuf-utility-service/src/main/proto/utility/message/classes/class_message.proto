@@ -8,7 +8,7 @@ import "core/message/uuid_message.proto";
 import "core/message/status_enum.proto";
 import "google/protobuf/timestamp.proto";
 
-message ClassesMessage {
+message ClassMessage {
   core.message.UuidMessage id = 1;
   string classTitleEnglish = 2;
   string classTitleBangla = 3;
@@ -17,4 +17,8 @@ message ClassesMessage {
   core.message.UuidMessage updatedBy = 6;
   google.protobuf.Timestamp createdAt = 7;
   google.protobuf.Timestamp updatedAt = 8;
+}
+
+message ClassListMessage {
+  repeated ClassMessage classes = 1;
 }

@@ -17,3 +17,7 @@ message BoardMessage {
   google.protobuf.Timestamp createdAt = 6;
   google.protobuf.Timestamp updatedAt = 7;
 }
+
+message BoardListMessage {
+  repeated BoardMessage boards = 1;
+}
