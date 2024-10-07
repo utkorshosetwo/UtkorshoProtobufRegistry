@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.utility.message.version;
+
+option java_multiple_files = true;
+
+message VersionUpdateMessage {
+  string id = 1;
+  string name = 2;
+}

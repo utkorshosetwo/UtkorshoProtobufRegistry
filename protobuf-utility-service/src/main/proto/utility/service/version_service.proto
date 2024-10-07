@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.utility.service;
+
+option java_multiple_files = true;
+
+import "utility/message/version/version_create_message.proto";
+import "utility/message/version/version_message.proto";
+import "utility/message/version/version_update_message.proto";
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+
+service VersionService {
+  rpc createVersion (message.version.VersionCreateMessage) returns (message.version.VersionMessage) {};
+
+  rpc getVersions(google.protobuf.Empty) returns (message.version.VersionListMessage) {};
+
+  rpc getVersionById(core.message.UuidMessage) returns (message.version.VersionMessage) {};
+
+  rpc updateVersion(message.version.VersionUpdateMessage) returns (message.version.VersionMessage) {};
+
+  rpc deleteVersion(core.message.UuidMessage) returns (google.protobuf.Empty) {};
+}
