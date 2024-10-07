@@ -4,12 +4,22 @@ package tech.utkorsho.protobuf.utility.service;
 
 option java_multiple_files = true;
 
-import "utility/message/board/board_create_message.proto";
 import "google/protobuf/empty.proto";
 import "core/message/uuid_message.proto";
 import "utility/message/board/board_message.proto";
+import "utility/message/board/board_create_message.proto";
+import "utility/message/board/board_update_message.proto";
 
 service BoardService {
-  rpc createBoard (message.board.CreateBoardRequest) returns (message.board.BoardMessage) {};
-  rpc createSteamBoard (stream message.board.CreateBoardRequest) returns (stream message.board.BoardMessage) {};
+  rpc createBoard (message.board.BoardCreateMessage) returns (message.board.BoardMessage) {}
+
+  rpc createStreamBoard (stream message.board.BoardCreateMessage) returns (stream message.board.BoardMessage) {}
+
+  rpc getBoards(google.protobuf.Empty) returns (message.board.BoardListMessage) {}
+
+  rpc updateBoard(message.board.BoardUpdateMessage) returns (message.board.BoardMessage) {}
+
+  rpc deleteBoard(core.message.UuidMessage) returns (google.protobuf.Empty) {}
+
+  rpc getBoardsByIds(core.message.UuidMessageList) returns (message.board.BoardListMessage) {}
 }
