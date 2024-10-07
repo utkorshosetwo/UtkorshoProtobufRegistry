@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package core.message;
+
+option java_multiple_files = true;
+
+message PaginationResult {
+  int32 page_no = 1;
+  int32 records_per_page = 2;
+  int32 next_page = 3;
+  int32 total_pages = 4;
+  int32 total_records = 5;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.utility.message.classes;
+
+option java_multiple_files = true;
+
+import "core/message/pagination_request.proto";
+import "core/message/uuid_message.proto";
+
+message ClassInfoListRequest {
+  core.message.PaginationRequest paginationRequest = 1;
+  core.message.UuidMessage level_id = 2;
+  core.message.UuidMessageList class_ids = 3;
+}
+

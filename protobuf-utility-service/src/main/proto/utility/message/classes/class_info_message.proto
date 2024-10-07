@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.utility.message.classes;
+
+option java_multiple_files = true;
+
+import "core/message/status_enum.proto";
+import "core/message/pagination_result.proto";
+import "utility/message/group/group_message.proto";
+import "utility/message/level/level_message.proto";
+
+message ClassInfoMessage {
+  string id = 1;
+  string classTitleEnglish = 2;
+  string classTitleBangla = 3;
+  core.message.Status status = 4;
+  repeated utility.message.group.GroupMessage groups = 5;
+  utility.message.level.LevelMessage level = 6;
+}
+
+message ClassInfoListMessage {
+  repeated ClassInfoMessage classes = 1;
+  optional core.message.PaginationResult paginationResult = 2;
+}

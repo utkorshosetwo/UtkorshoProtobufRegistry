@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package tech.utkorsho.protobuf.utility.service;
+
+import "utility/message/classes/class_info_list_request.proto";
+import "utility/message/classes/class_info_message.proto";
+import "utility/message/classes/class_create_message.proto";
+import "utility/message/classes/class_update_message.proto";
+import "core/message/uuid_message.proto";
+import "google/protobuf/empty.proto";
+
+service ClassService {
+  rpc createClass (utility.message.classes.ClassCreateMessage) returns (utility.message.classes.ClassInfoMessage) {}
+
+  rpc getClasses(utility.message.classes.ClassInfoListRequest) returns (utility.message.classes.ClassInfoListMessage) {}
+
+  rpc getClassById(core.message.UuidMessage) returns (utility.message.classes.ClassInfoMessage) {}
+
+  rpc updateClass(utility.message.classes.ClassUpdateMessage) returns (utility.message.classes.ClassInfoMessage) {}
+
+  rpc deleteClass(core.message.UuidMessage) returns (google.protobuf.Empty) {}
+}

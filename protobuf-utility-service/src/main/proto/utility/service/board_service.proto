@@ -13,8 +13,6 @@ import "utility/message/board/board_update_message.proto";
 service BoardService {
   rpc createBoard (message.board.BoardCreateMessage) returns (message.board.BoardMessage) {}
 
-  rpc createStreamBoard (stream message.board.BoardCreateMessage) returns (stream message.board.BoardMessage) {}
-
   rpc getBoards(google.protobuf.Empty) returns (message.board.BoardListMessage) {}
 
   rpc updateBoard(message.board.BoardUpdateMessage) returns (message.board.BoardMessage) {}

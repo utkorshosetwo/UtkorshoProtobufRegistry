@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package core.message;
+
+option java_multiple_files = true;
+
+message PaginationRequest {
+    int32 page_number = 1;
+    int32 page_size = 2;
+    string sort_by = 3;
+    string order = 4;
+    bool paginate = 5;
+}
