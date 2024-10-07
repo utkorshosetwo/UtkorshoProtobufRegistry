@@ -4,7 +4,7 @@ package tech.utkorsho.protobuf.utility.service;
 
 option java_multiple_files = true;
 
-import "utility/message/board/create_board_request.proto";
+import "utility/message/board/board_create_message.proto";
 import "google/protobuf/empty.proto";
 import "core/message/uuid_message.proto";
 import "utility/message/board/board_message.proto";

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.utility.message.group;
+
+option java_multiple_files = true;
+
+message GroupCreateMessage {
+  string name = 1;
+}
