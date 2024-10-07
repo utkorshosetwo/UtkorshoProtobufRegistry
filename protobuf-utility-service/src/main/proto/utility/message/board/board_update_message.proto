@@ -4,6 +4,7 @@ package tech.utkorsho.protobuf.utility.message.board;
 
 option java_multiple_files = true;
 
-message BoardCreateMessage {
-  string name = 1;
+message BoardUpdateMessage {
+  string id = 1;
+  string name = 2;
 }
