@@ -9,11 +9,12 @@ import "core/message/uuid_message.proto";
 import "utility/message/level/level_info_message.proto";
 import "utility/message/level/level_create_message.proto";
 import "utility/message/level/level_update_message.proto";
+import "utility/message/level/level_info_list_request.proto";
 
 service LevelService {
   rpc createLevel(message.level.LevelCreateMessage) returns (message.level.LevelInfoMessage) {}
 
-  rpc getLevels(google.protobuf.Empty) returns (message.level.LevelInfoMessage) {}
+  rpc getLevels(message.level.LevelInfoListRequest) returns (message.level.LevelInfoMessage) {}
 
   rpc getLevelById(core.message.UuidMessage) returns (message.level.LevelInfoMessage) {}
 
