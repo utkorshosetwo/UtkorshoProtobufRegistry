@@ -7,9 +7,19 @@ package tech.utkorsho.protobuf.utility.service;
 import "google/protobuf/empty.proto";
 import "core/message/uuid_message.proto";
 import "utility/message/group/group_message.proto";
+import "utility/message/group/group_create_message.proto";
+import "utility/message/group/group_update_message.proto";
 
 service GroupService {
-  rpc getGroups(google.protobuf.Empty) returns (protobuf.utility.message.group.GroupListMessage) {}
+  rpc createGroup(message.group.GroupCreateMessage) returns (message.group.GroupMessage) {}
 
-  rpc getGroupById(core.message.UuidMessage) returns (protobuf.utility.message.group.GroupMessage) {}
+  rpc getGroups(google.protobuf.Empty) returns (message.group.GroupListMessage) {}
+
+  rpc getGroupById(core.message.UuidMessage) returns (message.group.GroupMessage) {}
+
+  rpc updateGroup(message.group.GroupUpdateMessage) returns (message.group.GroupMessage) {}
+
+  rpc deleteGroup(core.message.UuidMessage) returns (google.protobuf.Empty) {}
+
+  rpc getGroupsById(core.message.UuidMessageList) returns (message.group.GroupListMessage) {}
 }

@@ -7,9 +7,19 @@ package tech.utkorsho.protobuf.utility.service;
 import "google/protobuf/empty.proto";
 import "core/message/uuid_message.proto";
 import "utility/message/level/level_message.proto";
+import "utility/message/level/level_create_message.proto";
+import "utility/message/level/level_update_message.proto";
 
 service LevelService {
+  rpc createLevel(message.level.LevelCreateMessage) returns (message.level.LevelMessage) {}
+
   rpc getLevels(google.protobuf.Empty) returns (message.level.LevelListMessage) {}
 
   rpc getLevelById(core.message.UuidMessage) returns (message.level.LevelMessage) {}
+
+  rpc updateLevel(utility.message.level.LevelUpdateMessage) returns (message.level.LevelMessage) {}
+
+  rpc deleteLevel(core.message.UuidMessage) returns (google.protobuf.Empty) {}
+
+  rpc getLevelByIds(core.message.UuidMessageList) returns (message.level.LevelListMessage) {}
 }

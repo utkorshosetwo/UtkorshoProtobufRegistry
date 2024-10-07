@@ -5,11 +5,19 @@ option java_multiple_files = true;
 package tech.utkorsho.protobuf.utility.service;
 
 import "google/protobuf/empty.proto";
-import "utility/message/session/session_message.proto";
 import "core/message/uuid_message.proto";
+import "utility/message/session/session_message.proto";
+import "utility/message/session/session_create_message.proto";
+import "utility/message/session/session_update_message.proto";
 
 service SessionService {
+  rpc createSession(message.session.SessionCreateMessage) returns (message.session.SessionMessage) {}
+
   rpc getSessions(google.protobuf.Empty) returns (message.session.SessionListMessage) {}
 
   rpc getSessionById(core.message.UuidMessage) returns (message.session.SessionMessage) {}
+
+  rpc updateSession(message.session.SessionUpdateMessage) returns (message.session.SessionMessage) {}
+
+  rpc deleteSession(core.message.UuidMessage) returns (google.protobuf.Empty) {}
 }
