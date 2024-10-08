@@ -15,6 +15,7 @@ message LevelInfoMessage {
     string id = 1;
     string name = 2;
   }
+  VersionInfoMessage version = 4;
 }
 
 message LevelInfoListMessage {
