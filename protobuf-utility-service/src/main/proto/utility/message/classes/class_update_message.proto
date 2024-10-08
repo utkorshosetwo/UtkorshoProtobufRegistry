@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package tech.utkorsho.protobuf.utility.message.classes;
 
+option java_multiple_files = true;
+
 import "core/message/uuid_message.proto";
 
 message ClassUpdateMessage {
