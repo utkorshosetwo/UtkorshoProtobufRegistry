@@ -14,7 +14,7 @@ import "utility/message/level/level_info_list_request.proto";
 service LevelService {
   rpc createLevel(message.level.LevelCreateMessage) returns (message.level.LevelInfoMessage) {}
 
-  rpc getLevels(message.level.LevelInfoListRequest) returns (message.level.LevelInfoMessage) {}
+  rpc getLevels(message.level.LevelInfoListRequest) returns (message.level.LevelInfoListMessage) {}
 
   rpc getLevelById(core.message.UuidMessage) returns (message.level.LevelInfoMessage) {}
 
