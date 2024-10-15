@@ -7,8 +7,9 @@ option java_multiple_files = true;
 import "core/message/uuid_message.proto";
 
 message ClassUpdateMessage {
-  string classTitleEnglish = 1;
-  string classTitleBangla = 2;
-  string levelId = 3;
-  repeated string groupIds = 4;
+  string id = 1;
+  string classTitleEnglish = 2;
+  string classTitleBangla = 3;
+  string levelId = 4;
+  repeated string groupIds = 5;
 }
