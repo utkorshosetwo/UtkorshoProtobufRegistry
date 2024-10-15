@@ -1,66 +1,68 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>tech.utkorsho</groupId>
-  <artifactId>protobuf-registry</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-    <module>protobuf-core</module>
-    <module>protobuf-utility-service</module>
-  </modules>
-  <version>1.0.3-SNAPSHOT</version>
-  <name>ProtobufRegistry</name>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>tech.utkorsho</groupId>
+    <artifactId>protobuf-registry</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>protobuf-core</module>
+        <module>protobuf-utility-service</module>
+        <module>protobuf-course-service</module>
+        <module>protobuf-user-service</module>
+    </modules>
+    <version>1.0.3-SNAPSHOT</version>
+    <name>ProtobufRegistry</name>
 
-  <properties>
-    <java.version>21</java.version>
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>21</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    <properties>
+        <java.version>21</java.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-  <scm>
-    <developerConnection>scm:git:https://github.com/utkorshose/UtkorshoProtobufRegistry</developerConnection>
-    <url>https://github.com/utkorshose/UtkorshoProtobufRegistry</url>
-  </scm>
+    <scm>
+        <developerConnection>scm:git:https://github.com/utkorshose/UtkorshoProtobufRegistry</developerConnection>
+        <url>https://github.com/utkorshose/UtkorshoProtobufRegistry</url>
+    </scm>
 
-  <distributionManagement>
-    <repository>
-      <id>github</id>
-      <name>GitHub Packages</name>
-      <url>https://maven.pkg.github.com/utkorshose/UtkorshoProtobufRegistry</url>
-    </repository>
-    <snapshotRepository>
-      <id>github</id>
-      <name>GitHub Packages</name>
-      <url>https://maven.pkg.github.com/utkorshose/UtkorshoProtobufRegistry</url>
-    </snapshotRepository>
-  </distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/utkorshose/UtkorshoProtobufRegistry</url>
+        </repository>
+        <snapshotRepository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/utkorshose/UtkorshoProtobufRegistry</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>tech.utkorsho</groupId>
-        <artifactId>protobuf-core</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>io.grpc</groupId>
-        <artifactId>grpc-protobuf</artifactId>
-        <version>1.66.0</version>
-      </dependency>
-      <dependency>
-        <groupId>io.grpc</groupId>
-        <artifactId>grpc-stub</artifactId>
-        <version>1.66.0</version>
-      </dependency>
-      <dependency> <!-- necessary for Java 9+ -->
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>annotations-api</artifactId>
-        <version>6.0.53</version>
-        <scope>provided</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>tech.utkorsho</groupId>
+                <artifactId>protobuf-core</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-protobuf</artifactId>
+                <version>1.66.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-stub</artifactId>
+                <version>1.66.0</version>
+            </dependency>
+            <dependency> <!-- necessary for Java 9+ -->
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>annotations-api</artifactId>
+                <version>6.0.53</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
