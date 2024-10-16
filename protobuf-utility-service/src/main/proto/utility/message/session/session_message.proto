@@ -9,12 +9,20 @@ import "core/message/status_enum.proto";
 import "core/message/pagination_result.proto";
 
 message SessionMessage {
+  message ClassInfoMessage {
+    string id = 1;
+    string classTitleEnglish = 2;
+    string classTitleBangla = 3;
+    core.message.Status status = 4;
+  }
+
   string id = 1;
   string session_name = 2;
   string exam_year = 3;
   core.message.Status status = 4;
-  google.protobuf.Timestamp created_at = 5;
-  google.protobuf.Timestamp updated_at = 6;
+  repeated ClassInfoMessage associatedClass = 5;
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
 }
 
 message SessionListMessage {

@@ -9,11 +9,12 @@ import "core/message/uuid_message.proto";
 import "utility/message/session/session_message.proto";
 import "utility/message/session/session_create_message.proto";
 import "utility/message/session/session_update_message.proto";
+import "utility/message/session/session_list_request.proto";
 
 service SessionService {
   rpc createSession(message.session.SessionCreateMessage) returns (message.session.SessionMessage) {}
 
-  rpc getSessions(utility.message.session.SessionListMessage) returns (message.session.SessionListMessage) {}
+  rpc getSessions(utility.message.session.SessionListRequest) returns (message.session.SessionListMessage) {}
 
   rpc getSessionById(core.message.UuidMessage) returns (message.session.SessionMessage) {}
 
