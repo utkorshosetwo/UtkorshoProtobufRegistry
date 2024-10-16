@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.utility.message.session;
+
+option java_multiple_files = true;
+
+import "core/message/pagination_request.proto";
+import "core/message/uuid_message.proto";
+
+message SessionListRequest {
+  core.message.PaginationRequest paginationRequest = 1;
+  core.message.UuidMessageList class_ids = 2;
+}
