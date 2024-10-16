@@ -13,7 +13,7 @@ import "utility/message/session/session_update_message.proto";
 service SessionService {
   rpc createSession(message.session.SessionCreateMessage) returns (message.session.SessionMessage) {}
 
-  rpc getSessions(google.protobuf.Empty) returns (message.session.SessionListMessage) {}
+  rpc getSessions(utility.message.session.SessionListMessage) returns (message.session.SessionListMessage) {}
 
   rpc getSessionById(core.message.UuidMessage) returns (message.session.SessionMessage) {}
 
