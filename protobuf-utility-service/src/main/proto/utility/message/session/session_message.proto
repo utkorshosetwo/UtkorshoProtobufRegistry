@@ -6,6 +6,7 @@ option java_multiple_files = true;
 
 import "google/protobuf/timestamp.proto";
 import "core/message/status_enum.proto";
+import "core/message/pagination_result.proto";
 
 message SessionMessage {
   string id = 1;
@@ -18,4 +19,5 @@ message SessionMessage {
 
 message SessionListMessage {
   repeated SessionMessage sessions = 1;
+  optional core.message.PaginationResult paginationResult = 2;
 }
