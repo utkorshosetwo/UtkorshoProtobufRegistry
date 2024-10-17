@@ -1,0 +1,23 @@
+syntax="proto3";
+
+package tech.utkorsho.protobuf.course.message.lesson;
+
+option java_multiple_files = true;
+
+import "core/message/status_enum.proto";
+import "google/protobuf/timestamp.proto";
+
+message LessonInfoMessage {
+  string id = 1;
+  string name = 2;
+  string label = 3;
+  string description = 4;
+  string coverPhotoUrl = 5;
+  core.message.Status status = 6;
+  google.protobuf.Timestamp createdAt = 7;
+  google.protobuf.Timestamp updatedAt = 8;
+}
+
+message LessonListInfoMessage {
+  repeated LessonInfoMessage lessons = 1;
+}

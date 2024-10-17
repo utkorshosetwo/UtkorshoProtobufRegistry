@@ -1,10 +1,10 @@
 syntax="proto3";
 
-package tech.utkorsho.protobuf.course.message.chapter;
+package tech.utkorsho.protobuf.course.message.lesson;
 
 option java_multiple_files = true;
 
-message ChapterUpdateMessage {
+message LessonUpdateMessage {
   string id = 1;
   string name = 2;
   string label = 3;

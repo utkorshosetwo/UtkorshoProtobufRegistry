@@ -1,13 +1,13 @@
 syntax="proto3";
 
-package tech.utkorsho.protobuf.course.message.chapter;
+package tech.utkorsho.protobuf.course.message.lesson;
 
 option java_multiple_files = true;
 
-message ChapterCreateMessage {
+message LessonCreateMessage {
   string name = 1;
   string label = 2;
   string description = 3;
   string coverPhotoUrl = 4;
-  string subjectId = 5;
+  string chapterId = 5;
 }

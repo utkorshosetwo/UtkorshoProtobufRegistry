@@ -21,9 +21,9 @@ implementation 'tech.utkorsho:protobuf-course-service:1.0-SNAPSHOT'
 ## Domain Message Definitions
 
 - [X] Sections
-- [ ] Subjects
-- [ ] Chapters
-- [ ] Lessons
+- [X] Subjects
+- [X] Chapters
+- [X] Lessons
 - [ ] Modules
 - [ ] Courses
 - [ ] Course Features
