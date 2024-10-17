@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "course/message/section/section_message.proto";
+import "course/message/section/section_create_message.proto";
+import "course/message/section/section_update_message.proto";
+
+service SectionService {
+  rpc createSection (message.section.SectionCreateMessage) returns (message.section.SectionMessage) {}
+
+  rpc getSections(google.protobuf.Empty) returns (message.section.SectionListMessage) {}
+
+  rpc getSectionById(core.message.UuidMessage) returns (message.section.SectionMessage) {}
+
+  rpc updateSection(message.section.SectionUpdateMessage) returns (message.section.SectionMessage) {}
+
+  rpc deleteSection(core.message.UuidMessage) returns (google.protobuf.Empty) {}
+}

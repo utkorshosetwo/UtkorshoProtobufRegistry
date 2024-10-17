@@ -1,0 +1,9 @@
+syntax="proto3";
+
+package tech.utkorsho.protobuf.course.message.section;
+
+option java_multiple_files = true;
+
+message SectionCreateMessage {
+  string name = 1;
+}

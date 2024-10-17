@@ -16,3 +16,7 @@ message SectionMessage {
   google.protobuf.Timestamp createdAt = 6;
   google.protobuf.Timestamp updatedAt = 7;
 }
+
+message SectionListMessage {
+  repeated SectionMessage sections = 1;
+}
