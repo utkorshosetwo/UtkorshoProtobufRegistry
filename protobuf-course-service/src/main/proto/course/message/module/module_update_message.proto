@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package tech.utkorsho.protobuf.course.message.module;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+
+message ModuleUpdateMessage {
+  string id = 1;
+  google.protobuf.StringValue name = 2;
+  google.protobuf.StringValue description = 3;
+}
