@@ -4,7 +4,8 @@ package tech.utkorsho.protobuf.course.message.section;
 
 option java_multiple_files = true;
 
-message SectionUpdateMessage {
-  string id = 1;
-  string name = 2;
+message ChapterInfoMessage {}
+
+message ChapterListInfoMessage {
+  repeated ChapterInfoMessage chapters = 1;
 }

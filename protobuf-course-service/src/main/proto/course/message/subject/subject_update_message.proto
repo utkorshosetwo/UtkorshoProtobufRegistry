@@ -5,8 +5,9 @@ package tech.utkorsho.protobuf.course.message.subject;
 option java_multiple_files = true;
 
 message SubjectUpdateMessage {
-  string name = 1;
-  string description = 2;
-  string iconUrl = 3;
-  string coverPhotoUrl = 4;
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  string iconUrl = 4;
+  string coverPhotoUrl = 5;
 }

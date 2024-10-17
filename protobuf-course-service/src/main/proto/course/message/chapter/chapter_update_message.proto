@@ -4,7 +4,10 @@ package tech.utkorsho.protobuf.course.message.section;
 
 option java_multiple_files = true;
 
-message SectionUpdateMessage {
+message ChapterUpdateMessage {
   string id = 1;
   string name = 2;
+  string label = 3;
+  string description = 4;
+  string coverPhotoUrl = 5;
 }
