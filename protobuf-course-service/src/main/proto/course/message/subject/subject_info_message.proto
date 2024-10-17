@@ -1,0 +1,25 @@
+syntax="proto3";
+
+package tech.utkorsho.protobuf.course.message.subject;
+
+option java_multiple_files = true;
+
+import "core/message/status_enum.proto";
+import "google/protobuf/timestamp.proto";
+
+message SubjectInfoMessage {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  string iconUrl = 4;
+  string coverPhotoUrl = 5;
+  core.message.Status status = 6;
+  string createdBy = 7;
+  string updatedBy = 8;
+  google.protobuf.Timestamp createdAt = 9;
+  google.protobuf.Timestamp updatedAt = 10;
+}
+
+message SubjectListInfoMessage {
+  repeated SubjectInfoMessage subjects = 1;
+}

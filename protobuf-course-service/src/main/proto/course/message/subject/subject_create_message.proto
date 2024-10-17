@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package tech.utkorsho.protobuf.course.message.subject;
+
+option java_multiple_files = true;
+
+message SubjectCreateMessage {
+  string name = 1;
+  string description = 2;
+  string iconUrl = 3;
+  string coverPhotoUrl = 4;
+  string classId = 5;
+}
