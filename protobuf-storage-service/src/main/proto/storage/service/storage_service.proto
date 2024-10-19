@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package tech.utkorsho.protobuf.storage.service;
+
+import "storage/message/storage/storage_create_message.proto";
+import "storage/message/storage/storage_message.proto";
+
+
+service StorageService {
+  rpc createSession(message.storage.StorageCreateMessage) returns (message.storage.StorageMessage) {}
+}
