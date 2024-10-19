@@ -9,5 +9,5 @@ import "storage/message/storage/storage_message.proto";
 
 
 service StorageService {
-  rpc createSession(message.storage.StorageCreateMessage) returns (message.storage.StorageMessage) {}
+  rpc createStorage(message.storage.StorageCreateMessage) returns (message.storage.StorageMessage) {}
 }
