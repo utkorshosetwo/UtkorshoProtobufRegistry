@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.syllabus;
+
+option java_multiple_files = true;
+
+import "course/message/syllabus/syllabus_type.proto";
+
+message SyllabusMessage {
+  string id = 1;
+  string label = 2;
+  string name = 3;
+  string description = 4;
+  string iconUrl = 5;
+  string coverPhotoUrl = 6;
+  SyllabusType syllabusType = 7;
+}
