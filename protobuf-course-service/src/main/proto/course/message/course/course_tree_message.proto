@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.course;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "core/message/uuid_message.proto";
+import "course/message/course/content_template.proto";
+import "course/message/syllabus/syllabus_tree.proto";
+
+message CourseTreeMessage {
+  string id = 1;
+  string name = 2;
+  string courseCode = 3;
+  string iconUrl = 4;
+  string coverPhotoUrl = 5;
+  ContentTemplate contentTemplate = 6;
+  repeated syllabus.SyllabusTree syllabusTreeDtos = 7;
+}
