@@ -5,7 +5,7 @@ package tech.utkorsho.protobuf.storage.message.upload;
 option java_multiple_files = true;
 
 message UploadFileRequest {
-  bytes file_content = 1;
+  repeated bytes fileContents = 1;
   repeated string fileNames = 2;
 }
 
