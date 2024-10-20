@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.feature;
+
+option java_multiple_files = true;
+
+message FeatureUpdateMessage {
+  string id = 1;
+  string name = 2;
+  string value = 3;
+}
