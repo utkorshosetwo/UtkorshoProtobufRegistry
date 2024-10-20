@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.course;
+
+option java_multiple_files = true;
+
+enum ContentTemplate {
+  SUBJECT_CHAPTER_LESSON = 0;
+  SUBJECT_CHAPTER = 1;
+  SUBJECT_CHAPTER_CLASS = 2;
+  SUBJECT_CLASS = 3;
+  CLASS = 4;
+  SUBJECT = 5;
+  COURSE = 6;
+  BUNDLE = 7;
+  MODULE = 8;
+}

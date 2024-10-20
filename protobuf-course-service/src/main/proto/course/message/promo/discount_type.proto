@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.promo;
+
+option java_multiple_files = true;
+
+enum DiscountType {
+  FLAT = 0;
+  PERCENTAGE = 1;
+}

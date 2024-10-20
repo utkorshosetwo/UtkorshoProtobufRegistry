@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.offerDiscount;
+
+option java_multiple_files = true;
+
+import "course/message/promo/discount_type.proto";
+import "google/protobuf/timestamp.proto";
+
+message OfferDiscountCreateMessage {
+  course.message.promo.DiscountType discountType = 1;
+  double discountValue = 2;
+  double specialOfferPrice = 3;
+  string specialOfferName = 4;
+  string specialOfferDescription = 5;
+  google.protobuf.Timestamp specialOfferStartDate = 6;
+  google.protobuf.Timestamp specialOfferEndDate = 7;
+  bool hasSpecialOffer = 8;
+  bool hasDiscount = 9;
+}

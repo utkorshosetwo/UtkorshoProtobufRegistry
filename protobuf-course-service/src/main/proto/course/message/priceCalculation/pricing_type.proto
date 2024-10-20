@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.priceCalculation;
+
+option java_multiple_files = true;
+
+enum PricingType {
+  FREE = 0;
+  PAID = 1;
+}

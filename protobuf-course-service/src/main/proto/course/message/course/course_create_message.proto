@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.course;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "core/message/uuid_message.proto";
+import "course/message/course/content_template.proto";
+
+message CourseCreateMessage {
+  string name = 1;
+  string courseCode = 2;
+  string description = 3;
+  string iconUrl = 4;
+  string coverPhotoUrl = 5;
+  string videoUrl = 6;
+  bool isFeatured = 7;
+  google.protobuf.Timestamp startDate = 8;
+  ContentTemplate contentTemplate = 9;
+  string moduleId = 10;
+  core.message.UuidMessageList classIs = 11;
+  core.message.UuidMessageList instructorIds = 12;
+  string sessionId = 13;
+  google.protobuf.Timestamp freeUntil = 14;
+}
