@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.userCourse;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+
+message CourseInfoMessage {
+  string id = 1;
+  string name = 2;
+  string courseCode = 3;
+  int64 price = 4;
+  string description = 5;
+  string iconUrl = 6;
+  string coverPhotoUrl = 7;
+  string contentTemplate = 8;
+  google.protobuf.Timestamp startDate = 9;
+  google.protobuf.Timestamp freeUntil = 10;
+}

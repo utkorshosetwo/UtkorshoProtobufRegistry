@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.priceCalculation;
+
+option java_multiple_files = true;
+
+message PriceCalculationCreateMessage {
+  string courseId = 1;
+  string promoCode = 2;
+}

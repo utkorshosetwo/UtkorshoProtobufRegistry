@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.syllabus;
+
+option java_multiple_files = true;
+
+enum SyllabusType {
+  SUBJECT = 0;
+  CHAPTER = 1;
+  CLASS = 2;
+  LESSON = 3;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.promo;
+
+option java_multiple_files = true;
+
+import "course/message/promo/discount_type.proto";
+import "google/protobuf/timestamp.proto";
+
+message PromoMessage {
+  string code = 1;
+  int64 discountAmount = 2;
+  DiscountType discountType = 3;
+  google.protobuf.Timestamp expiryDate = 4;
+  int64 maxUsage = 5;
+  string reference = 6;
+  string remarks = 7;
+}
