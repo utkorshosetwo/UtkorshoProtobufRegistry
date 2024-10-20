@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.priceCalculation;
+
+option java_multiple_files = true;
+
+import "course/message/priceCalculation/pricing_type.proto";
+
+message PriceCalculationMessage {
+  int64 finalPrice = 1;
+  int64 basePrice = 2;
+  int64 offerDiscount = 3;
+  int64 specialOfferDiscount = 4;
+  int64 promoCodeDiscount = 5;
+  PricingType pricingType = 6;
+}
