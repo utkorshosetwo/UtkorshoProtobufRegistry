@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.storage.message.upload;
+
+option java_multiple_files = true;
+
+message UploadFileResponse {
+  repeated string download_urls = 1;
+}
