@@ -25,3 +25,7 @@ message CourseMessage {
   string sessionId = 14;
   google.protobuf.Timestamp freeUntil = 15;
 }
+
+message CourseListMessage {
+  repeated CourseMessage courses = 1;
+}

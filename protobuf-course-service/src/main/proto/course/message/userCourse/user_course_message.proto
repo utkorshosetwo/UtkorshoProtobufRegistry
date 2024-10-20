@@ -11,3 +11,7 @@ message UserCourseMessage {
   string userId = 2;
   CourseInfoMessage course = 3;
 }
+
+message UserCourseListMessage {
+  repeated UserCourseMessage userCourses = 1;
+}

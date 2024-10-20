@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.userCourse;
+
+option java_multiple_files = true;
+
+message AssignedCourseRequest {
+  string userId = 1;
+  int32 page = 2;
+  int32 size = 3;
+}
