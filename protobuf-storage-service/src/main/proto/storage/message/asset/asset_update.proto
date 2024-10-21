@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.storage.message.asset;
+
+option java_multiple_files = true;
+
+import "core/message/uuid_message.proto";
+
+message AssetUpdate {
+  string id = 1;
+  string name = 2;
+  string url = 3;
+}

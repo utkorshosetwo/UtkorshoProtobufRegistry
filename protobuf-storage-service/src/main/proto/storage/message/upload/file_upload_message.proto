@@ -4,6 +4,6 @@ package tech.utkorsho.protobuf.storage.message.upload;
 
 option java_multiple_files = true;
 
-message UploadFileResponse {
+message FileUploadMessage {
   repeated string download_urls = 1;
 }

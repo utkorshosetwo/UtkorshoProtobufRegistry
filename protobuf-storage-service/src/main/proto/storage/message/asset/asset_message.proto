@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.storage.message.asset;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "core/message/pagination_result.proto";
+
+message AssetMessage {
+  string id = 1;
+  string name = 2;
+  string url = 3;
+}
+
+message AssetListMessage {
+  repeated AssetMessage assets = 1;
+  optional core.message.PaginationResult paginationResult = 2;
+}

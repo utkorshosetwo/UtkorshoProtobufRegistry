@@ -10,6 +10,4 @@ message StorageMessage {
   string id = 1;
   string key_url = 2;
   string extension = 3;
-  //  google.protobuf.Timestamp created_at = 4;
-  //  google.protobuf.Timestamp updated_at = 5;
 }

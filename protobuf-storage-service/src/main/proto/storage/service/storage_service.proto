@@ -4,10 +4,10 @@ option java_multiple_files = true;
 
 package tech.utkorsho.protobuf.storage.service;
 
-import "storage/message/storage/storage_create_message.proto";
+import "storage/message/storage/storage_request.proto";
 import "storage/message/storage/storage_message.proto";
 
 
 service StorageService {
-  rpc createStorage(message.storage.StorageCreateMessage) returns (message.storage.StorageMessage) {}
+  rpc getStorageByKey(message.storage.StorageRequest) returns (message.storage.StorageMessage) {}
 }

@@ -5,10 +5,10 @@ option java_multiple_files = true;
 package tech.utkorsho.protobuf.upload.service;
 
 import "storage/message/upload/file_upload_request.proto";
-import "storage/message/upload/file_upload_reponse.proto";
+import "storage/message/upload/file_upload_message.proto";
 
 
 
 service FileUploadService {
-  rpc UploadFile (stream  storage.message.upload.UploadFileRequest) returns (storage.message.upload.UploadFileResponse);
+  rpc UploadFile (stream  storage.message.upload.FileUploadRequest) returns (storage.message.upload.FileUploadMessage);
 }
