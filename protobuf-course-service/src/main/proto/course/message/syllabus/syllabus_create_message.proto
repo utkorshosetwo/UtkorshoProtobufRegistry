@@ -14,4 +14,5 @@ message SyllabusCreateMessage {
   string coverPhotoUrl = 5;
   SyllabusType syllabusType = 6;
   string parentId = 7;
+  string courseId = 8;
 }

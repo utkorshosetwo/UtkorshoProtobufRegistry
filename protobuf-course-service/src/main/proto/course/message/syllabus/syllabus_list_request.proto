@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.syllabus;
+
+option java_multiple_files = true;
+
+import "core/message/pagination_request.proto";
+import "course/message/syllabus/syllabus_type.proto";
+
+message SyllabusListRequest {
+  core.message.PaginationRequest paginationRequest = 1;
+  string courseId = 2;
+  syllabus.SyllabusType syllabusType = 3;
+  string parentId = 4;
+}

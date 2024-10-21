@@ -15,3 +15,7 @@ message SyllabusMessage {
   string coverPhotoUrl = 6;
   SyllabusType syllabusType = 7;
 }
+
+message SyllabusListMessage {
+  repeated SyllabusMessage syllabuses = 1;
+}
