@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "course/message/subjectLesson/subject_lesson_create_message.proto";
+import "course/message/subjectLesson/subject_lesson_message.proto";
+import "course/message/subjectLesson/subject_lesson_list_request.proto";
+import "course/message/subjectLesson/subject_lesson_update_message.proto";
+
+service SubjectLessonService {
+  rpc createSubjectLesson(message.subjectLesson.SubjectLessonCreateMessage) returns (message.subjectLesson.SubjectLessonMessage) {};
+
+  rpc getAllSubjectLessons(message.subjectLesson.SubjectLessonListRequest) returns (message.subjectLesson.SubjectLessonListMessage) {};
+
+  rpc getSubjectLessonById(core.message.UuidMessage) returns (message.subjectLesson.SubjectLessonMessage) {};
+
+  rpc updateSubjectLesson(message.subjectLesson.SubjectLessonUpdateMessage) returns (message.subjectLesson.SubjectLessonMessage) {};
+
+  rpc deleteSubjectLesson(core.message.UuidMessage) returns (google.protobuf.Empty) {};
+}

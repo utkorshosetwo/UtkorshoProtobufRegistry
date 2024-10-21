@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.subjectLesson;
+
+option java_multiple_files = true;
+
+import "core/message/pagination_request.proto";
+
+message SubjectLessonListRequest {
+  core.message.PaginationRequest paginationRequest = 1;
+  string subjectChapterId = 2;
+}
