@@ -8,3 +8,8 @@ message FeatureCreateMessage {
   string name = 1;
   string value = 2;
 }
+
+message FeatureListCreateMessage {
+  string courseId = 1;
+  repeated FeatureCreateMessage features = 2;
+}
