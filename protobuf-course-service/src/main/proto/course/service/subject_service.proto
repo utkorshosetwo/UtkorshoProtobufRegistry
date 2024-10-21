@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.service;
+
+option java_multiple_files = true;
+
+import "core/message/uuid_message.proto";
+import "course/message/subject/subject_create_message.proto";
+import "course/message/subject/subject_update_message.proto";
+import "course/message/subject/subject_info_message.proto";
+import "course/message/subject/subject_list_request.proto";
+import "course/message/subject/subject_tree_message.proto";
+import "google/protobuf/empty.proto";
+
+service SubjectService {
+  rpc createSubject(message.subject.SubjectCreateMessage) returns (message.subject.SubjectInfoMessage) {};
+
+  rpc getAllSubjects(message.subject.SubjectListRequest) returns (message.subject.SubjectListInfoMessage) {};
+
+  rpc getSubjectById(core.message.UuidMessage) returns (message.subject.SubjectInfoMessage) {};
+
+  rpc updateSubject(message.subject.SubjectUpdateMessage) returns (message.subject.SubjectInfoMessage) {};
+
+  rpc deleteSubject(core.message.UuidMessage) returns (google.protobuf.Empty) {};
+
+  rpc getSubjectTree(core.message.UuidMessage) returns (message.subject.SubjectTreeMessage) {};
+}

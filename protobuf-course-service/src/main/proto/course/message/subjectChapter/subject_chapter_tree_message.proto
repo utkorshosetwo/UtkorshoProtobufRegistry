@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.subjectChapter;
+
+option java_multiple_files = true;
+
+import "course/message/subjectLesson/subject_lesson_tree_message.proto";
+
+message SubjectChapterTreeMessage {
+  string id = 1;
+  string name = 2;
+  string label = 3;
+  string description = 4;
+  string coverPhotoUrl = 5;
+  repeated subjectLesson.SubjectLessonTreeMessage subjectLessons = 6;
+}
