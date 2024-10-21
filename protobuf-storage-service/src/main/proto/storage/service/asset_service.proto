@@ -13,7 +13,7 @@ import "google/protobuf/empty.proto";
 
 service AssetService {
 
-  rpc uploadAsset (storage.message.asset.AssetCreate) returns (storage.message.asset.AssetMessage) {}
+  rpc createAsset (stream storage.message.asset.AssetCreate) returns (storage.message.asset.AssetMessage) {}
 
   rpc getAssets (google.protobuf.Empty) returns (storage.message.asset.AssetListMessage) {}
 
