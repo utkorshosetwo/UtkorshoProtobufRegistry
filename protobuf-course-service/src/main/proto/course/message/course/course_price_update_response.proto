@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.course;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "course/message/priceCalculation/pricing_type.proto";
+import "course/message/course/content_template.proto";
+import "course/message/module/module_info_message.proto";
+import "course/message/version/version_message.proto";
+
+message CoursePriceUpdateResponse {
+  string id = 1;
+  string name = 2;
+  string courseCode = 3;
+  string description = 4;
+  string iconUrl = 5;
+  string coverPhotoUrl = 6;
+  double price = 7;
+  version.VersionMessage version = 8;
+  priceCalculation.PricingType pricingType = 9;
+  ContentTemplate contentTemplate = 10;
+  module.ModuleInfoMessage module = 11;
+  google.protobuf.Timestamp trialStart = 12;
+  google.protobuf.Timestamp trialEnd = 13;
+}

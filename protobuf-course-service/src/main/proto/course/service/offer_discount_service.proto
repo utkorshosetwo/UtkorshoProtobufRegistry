@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "course/message/offerDiscount/offer_discount_message.proto";
+import "course/message/offerDiscount/offer_discount_update_message.proto";
+
+service OfferDiscountService {
+  rpc createDefaultOfferDiscount(google.protobuf.Empty) returns (google.protobuf.Empty) {};
+
+  rpc getOfferDiscountByCourseId(core.message.UuidMessage) returns (message.offerDiscount.OfferDiscountMessage) {};
+
+  rpc updateOfferDiscountByCourseId(message.offerDiscount.OfferDiscountUpdateMessage) returns (message.offerDiscount.OfferDiscountMessage) {};
+}

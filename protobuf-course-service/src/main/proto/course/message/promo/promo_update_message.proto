@@ -8,11 +8,12 @@ import "course/message/promo/discount_type.proto";
 import "google/protobuf/timestamp.proto";
 
 message PromoUpdateMessage {
-  string code = 1;
-  int64 discountAmount = 2;
-  DiscountType discountType = 3;
-  google.protobuf.Timestamp expiryDate = 4;
-  int64 maxUsage = 5;
-  string reference = 6;
-  string remarks = 7;
+  string promoId = 1;
+  string code = 2;
+  int64 discountAmount = 3;
+  DiscountType discountType = 4;
+  google.protobuf.Timestamp expiryDate = 5;
+  int64 maxUsage = 6;
+  string reference = 7;
+  string remarks = 8;
 }

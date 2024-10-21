@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.service;
+
+option java_multiple_files = true;
+
+import "course/message/priceCalculation/price_calculation_create_message.proto";
+import "course/message/priceCalculation/price_calculation_message.proto";
+
+service PriceCalculationService {
+  rpc generatePriceCalculation(message.priceCalculation.PriceCalculationCreateMessage) returns (message.priceCalculation.PriceCalculationMessage) {};
+}

@@ -9,3 +9,7 @@ message FeatureMessage {
   string name = 2;
   string value = 3;
 }
+
+message FeatureListMessage {
+  repeated FeatureMessage features = 1;
+}

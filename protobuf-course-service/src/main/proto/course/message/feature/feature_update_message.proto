@@ -9,3 +9,8 @@ message FeatureUpdateMessage {
   string name = 2;
   string value = 3;
 }
+
+message FeatureUpdateListMessage {
+  string courseId = 1;
+  repeated FeatureUpdateMessage features = 2;
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.course;
+
+option java_multiple_files = true;
+
+import "course/message/feature/feature_update_message.proto";
+
+message CourseFeatureUpdateRequest {
+  string courseId = 1;
+  feature.FeatureUpdateListMessage features = 2;
+}

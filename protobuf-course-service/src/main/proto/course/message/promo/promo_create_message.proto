@@ -17,3 +17,7 @@ message PromoCreateMessage {
   string remarks = 7;
   string courseId = 8;
 }
+
+message PromoCodeListCreateMessage {
+  repeated PromoCreateMessage promoCodes = 1;
+}

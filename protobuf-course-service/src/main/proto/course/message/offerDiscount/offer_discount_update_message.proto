@@ -8,7 +8,7 @@ import "course/message/promo/discount_type.proto";
 import "google/protobuf/timestamp.proto";
 
 message OfferDiscountUpdateMessage {
-  string id = 1;
+  string courseId = 1;
   course.message.promo.DiscountType discountType = 2;
   double discountValue = 3;
   double specialOfferPrice = 4;

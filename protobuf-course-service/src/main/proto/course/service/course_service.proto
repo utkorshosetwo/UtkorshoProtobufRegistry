@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "course/message/course/course_message.proto";
+import "course/message/course/course_create_message.proto";
+import "course/message/course/course_update_message.proto";
+import "course/message/course/course_list_request.proto";
+import "course/message/course/course_tree_message.proto";
+import "course/message/course/course_price_update_request.proto";
+import "course/message/course/course_price_update_response.proto";
+import "course/message/course/course_content_update_request.proto";
+import "course/message/course/course_request_by_session_module.proto";
+import "course/message/course/course_with_module.proto";
+import "course/message/course/user_recommended_course_list_request.proto";
+import "course/message/course/course_feature_create_request.proto";
+import "course/message/course/course_feature_update_request.proto";
+import "course/message/course/course_feature_delete_request.proto";
+import "course/message/course/sub_course_assign_request.proto";
+import "course/message/course/sub_course_remove_request.proto";
+import "course/message/feature/feature_message.proto";
+
+service CourseService {
+  rpc createCourse(message.course.CourseCreateMessage) returns (message.course.CourseMessage) {};
+
+  rpc getAllCourses(message.course.CourseListRequest) returns (message.course.CourseListMessage) {};
+
+  rpc getCourseById(core.message.UuidMessage) returns (message.course.CourseMessage) {};
+
+  rpc updateCourse(message.course.CourseUpdateMessage) returns (message.course.CourseMessage) {};
+
+  rpc deleteCourse(core.message.UuidMessage) returns (google.protobuf.Empty) {};
+
+  rpc updateCoursePrice(message.course.CoursePriceUpdateRequest) returns (course.message.course.CoursePriceUpdateResponse) {};
+
+  rpc updateCourseContent(message.course.CourseContentUpdateRequest) returns (google.protobuf.Empty) {};
+
+  rpc getCourseTree(google.protobuf.Empty) returns (course.message.course.CourseTreeListMessage) {};
+
+  rpc getCoursesByModule(core.message.UuidMessage) returns (course.message.course.CourseMessage) {};
+
+  rpc getCoursesBySession(core.message.UuidMessage) returns (course.message.course.CourseListMessage) {};
+
+  rpc getCoursesBySessionAndModule(course.message.course.CourseRequestBySessionAndModule) returns (course.message.course.CourseWithModule) {};
+
+  rpc getCourseTreeById(core.message.UuidMessage) returns (course.message.course.CourseTreeMessage) {};
+
+  rpc getUserRecommendedCourses(message.course.UserRecommendedCourseListRequest) returns (course.message.course.CourseListMessage) {};
+
+  rpc createCourseFeature(message.course.CourseFeatureCreateRequest) returns (course.message.course.CourseMessage) {};
+
+  rpc updateCourseFeatures(message.course.CourseFeatureUpdateRequest) returns (course.message.feature.FeatureListMessage) {};
+
+  rpc deleteCourseFeature(message.course.CourseFeatureDeleteRequest) returns (google.protobuf.Empty) {};
+
+  rpc assignSubCourses(message.course.SubCourseAssignRequest) returns (message.course.CourseMessage) {};
+
+  rpc removeSubCourse(message.course.SubCourseRemoveRequest) returns (google.protobuf.Empty) {};
+
+  rpc getCourseInstructors(core.message.UuidMessage) returns (core.message.UuidMessageList) {};
+
+  rpc getFreeCourses(message.course.CourseListRequest) returns (message.course.CourseListMessage) {};
+
+  rpc getTrialCourses(message.course.CourseListRequest) returns (message.course.CourseListMessage) {};
+}

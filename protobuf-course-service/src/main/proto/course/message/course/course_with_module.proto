@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.course;
+
+option java_multiple_files = true;
+
+import "course/message/module/module_info_message.proto";
+import "course/message/course/course_message.proto";
+
+message CourseWithModule {
+  module.ModuleInfoMessage module = 1;
+  course.CourseListMessage courses = 2;
+}
