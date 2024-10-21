@@ -16,3 +16,7 @@ message PromoMessage {
   string reference = 6;
   string remarks = 7;
 }
+
+message PromoListMessage {
+  repeated PromoMessage promos = 1;
+}
