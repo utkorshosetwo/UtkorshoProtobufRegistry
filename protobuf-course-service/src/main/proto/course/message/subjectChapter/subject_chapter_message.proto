@@ -10,3 +10,7 @@ message SubjectChapterMessage {
   string description = 3;
   string coverPhotoUrl = 4;
 }
+
+message SubjectChapterListMessage {
+  repeated SubjectChapterMessage subjectChapters = 1;
+}

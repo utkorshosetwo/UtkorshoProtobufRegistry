@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "course/message/subjectChapter/subject_chapter_create_message.proto";
+import "course/message/subjectChapter/subject_chapter_message.proto";
+import "course/message/subjectChapter/subject_chapter_list_request.proto";
+import "course/message/subjectChapter/subject_chapter_update_message.proto";
+
+service SubjectChapterService {
+  rpc createSubjectChapter(message.subjectChapter.SubjectChapterCreateMessage) returns (message.subjectChapter.SubjectChapterMessage) {};
+
+  rpc getAllSubjectChapters(message.subjectChapter.SubjectChapterListRequest) returns (message.subjectChapter.SubjectChapterListMessage) {};
+
+  rpc getSubjectChapterById(core.message.UuidMessage) returns (message.subjectChapter.SubjectChapterMessage) {};
+
+  rpc updateSubjectChapter(message.subjectChapter.SubjectChapterUpdateMessage) returns (message.subjectChapter.SubjectChapterMessage) {};
+
+  rpc deleteSubjectChapter(core.message.UuidMessage) returns (google.protobuf.Empty) {};
+}
