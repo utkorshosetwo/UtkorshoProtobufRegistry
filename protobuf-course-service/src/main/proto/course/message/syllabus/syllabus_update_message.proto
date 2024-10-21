@@ -4,10 +4,15 @@ package tech.utkorsho.protobuf.course.message.syllabus;
 
 option java_multiple_files = true;
 
+import "course/message/syllabus/syllabus_type.proto";
+
 message SyllabusUpdateMessage {
-  string label = 1;
-  string name = 2;
-  string description = 3;
-  string iconUrl = 4;
-  string coverPhotoUrl = 5;
+  string id = 1;
+  string label = 2;
+  string name = 3;
+  string description = 4;
+  string iconUrl = 5;
+  string coverPhotoUrl = 6;
+  string courseId = 7;
+  syllabus.SyllabusType syllabusType = 8;
 }

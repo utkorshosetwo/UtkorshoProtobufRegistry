@@ -11,3 +11,7 @@ message SubjectLessonMessage {
   string description = 4;
   string coverPhotoUrl = 5;
 }
+
+message SubjectLessonListMessage {
+  repeated SubjectLessonMessage subjectLessons = 1;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.syllabus;
+
+import "course/message/syllabus/syllabus_type.proto";
+
+message SyllabusGetRequest {
+  string courseId = 1;
+  SyllabusType syllabusType = 2;
+  string syllabusId = 3;
+}

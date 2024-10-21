@@ -4,8 +4,9 @@ package tech.utkorsho.protobuf.course.message.userCourse;
 
 option java_multiple_files = true;
 
+import "core/message/pagination_request.proto";
+
 message AssignedCourseRequest {
   string userId = 1;
-  int32 page = 2;
-  int32 size = 3;
+  core.message.PaginationRequest paginationRequest = 2;
 }
