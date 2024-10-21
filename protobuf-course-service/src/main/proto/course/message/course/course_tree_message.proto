@@ -18,3 +18,7 @@ message CourseTreeMessage {
   ContentTemplate contentTemplate = 6;
   repeated syllabus.SyllabusTree syllabusTreeDtos = 7;
 }
+
+message CourseTreeListMessage {
+  repeated CourseTreeMessage courseTrees = 1;
+}

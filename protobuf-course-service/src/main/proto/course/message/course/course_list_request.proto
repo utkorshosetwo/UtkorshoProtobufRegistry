@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.course;
+
+import "core/message/pagination_request.proto";
+import "core/message/uuid_message.proto";
+
+message CourseListRequest {
+  core.message.PaginationRequest paginationRequest = 1;
+  bool includeOfferDiscount = 2;
+  core.message.UuidMessageList classIds = 3;
+}
