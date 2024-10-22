@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.user.message.permission;
+
+option java_multiple_files = true;
+
+import "core/message/uuid_message.proto";
+
+message PermissionAssignRequest {
+  core.message.UuidMessage userId = 1;
+  core.message.UuidMessageList permissionIds = 2;
+}
