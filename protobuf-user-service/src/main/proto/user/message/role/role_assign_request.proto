@@ -4,8 +4,6 @@ package tech.utkorsho.protobuf.user.message.role;
 
 option java_multiple_files = true;
 
-import "google/protobuf/timestamp.proto";
-
 message RoleAssignRequest {
   string userId = 2;
   repeated string roleIds = 3;

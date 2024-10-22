@@ -4,12 +4,8 @@ package tech.utkorsho.protobuf.user.message.user;
 
 option java_multiple_files = true;
 
-import "user/enums/gender.proto";
-import "user/enums/religion.proto";
 import "user/message/utility/board_message.proto";
 import "user/message/utility/class_message.proto";
-import "user/message/utility/group_message.proto";
-import "user/message/utility/session_message.proto";
 
 message StudentInfoMessage {
   string id = 1;

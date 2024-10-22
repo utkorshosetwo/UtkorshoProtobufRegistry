@@ -4,8 +4,12 @@ package tech.utkorsho.protobuf.user.message.role;
 
 option java_multiple_files = true;
 
-message RoleCreateMessage {
+message RoleDtoMessage {
+  string id = 1;
   string name = 2;
   string description = 3;
-  repeated string permissionIds = 4;
+}
+
+message RoleDtoListMessage {
+  repeated RoleDtoMessage roles = 1;
 }

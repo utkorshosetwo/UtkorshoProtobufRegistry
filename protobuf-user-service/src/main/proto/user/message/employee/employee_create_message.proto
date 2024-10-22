@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.employee;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "user/enums/gender.proto";
+import "user/enums/religion.proto";
+import "user/enums/employee_status.proto";
+
+message EmployeeCreateMessage {
+  string name = 1;
+  string email = 2;
+  string phone = 3;
+  enums.Gender gender = 4;
+  enums.Religion religion = 5;
+  google.protobuf.Timestamp dateOfBirth = 6;
+  google.protobuf.Timestamp joiningDate = 7;
+  string departmentId = 8;
+  string designationId = 9;
+  enums.EmployeeStatus employeeStatus = 10;
+  string password = 11;
+  string confirmPassword = 12;
+  string address = 13;
+}
