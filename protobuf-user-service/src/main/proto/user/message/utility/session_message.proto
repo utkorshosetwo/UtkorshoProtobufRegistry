@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.utility;
+
+option java_multiple_files = true;
+
+message SessionMessage {
+  string id = 1;
+  string sessionName = 2;
+  string examYear = 3;
+}
