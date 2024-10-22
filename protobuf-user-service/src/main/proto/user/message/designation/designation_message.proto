@@ -1,12 +1,12 @@
 syntax = "proto3";
 
-package tech.utkorsho.protobuf.user.message.department;
+package tech.utkorsho.protobuf.user.message.designation;
 
 option java_multiple_files = true;
 
 import "google/protobuf/timestamp.proto";
 
-message DepartmentMessage {
+message DesignationMessage {
   string id = 1;
   string name = 2;
   string description = 3;
