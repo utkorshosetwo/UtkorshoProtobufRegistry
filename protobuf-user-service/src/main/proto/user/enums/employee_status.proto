@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.enums;
+
+option java_multiple_files = true;
+
+enum EmployeeStatus {
+  PART_TIME = 0;
+  PROBATION = 1;
+  CONTRACT = 2;
+  INTERN = 3;
+  PERMANENT = 4;
+}
