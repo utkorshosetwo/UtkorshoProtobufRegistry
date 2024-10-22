@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.user;
+
+option java_multiple_files = true;
+
+message EmployeeSignupRequest {
+  string name = 1;
+  string email = 2;
+  string password = 3;
+  string phone = 4;
+  repeated string roleIds = 5;
+}
