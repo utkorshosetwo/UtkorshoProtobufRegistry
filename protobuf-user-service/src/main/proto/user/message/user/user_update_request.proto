@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.user;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "user/enums/gender.proto";
+import "user/enums/religion.proto";
+
+message UserUpdateRequest {
+  string id = 1;
+  string name = 2;
+  string address = 3;
+  google.protobuf.Timestamp dateOfBirth = 4;
+  string imageUrl = 5;
+  enums.Gender gender = 6;
+  enums.Religion religion = 7;
+}

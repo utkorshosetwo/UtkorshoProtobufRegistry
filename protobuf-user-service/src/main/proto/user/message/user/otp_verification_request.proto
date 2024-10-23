@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.user;
+
+option java_multiple_files = true;
+
+message OtpVerificationRequest {
+  string phone = 1;
+  string otp = 2;
+}

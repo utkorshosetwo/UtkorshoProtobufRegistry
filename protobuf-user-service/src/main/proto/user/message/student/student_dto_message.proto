@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.user;
+
+option java_multiple_files = true;
+
+message StudentDtoMessage {
+  string registrationNo = 1;
+  string parentPhone = 2;
+  string sessionId = 3;
+  string boardId = 4;
+  string groupId = 5;
+  string classId = 6;
+}

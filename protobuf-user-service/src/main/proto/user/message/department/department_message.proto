@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.department;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+
+message DepartmentMessage {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  google.protobuf.Timestamp createdAt = 4;
+  google.protobuf.Timestamp updatedAt = 5;
+}

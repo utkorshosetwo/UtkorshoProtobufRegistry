@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.utility;
+
+option java_multiple_files = true;
+
+message ClassMessage {
+  string id = 1;
+  string classTitleEnglish = 2;
+  string classTitleBangla = 3;
+}

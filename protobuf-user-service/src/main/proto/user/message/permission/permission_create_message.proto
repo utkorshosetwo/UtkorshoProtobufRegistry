@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.permission;
+
+option java_multiple_files = true;
+
+message PermissionCreateMessage {
+  string key = 1;
+  string name = 2;
+  string description = 3;
+}

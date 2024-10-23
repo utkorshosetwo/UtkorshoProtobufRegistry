@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.user;
+
+option java_multiple_files = true;
+
+message StudentCurriculumInfo {
+  string boardId = 1;
+  string sessionId = 2;
+  string groupId = 3;
+  string classId = 4;
+  string userId = 5;
+}

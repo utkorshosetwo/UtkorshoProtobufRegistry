@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.user;
+
+option java_multiple_files = true;
+
+import "user/message/utility/board_message.proto";
+import "user/message/utility/class_message.proto";
+import "user/message/utility/group_message.proto";
+import "user/message/utility/session_message.proto";
+import "user/enums/user_type.proto";
+
+message UserInfoMessage {
+  string id = 1;
+  string name = 2;
+  string phone = 3;
+  string email = 4;
+  string imageUrl = 5;
+  string gender = 6;
+  string religion = 7;
+  string district = 8;
+  string parentPhone = 9;
+  string registrationNo = 10;
+  string boardId = 11;
+  string sessionId = 12;
+  string groupId = 13;
+  string classId = 14;
+  utility.BoardMessage board = 15;
+  utility.ClassMessage studentClass = 16;
+  utility.GroupMessage group = 17;
+  utility.SessionMessage session = 18;
+  repeated string roles = 19;
+  repeated string authorities = 20;
+  repeated enums.UserType userTypes = 21;
+}

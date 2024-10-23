@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.user;
+
+option java_multiple_files = true;
+
+message PhoneNumber {
+  string phone = 1;
+}

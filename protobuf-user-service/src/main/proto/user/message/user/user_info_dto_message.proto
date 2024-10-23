@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.user;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "user/message/role/role_dto_message.proto";
+import "user/message/student/student_dto_message.proto";
+import "user/enums/gender.proto";
+import "user/enums/religion.proto";
+
+message UserInfoDtoMessage {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+  string phone = 4;
+  string phoneVerified = 5;
+  google.protobuf.Timestamp dateOfBirth = 6;
+  string imageUrl = 7;
+  enums.Gender gender = 8;
+  enums.Religion religion = 9;
+  string district = 10;
+  role.RoleDtoListMessage roles = 11;
+  repeated string permissions = 12;
+  user.StudentDtoMessage student = 13;
+}

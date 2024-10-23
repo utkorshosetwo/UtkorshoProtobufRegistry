@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.member;
+
+option java_multiple_files = true;
+
+message MemberListItemMessage {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+  string phone = 4;
+  string department = 5;
+  string designation = 6;
+  string imageUrl = 7;
+  repeated string roles = 8;
+}
