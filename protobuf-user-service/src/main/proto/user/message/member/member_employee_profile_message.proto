@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.member;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "user/message/department/department_message.proto";
+import "user/message/designation/designation_message.proto";
+
+message MemberEmployeeProfileMessage {
+  department.DepartmentMessage department = 1;
+  designation.DesignationMessage designation = 2;
+  string institution = 3;
+  google.protobuf.Timestamp experiencedFrom = 4;
+}
