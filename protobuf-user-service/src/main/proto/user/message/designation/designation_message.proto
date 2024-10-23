@@ -13,3 +13,7 @@ message DesignationMessage {
   google.protobuf.Timestamp createdAt = 4;
   google.protobuf.Timestamp updatedAt = 5;
 }
+
+message DesignationListMessage {
+  repeated DesignationMessage designations = 1;
+}

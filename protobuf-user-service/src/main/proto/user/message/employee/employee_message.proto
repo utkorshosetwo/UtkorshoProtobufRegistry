@@ -13,3 +13,7 @@ message EmployeeMessage {
   google.protobuf.Timestamp updatedAt = 3;
   user.UserInfoDtoMessage user = 4;
 }
+
+message EmployeeListMessage {
+  repeated EmployeeMessage employees = 1;
+}
