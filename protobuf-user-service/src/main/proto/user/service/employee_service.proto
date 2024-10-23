@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "user/message/employee/employee_message.proto";
+import "user/message/employee/employee_create_message.proto";
+import "user/message/employee/employee_update_message.proto";
+
+service EmployeeService {
+  rpc createEmployee(message.employee.EmployeeCreateMessage) returns (message.employee.EmployeeMessage) {};
+
+  rpc getEmployeeById(core.message.UuidMessage) returns (message.employee.EmployeeMessage) {};
+
+  rpc getAllEmployees(google.protobuf.Empty) returns (message.employee.EmployeeListMessage) {};
+
+  rpc updateEmployee(message.employee.EmployeeUpdateMessage) returns (message.employee.EmployeeMessage) {};
+
+  rpc deleteEmployee(core.message.UuidMessage) returns (google.protobuf.Empty) {};
+}
