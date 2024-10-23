@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "user/message/designation/designation_message.proto";
+import "user/message/designation/designation_create_message.proto";
+import "user/message/designation/designation_update_message.proto";
+
+service DesignationService {
+  rpc createDesignation(message.designation.DesignationCreateMessage) returns (message.designation.DesignationMessage) {};
+
+  rpc getDesignationById(core.message.UuidMessage) returns (message.designation.DesignationMessage) {};
+
+  rpc getAllDesignations(google.protobuf.Empty) returns (message.designation.DesignationListMessage) {};
+
+  rpc updateDesignation(message.designation.DesignationUpdateMessage) returns (message.designation.DesignationMessage) {};
+
+  rpc deleteDesignation(core.message.UuidMessage) returns (google.protobuf.Empty) {};
+}
