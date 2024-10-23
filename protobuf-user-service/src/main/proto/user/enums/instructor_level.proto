@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.enums;
+
+option java_multiple_files = true;
+
+enum InstructorLevel {
+  I_INTERN = 0;
+  BEGINNER = 1;
+  INTERMEDIATE = 2;
+  EXPERT = 3;
+}

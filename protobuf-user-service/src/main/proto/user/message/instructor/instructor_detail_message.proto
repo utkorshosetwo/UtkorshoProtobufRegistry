@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.instructor;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "user/enums/instructor_level.proto";
+import "user/enums/employee_status.proto";
+import "user/enums/gender.proto";
+import "user/enums/religion.proto";
+import "user/message/department/department_message.proto";
+import "user/message/designation/designation_message.proto";
+
+message InstructorDetailsResponse {
+  enums.InstructorLevel instructorLevel = 1;
+  enums.EmployeeStatus employeeStatus = 2;
+  string institution = 3;
+  designation.DesignationMessage designation = 4;
+  department.DepartmentMessage department = 5;
+  google.protobuf.Timestamp createdAt = 6;
+  google.protobuf.Timestamp updatedAt = 7;
+  string id = 8;
+  string name = 9;
+  string email = 10;
+  string phone = 11;
+  google.protobuf.Timestamp dateOfBirth = 12;
+  string imageUrl = 13;
+  enums.Gender gender = 14;
+  enums.Religion religion = 15;
+  string district = 16;
+  google.protobuf.Timestamp experiencedFrom = 17;
+}

@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.instructor;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "user/enums/instructor_level.proto";
+import "user/enums/employee_status.proto";
+import "user/message/department/department_message.proto";
+import "user/message/designation/designation_message.proto";
+
+message InstructorListItemMessage {
+  enums.InstructorLevel instructorLevel = 1;
+  enums.EmployeeStatus employeeStatus = 2;
+  department.DepartmentMessage department = 3;
+  designation.DesignationMessage designation = 4;
+  string institution = 5;
+  string address = 6;
+  google.protobuf.Timestamp createdAt = 7;
+  google.protobuf.Timestamp updatedAt = 8;
+  string id = 9;
+  string name = 10;
+  string email = 11;
+  string phone = 12;
+}

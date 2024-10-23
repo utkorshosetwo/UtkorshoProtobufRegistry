@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.instructor;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "user/enums/instructor_level.proto";
+import "user/enums/employee_status.proto";
+
+message InstructorUpdateMessage {
+  string userId = 1;
+  enums.InstructorLevel instructorLevel = 2;
+  enums.EmployeeStatus employeeStatus = 3;
+  string institution = 4;
+  string address = 5;
+  google.protobuf.Timestamp experiencedFrom = 6;
+}
