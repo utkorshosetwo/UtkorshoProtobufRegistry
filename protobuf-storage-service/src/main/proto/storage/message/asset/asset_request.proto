@@ -5,7 +5,10 @@ package tech.utkorsho.protobuf.storage.message.asset;
 option java_multiple_files = true;
 
 import "core/message/uuid_message.proto";
+import "core/message/pagination_request.proto";
+
+
 
 message AssetRequest {
-  core.message.UuidMessage id = 1;
+  core.message.PaginationRequest paginationRequest = 1;
 }

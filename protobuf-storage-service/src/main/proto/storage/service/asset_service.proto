@@ -16,7 +16,7 @@ service AssetService {
 
   rpc createAsset (stream storage.message.asset.AssetCreate) returns (storage.message.asset.AssetMessage) {}
 
-  rpc getAssets (google.protobuf.Empty) returns (storage.message.asset.AssetListMessage) {}
+  rpc getAssets (storage.message.asset.AssetRequest) returns (storage.message.asset.AssetListMessage) {}
 
   rpc getAssetById (core.message.UuidMessage) returns (storage.message.asset.AssetMessage) {}
 
