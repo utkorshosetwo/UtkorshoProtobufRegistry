@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "user/message/department/department_message.proto";
+import "user/message/department/department_create_message.proto";
+import "user/message/department/department_update_message.proto";
+
+service DepartmentService {
+  rpc createDepartment(message.department.DepartmentCreateMessage) returns (message.department.DepartmentMessage) {};
+
+  rpc getDepartmentById(core.message.UuidMessage) returns (message.department.DepartmentMessage) {};
+
+  rpc getAllDepartments(google.protobuf.Empty) returns (message.department.DepartmentListMessage) {};
+
+  rpc updateDepartment(message.department.DepartmentUpdateMessage) returns (message.department.DepartmentMessage) {};
+
+  rpc deleteDepartment(core.message.UuidMessage) returns (google.protobuf.Empty) {};
+}

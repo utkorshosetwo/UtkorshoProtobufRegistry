@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.student;
+
+option java_multiple_files = true;
+
+import "user/message/utility/board_message.proto";
+import "user/message/utility/class_message.proto";
+import "user/message/utility/group_message.proto";
+import "user/message/utility/session_message.proto";
+
+message StudentCreatedMessage {
+  string id = 1;
+  string registrationNo = 2;
+  string phone = 3;
+  string parentPhone = 4;
+  utility.BoardMessage board = 5;
+  utility.ClassMessage studentClass = 6;
+  utility.GroupMessage group = 7;
+  utility.SessionMessage session = 8;
+}

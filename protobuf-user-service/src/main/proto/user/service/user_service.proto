@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+import "user/message/permission/permission_assign_request.proto";
+import "core/message/uuid_message.proto";
+import "user/message/user/user_create_message.proto";
+import "user/message/user/user_created_message.proto";
+import "user/message/user/user_message.proto";
+import "user/message/user/user_basic_info_message.proto";
+import "user/message/user/user_update_request.proto";
+import "user/message/user/password_change_request.proto";
+
+service UserService {
+  rpc createUser(message.user.UserCreateMessage) returns (message.user.UserCreatedMessage) {};
+
+  rpc findUserById(core.message.UuidMessage) returns (message.user.UserMessage) {};
+
+  rpc findUserByPhone(google.protobuf.StringValue) returns (message.user.UserMessage) {};
+
+  rpc findUserByEmail(google.protobuf.StringValue) returns (message.user.UserMessage) {};
+
+  rpc findUserByRegistrationNo(google.protobuf.StringValue) returns (message.user.UserMessage) {};
+
+  rpc assignPermissionsToUser(message.permission.PermissionAssignRequest) returns (google.protobuf.Empty) {};
+
+  rpc updateUser(message.user.UserUpdateRequest) returns (message.user.UserBasicInfoMessage) {};
+
+  rpc deleteUser(core.message.UuidMessage) returns (google.protobuf.Empty) {};
+
+  rpc checkPhoneNumberAvailability(google.protobuf.StringValue) returns (google.protobuf.BoolValue) {};
+
+  rpc resetPassword(google.protobuf.StringValue) returns (google.protobuf.StringValue) {};
+
+  rpc changePassword(message.user.PasswordChangeRequest) returns (google.protobuf.StringValue) {};
+}

@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "user/message/permission/permission_create_message.proto";
+import "user/message/permission/permission_update_message.proto";
+import "user/message/permission/permission_assign_request.proto";
+import "user/message/permission/permission_message.proto";
+import "user/message/utility/message.proto";
+
+service PermissionService {
+  rpc createPermission(message.permission.PermissionCreateMessage) returns (message.permission.PermissionMessage) {};
+
+  rpc getPermissionById(core.message.UuidMessage) returns (message.permission.PermissionMessage) {};
+
+  rpc getAllPermissions(google.protobuf.Empty) returns (message.permission.PermissionListMessage) {};
+
+  rpc getAllPermissionsByIds(core.message.UuidMessageList) returns (message.permission.PermissionListMessage) {};
+
+  rpc getAllPermissionsByRoleId(core.message.UuidMessage) returns (message.permission.PermissionListMessage) {};
+
+  rpc updatePermission(message.permission.PermissionUpdateMessage) returns (message.permission.PermissionMessage) {};
+
+  rpc assignPermission(message.permission.PermissionAssignRequest) returns (message.Message) {};
+}

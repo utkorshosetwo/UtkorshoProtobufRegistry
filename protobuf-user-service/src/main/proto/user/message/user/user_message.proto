@@ -6,22 +6,22 @@ option java_multiple_files = true;
 
 import "google/protobuf/timestamp.proto";
 import "user/message/role/role_dto_message.proto";
-import "user/message/student/student_dto_message.proto";
 import "user/enums/gender.proto";
 import "user/enums/religion.proto";
+import "user/message/permission/permission_message.proto";
 
-message UserInfoDtoMessage {
+message UserMessage {
   string id = 1;
   string name = 2;
   string email = 3;
   string phone = 4;
   string phoneVerified = 5;
-  google.protobuf.Timestamp dateOfBirth = 6;
-  string imageUrl = 7;
-  enums.Gender gender = 8;
-  enums.Religion religion = 9;
-  string district = 10;
-  role.RoleDtoListMessage roles = 11;
-  repeated string permissions = 12;
-  student.StudentDtoMessage student = 13;
+  string address = 6;
+  google.protobuf.Timestamp dateOfBirth = 7;
+  string imageUrl = 8;
+  enums.Gender gender = 9;
+  enums.Religion religion = 10;
+  string district = 11;
+  role.RoleDtoListMessage roles = 12;
+  permission.PermissionListMessage permissions = 13;
 }

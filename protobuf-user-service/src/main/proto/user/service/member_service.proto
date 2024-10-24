@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "user/message/member/member_list_item_message.proto";
+import "user/message/member/member_detail_message.proto";
+
+service MemberService {
+  rpc getMemberById(core.message.UuidMessage) returns (message.member.MemberDetailMessage) {};
+
+  rpc getAllMembers(google.protobuf.Empty) returns (message.member.MemberListItemMessage) {};
+}

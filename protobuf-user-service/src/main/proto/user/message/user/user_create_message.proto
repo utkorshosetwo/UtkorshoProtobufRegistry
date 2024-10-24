@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.user;
+
+option java_multiple_files = true;
+
+import "user/enums/gender.proto";
+import "user/enums/religion.proto";
+
+message UserCreateMessage {
+  string name = 1;
+  string email = 2;
+  string phone = 3;
+  string password = 4;
+  enums.Gender gender = 5;
+  enums.Religion religion = 6;
+  string district = 7;
+}
