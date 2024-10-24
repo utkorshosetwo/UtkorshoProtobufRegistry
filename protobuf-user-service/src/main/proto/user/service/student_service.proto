@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+import "core/message/uuid_message.proto";
+import "user/message/student/student_message.proto";
+import "user/message/student/student_list_request.proto";
+import "user/message/student/student_signup_request_without_curriculum_message.proto";
+import "user/message/student/student_signup_response_message.proto";
+import "user/message/student/student_info_message.proto";
+import "user/message/student/student_dto_message.proto";
+
+service StudentService {
+  rpc createStudent(message.student.StudentSignupResponseMessage) returns (message.student.StudentSignupRequestWithoutCurriculum) {};
+
+  rpc getStudentById(google.protobuf.StringValue) returns (message.student.StudentMessage) {} ;
+
+  rpc getAllStudents(message.student.StudentListRequest) returns (message.student.StudentListMessage) {};
+
+  rpc deleteStudent(core.message.UuidMessage) returns (google.protobuf.StringValue) {};
+
+  rpc getStudentBasicInfo(core.message.UuidMessageList) returns (message.student.StudentInfoListMessage) {};
+}

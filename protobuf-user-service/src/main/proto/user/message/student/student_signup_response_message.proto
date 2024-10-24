@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.student;
+
+option java_multiple_files = true;
+
+message StudentSignupResponseMessage {
+  string id = 1;
+  string phone = 2;
+  string registrationNo = 3;
+}

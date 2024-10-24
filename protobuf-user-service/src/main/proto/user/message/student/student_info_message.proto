@@ -14,3 +14,7 @@ message StudentInfoMessage {
   utility.BoardMessage board = 14;
   utility.ClassMessage studentClass = 15;
 }
+
+message StudentInfoListMessage {
+  repeated StudentInfoMessage students = 1;
+}

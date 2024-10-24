@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.student;
+
+option java_multiple_files = true;
+
+import "user/enums/gender.proto";
+import "user/enums/religion.proto";
+
+message StudentSignupRequestWithoutCurriculum {
+  string name = 1;
+  string phone = 2;
+  enums.Gender gender = 3;
+  enums.Religion religion = 4;
+  string district = 5;
+  string email = 6;
+  string parentPhone = 7;
+}
