@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.user;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "user/message/role/role_dto_message.proto";
+import "user/enums/gender.proto";
+import "user/enums/religion.proto";
+import "user/message/permission/permission_message.proto";
+
+message UserMessage {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+  string phone = 4;
+  string phoneVerified = 5;
+  string address = 6;
+  google.protobuf.Timestamp dateOfBirth = 7;
+  string imageUrl = 8;
+  enums.Gender gender = 9;
+  enums.Religion religion = 10;
+  string district = 11;
+  role.RoleDtoListMessage roles = 12;
+  permission.PermissionListMessage permissions = 13;
+}
