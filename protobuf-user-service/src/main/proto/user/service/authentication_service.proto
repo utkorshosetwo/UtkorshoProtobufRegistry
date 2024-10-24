@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "user/message/user/authentication_request.proto";
+import "user/message/user/token_response.proto";
+import "user/message/user/user_register_request.proto";
+import "user/message/student/student_created_message.proto";
+import "user/message/user/phone_availability_response.proto";
+import "user/message/user/otp_verification_request.proto";
+import "user/message/user/otp_verification_response.proto";
+
+service AuthenticationService {
+  rpc authenticate(message.user.AuthenticationRequest) returns (message.user.TokenResponse) {};
+
+  rpc register(message.user.UserRegisterRequest) returns (message.student.StudentCreatedMessage) {};
+
+  rpc isAccountExistsByPhone(google.protobuf.StringValue) returns (google.protobuf.BoolValue) {};
+
+  rpc checkPhoneNumberAvailability(google.protobuf.StringValue) returns (message.user.PhoneAvailableResponse) {};
+
+  rpc verifyOTP(message.user.OtpVerificationRequest) returns (message.user.OtpVerificationResponse) {};
+
+  rpc forgotPassword(google.protobuf.StringValue) returns (google.protobuf.StringValue) {};
+
+  rpc resetPassword(google.protobuf.StringValue) returns (google.protobuf.StringValue) {};
+}

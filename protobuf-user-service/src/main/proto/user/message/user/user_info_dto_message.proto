@@ -23,5 +23,5 @@ message UserInfoDtoMessage {
   string district = 10;
   role.RoleDtoListMessage roles = 11;
   repeated string permissions = 12;
-  user.StudentDtoMessage student = 13;
+  student.StudentDtoMessage student = 13;
 }
