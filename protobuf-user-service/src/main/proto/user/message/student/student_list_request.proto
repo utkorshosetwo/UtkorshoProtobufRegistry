@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.student;
+
+option java_multiple_files = true;
+
+import "core/message/pagination_request.proto";
+
+message StudentListRequest {
+  core.message.PaginationRequest paginationRequest = 1;
+  string key = 2;
+}

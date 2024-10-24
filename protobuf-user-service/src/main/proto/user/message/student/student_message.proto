@@ -30,3 +30,7 @@ message StudentMessage {
   utility.GroupMessage group = 16;
   utility.SessionMessage session = 17;
 }
+
+message StudentListMessage {
+  repeated StudentMessage students = 1;
+}
