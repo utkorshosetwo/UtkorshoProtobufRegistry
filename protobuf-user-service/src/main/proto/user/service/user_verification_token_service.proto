@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.service;
+
+option java_multiple_files = true;
+
+import "user/message/utility/message.proto";
+import "user/message/user/user_verification_token_validation_result.proto";
+
+service UserVerificationTokenService {
+  rpc createVerificationToken(message.Message) returns (message.Message) {};
+
+  rpc validateVerificationToken(message.Message) returns (message.user.UserVerificationTokenValidationResult) {};
+}
