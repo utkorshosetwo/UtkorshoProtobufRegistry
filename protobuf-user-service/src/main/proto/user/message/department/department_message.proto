@@ -6,6 +6,10 @@ option java_multiple_files = true;
 
 import "google/protobuf/timestamp.proto";
 
+message DepartmentRequest {
+  repeated string fields = 1; // e.g., ["id", "name"] or empty for all fields
+}
+
 message DepartmentMessage {
   string id = 1;
   string name = 2;

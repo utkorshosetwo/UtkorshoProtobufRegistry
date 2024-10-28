@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>protobuf-user-service</artifactId>
-    <version>1.0.11-SNAPSHOT</version>
+    <version>1.0.12-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
