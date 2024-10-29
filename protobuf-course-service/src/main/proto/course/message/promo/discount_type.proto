@@ -8,3 +8,7 @@ enum DiscountType {
   FLAT = 0;
   PERCENTAGE = 1;
 }
+
+message DiscountTypeValue {
+  DiscountType discountType = 1;
+}
