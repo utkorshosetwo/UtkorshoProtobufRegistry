@@ -12,10 +12,7 @@ import "google/protobuf/empty.proto";
 message PromoUpdateMessage {
   google.protobuf.StringValue code = 1;
   google.protobuf.Int64Value discountAmount = 2;
-  oneof discountType {
-    DiscountType value = 3;
-    google.protobuf.Empty empty = 8;
-  }
+  DiscountType discountType = 3;
   google.protobuf.Timestamp expiryDate = 4;
   google.protobuf.Int64Value maxUsage = 5;
   google.protobuf.StringValue reference = 6;
