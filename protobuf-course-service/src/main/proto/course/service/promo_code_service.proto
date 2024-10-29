@@ -9,15 +9,17 @@ import "core/message/uuid_message.proto";
 import "course/message/promo/promo_create_message.proto";
 import "course/message/promo/promo_message.proto";
 import "course/message/promo/promo_update_message.proto";
+import "course/message/promo/promo_filter_message.proto";
+import "google/protobuf/wrappers.proto";
 
 service PromoCodeService {
   rpc createPromoCode(message.promo.PromoCodeListCreateMessage) returns (message.promo.PromoListMessage) {};
 
   rpc getPromoCode(core.message.UuidMessage) returns (message.promo.PromoMessage) {};
 
-  rpc getPromoCodes(core.message.UuidMessage) returns (message.promo.PromoListMessage) {};
+  rpc getPromoCodes(message.promo.PromoFilterMessage) returns (message.promo.PromoListMessage) {};
 
-  rpc countInStockPromoCode(core.message.UuidMessage) returns (message.promo.PromoMessage) {};
+  rpc getPromoCodeCount(message.promo.PromoFilterMessage) returns (google.protobuf.Int64Value) {};
 
   rpc updatePromoCode(message.promo.PromoUpdateMessage) returns (message.promo.PromoMessage) {};
 
