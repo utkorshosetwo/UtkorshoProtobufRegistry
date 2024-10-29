@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.promo;
+
+option java_multiple_files = true;
+
+import "course/message/promo/discount_type.proto";
+
+message PromoFilterMessage {
+  string courseId = 1;
+  bool active = 2;
+  string search = 3;
+  DiscountType discountType = 4;
+}
