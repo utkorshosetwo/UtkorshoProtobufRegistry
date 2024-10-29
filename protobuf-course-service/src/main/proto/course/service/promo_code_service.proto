@@ -15,7 +15,7 @@ import "google/protobuf/wrappers.proto";
 service PromoCodeService {
   rpc createPromoCode(message.promo.PromoCodeListCreateMessage) returns (message.promo.PromoListMessage) {};
 
-  rpc getPromoCode(core.message.UuidMessage) returns (message.promo.PromoMessage) {};
+  rpc getPromoCode(google.protobuf.StringValue) returns (message.promo.PromoMessage) {};
 
   rpc getPromoCodes(message.promo.PromoFilterMessage) returns (message.promo.PromoListMessage) {};
 
