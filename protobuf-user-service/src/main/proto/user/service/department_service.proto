@@ -15,7 +15,7 @@ service DepartmentService {
 
   rpc getDepartmentById(core.message.UuidMessage) returns (message.department.DepartmentMessage) {};
 
-  rpc getAllDepartments(message.department.DepartmentRequest) returns (message.department.DepartmentListMessage) {};
+  rpc getAllDepartments(google.protobuf.Empty) returns (message.department.DepartmentListMessage) {};
 
   rpc updateDepartment(message.department.DepartmentUpdateMessage) returns (message.department.DepartmentMessage) {};
 
