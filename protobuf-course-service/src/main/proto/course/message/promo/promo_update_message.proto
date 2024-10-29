@@ -6,14 +6,18 @@ option java_multiple_files = true;
 
 import "course/message/promo/discount_type.proto";
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
 
 message PromoUpdateMessage {
-  string promoId = 1;
-  string code = 2;
-  int64 discountAmount = 3;
-  DiscountType discountType = 4;
-  google.protobuf.Timestamp expiryDate = 5;
-  int64 maxUsage = 6;
-  string reference = 7;
-  string remarks = 8;
+  google.protobuf.StringValue code = 1;
+  google.protobuf.Int64Value discountAmount = 2;
+  oneof discountType {
+    DiscountType value = 3;
+    google.protobuf.Empty empty = 8;
+  }
+  google.protobuf.Timestamp expiryDate = 4;
+  google.protobuf.Int64Value maxUsage = 5;
+  google.protobuf.StringValue reference = 6;
+  google.protobuf.StringValue remarks = 7;
 }

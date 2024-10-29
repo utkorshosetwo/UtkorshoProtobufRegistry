@@ -23,5 +23,5 @@ service PromoCodeService {
 
   rpc updatePromoCode(message.promo.PromoUpdateMessage) returns (message.promo.PromoMessage) {};
 
-  rpc deletePromoCode(core.message.UuidMessage) returns (google.protobuf.Empty) {};
+  rpc deletePromoCode(google.protobuf.StringValue) returns (google.protobuf.Empty) {};
 }
