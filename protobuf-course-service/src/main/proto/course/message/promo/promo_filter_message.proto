@@ -10,5 +10,4 @@ message PromoFilterMessage {
   string courseId = 1;
   bool active = 2;
   string search = 3;
-  DiscountType discountType = 4;
 }
