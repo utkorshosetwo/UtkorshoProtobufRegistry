@@ -8,4 +8,6 @@ import "core/message/pagination_request.proto";
 
 message SubjectListRequest {
   core.message.PaginationRequest paginationRequest = 1;
+  repeated string classId = 2;
+  string search = 3;
 }
