@@ -4,6 +4,8 @@ package tech.utkorsho.protobuf.course.message.subjectLesson;
 
 option java_multiple_files = true;
 
+import "core/message/pagination_result.proto";
+
 message SubjectLessonMessage {
   string id = 1;
   string name = 2;
@@ -14,4 +16,5 @@ message SubjectLessonMessage {
 
 message SubjectLessonListMessage {
   repeated SubjectLessonMessage subjectLessons = 1;
+  optional core.message.PaginationResult paginationResult = 2;
 }

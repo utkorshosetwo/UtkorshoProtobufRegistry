@@ -9,4 +9,5 @@ import "core/message/pagination_request.proto";
 message SubjectChapterListRequest {
   core.message.PaginationRequest paginationRequest = 1;
   string subjectId = 2;
+  string search = 3;
 }
