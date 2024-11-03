@@ -13,3 +13,7 @@ message QuestionDetailCreateMessage {
   int32 marks = 6;
   string questionId = 7;
 }
+
+message QuestionDetailListCreateMessage {
+  repeated QuestionDetailCreateMessage questionDetails = 1;
+}

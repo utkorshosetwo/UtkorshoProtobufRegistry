@@ -8,3 +8,7 @@ message PracticeExamQuestionDetailMessage {
   string id = 1;
   string questionText = 2;
 }
+
+message PracticeExamQuestionDetailListMessage {
+  repeated PracticeExamQuestionDetailMessage questionDetails = 1;
+}
