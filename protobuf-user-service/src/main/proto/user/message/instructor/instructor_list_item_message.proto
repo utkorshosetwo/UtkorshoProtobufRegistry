@@ -24,3 +24,8 @@ message InstructorListItemMessage {
   string email = 11;
   string phone = 12;
 }
+
+
+message InstructorListMessage {
+  repeated InstructorListItemMessage instructors = 1;
+}
