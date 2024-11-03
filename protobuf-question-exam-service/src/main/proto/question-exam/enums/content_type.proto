@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.enums;
+
+option java_multiple_files = true;
+
+enum ContentType {
+  MCQ = 0;
+  CREATIVE = 1;
+  MCQ_AND_CREATIVE = 2;
+}
