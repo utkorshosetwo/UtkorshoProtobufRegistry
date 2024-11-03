@@ -10,6 +10,7 @@
         <module>protobuf-course-service</module>
         <module>protobuf-user-service</module>
         <module>protobuf-storage-service</module>
+        <module>protobuf-question-exam-service</module>
     </modules>
     <version>1.0.3-SNAPSHOT</version>
     <name>ProtobufRegistry</name>
