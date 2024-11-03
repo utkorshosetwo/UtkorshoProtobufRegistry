@@ -17,9 +17,9 @@ service RoleService {
 
   rpc getRoleById(core.message.UuidMessage) returns (message.role.RoleMessage) {};
 
-  rpc getAllRoles(google.protobuf.Empty) returns (message.role.RoleListMessage) {};
+  rpc getAllRoles(core.message.UuidMessageList) returns (message.role.RoleListMessage) {};
 
-  rpc getAllRolesByIds(core.message.UuidMessageList) returns (message.role.RoleListMessage) {};
+//  rpc getAllRolesByIds(core.message.UuidMessageList) returns (message.role.RoleListMessage) {};
 
   rpc updateRole(message.role.RoleUpdateMessage) returns (message.role.RoleMessage) {};
 
