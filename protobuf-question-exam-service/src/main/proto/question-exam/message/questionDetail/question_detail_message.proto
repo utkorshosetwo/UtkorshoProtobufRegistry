@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.questionDetail;
+
+option java_multiple_files = true;
+
+message QuestionDetailMessage {
+  string id = 1;
+  string serial = 2;
+  string questionText = 3;
+  string imageUrl = 4;
+  string answer = 5;
+  bool isCorrect = 6;
+  int32 marks = 7;
+  string questionId = 8;
+}
