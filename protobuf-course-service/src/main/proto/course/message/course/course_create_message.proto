@@ -19,7 +19,7 @@ message CourseCreateMessage {
   google.protobuf.Timestamp startDate = 8;
   ContentTemplate contentTemplate = 9;
   string moduleId = 10;
-  core.message.UuidMessageList classIs = 11;
+  core.message.UuidMessageList classIds = 11;
   core.message.UuidMessageList instructorIds = 12;
   string sessionId = 13;
   google.protobuf.Timestamp freeUntil = 14;
