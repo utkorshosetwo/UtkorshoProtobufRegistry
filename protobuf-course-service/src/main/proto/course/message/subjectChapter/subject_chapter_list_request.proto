@@ -11,5 +11,5 @@ message SubjectChapterListRequest {
   core.message.PaginationRequest paginationRequest = 1;
   string subjectId = 2;
   string search = 3;
-  course.message.subjectChapter.SubjectChapterStatus status = 6;
+  repeated course.message.subjectChapter.SubjectChapterStatus status = 6;
 }

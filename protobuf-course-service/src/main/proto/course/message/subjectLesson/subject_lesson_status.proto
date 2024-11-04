@@ -10,3 +10,7 @@ enum SubjectLessonStatus {
   INACTIVE = 2;
   DELETED = 3;
 }
+
+message SubjectLessonStatusValue {
+  SubjectLessonStatus value = 1;
+}

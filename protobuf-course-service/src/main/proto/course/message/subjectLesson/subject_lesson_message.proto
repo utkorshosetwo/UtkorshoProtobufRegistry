@@ -13,7 +13,7 @@ message SubjectLessonMessage {
   string label = 3;
   string description = 4;
   string coverPhotoUrl = 5;
-  course.message.subjectLesson.SubjectLessonStatus status = 6;
+  course.message.subjectLesson.SubjectLessonStatusValue status = 6;
 }
 
 message SubjectLessonListMessage {

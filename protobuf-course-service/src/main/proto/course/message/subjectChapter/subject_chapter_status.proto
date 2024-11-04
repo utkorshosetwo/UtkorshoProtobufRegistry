@@ -10,3 +10,7 @@ enum SubjectChapterStatus {
   INACTIVE = 2;
   DELETED = 3;
 }
+
+message SubjectChapterStatusValue {
+  SubjectChapterStatus value = 1;
+}

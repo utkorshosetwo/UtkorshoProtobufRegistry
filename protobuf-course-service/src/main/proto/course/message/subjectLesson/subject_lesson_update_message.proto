@@ -13,5 +13,5 @@ message SubjectLessonUpdateMessage {
   google.protobuf.StringValue label = 3;
   google.protobuf.StringValue description = 4;
   google.protobuf.StringValue coverPhotoUrl = 5;
-  course.message.subjectLesson.SubjectLessonStatus status = 6;
+  course.message.subjectLesson.SubjectLessonStatusValue status = 6;
 }
