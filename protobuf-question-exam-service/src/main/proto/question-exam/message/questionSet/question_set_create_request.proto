@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.questionSet;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "question-exam/enums/content_type.proto";
+import "question-exam/enums/exam_type.proto";
+
+message QuestionSetCreateMessage {
+  string title = 1;
+  string description = 2;
+  enums.ContentType contentType = 3;
+  int32 noOfQuestion = 4;
+  int32 totalTime = 5;
+  google.protobuf.Timestamp startDate = 6;
+  google.protobuf.Timestamp endDate = 7;
+  string section = 8;
+  enums.ExamType examType = 9;
+}

@@ -5,7 +5,7 @@ package tech.utkorsho.protobuf.questionexam.enums;
 option java_multiple_files = true;
 
 enum QuestionTemplate {
-  GENERAL = 0;
-  MATH = 1;
-  MCQ = 2;
+  QT_GENERAL = 0;
+  QT_MATH = 1;
+  QT_MCQ = 2;
 }

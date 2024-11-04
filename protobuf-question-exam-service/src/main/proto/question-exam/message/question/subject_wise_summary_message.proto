@@ -4,9 +4,6 @@ package tech.utkorsho.protobuf.questionexam.message.question;
 
 option java_multiple_files = true;
 
-import "google/protobuf/timestamp.proto";
-import "question-exam/enums/question_type.proto";
-
 message SubjectWiseSummaryMessage {
   string id = 1;
   string name = 2;

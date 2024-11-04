@@ -13,3 +13,7 @@ message PracticeExamQuestionMessage {
   bool multi = 4;
   questionDetail.PracticeExamQuestionDetailListMessage questionDetails = 5;
 }
+
+message PracticeExamQuestionListMessage {
+  repeated PracticeExamQuestionMessage questions = 1;
+}

@@ -8,3 +8,7 @@ message TagMessage {
   string id = 1;
   string name = 2;
 }
+
+message TagListMessage {
+  repeated TagMessage tags = 1;
+}
