@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.instructor;
+
+import "core/message/uuid_message.proto";
+
+option java_multiple_files = true;
+
+
+message InstructorRequestMessage {
+  repeated core.message.UuidMessage instructorIds = 1;
+}

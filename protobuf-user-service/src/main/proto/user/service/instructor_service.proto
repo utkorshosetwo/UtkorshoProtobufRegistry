@@ -10,13 +10,15 @@ import "user/message/instructor/instructor_list_item_message.proto";
 import "user/message/instructor/instructor_detail_message.proto";
 import "user/message/instructor/instructor_create_message.proto";
 import "user/message/instructor/instructor_update_message.proto";
+import "user/message/instructor/instructor_request_message.proto";
+
 
 service InstructorService {
   rpc createInstructor(message.instructor.InstructorCreateMessage) returns (message.instructor.InstructorDetailsResponse) {};
 
   rpc getInstructorById(core.message.UuidMessage) returns (message.instructor.InstructorDetailsResponse) {};
 
-  rpc getAllInstructors(google.protobuf.Empty) returns (message.instructor.InstructorListItemMessage) {};
+  rpc getAllInstructors(message.instructor.InstructorRequestMessage) returns (message.instructor.InstructorListMessage) {};
 
   rpc updateInstructor(message.instructor.InstructorUpdateMessage) returns (message.instructor.InstructorDetailsResponse) {};
 

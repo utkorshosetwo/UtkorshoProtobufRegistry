@@ -15,7 +15,7 @@ import "user/message/student/student_info_message.proto";
 import "user/message/student/student_dto_message.proto";
 
 service StudentService {
-  rpc createStudent(message.student.StudentSignupResponseMessage) returns (message.student.StudentSignupRequestWithoutCurriculum) {};
+  rpc createStudent(message.student.StudentSignupRequestWithoutCurriculum) returns (message.student.StudentSignupResponseMessage) {};
 
   rpc getStudentById(google.protobuf.StringValue) returns (message.student.StudentMessage) {} ;
 
