@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answerDetail;
+
+option java_multiple_files = true;
+
+import "core/message/uuid_message.proto";
+
+message PracticeExamAnswerDetailCreateMessage {
+  string questionId = 1;
+  core.message.UuidMessageList givenQuestionDetailIds = 2;
+  core.message.UuidMessageList markedQuestionDetailIds = 3;
+}
