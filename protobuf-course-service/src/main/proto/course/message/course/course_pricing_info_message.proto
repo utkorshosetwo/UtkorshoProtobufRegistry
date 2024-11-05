@@ -4,6 +4,18 @@ package tech.utkorsho.protobuf.course.message.course;
 
 option java_multiple_files = true;
 
-message CoursePricingInfoMessage {
+import "course/message/promo/discount_type.proto";
+import "google/protobuf/timestamp.proto";
 
+message CoursePricingInfoMessage {
+  double price = 1;
+  promo.DiscountType discountType = 2;
+  double discountValue = 3;
+  double specialOfferPrice = 4;
+  string specialOfferName = 5;
+  string specialOfferDescription = 6;
+  google.protobuf.Timestamp specialOfferStartDate = 7;
+  google.protobuf.Timestamp specialOfferEndDate = 8;
+  bool hasSpecialOffer = 9;
+  bool hasDiscount = 10;
 }
