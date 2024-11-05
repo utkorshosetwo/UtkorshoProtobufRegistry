@@ -11,3 +11,7 @@ message PracticeExamAnswerDetailCreateMessage {
   core.message.UuidMessageList givenQuestionDetailIds = 2;
   core.message.UuidMessageList markedQuestionDetailIds = 3;
 }
+
+message PracticeExamAnswerDetailListCreateMessage {
+  repeated PracticeExamAnswerDetailCreateMessage answerDetails = 1;
+}

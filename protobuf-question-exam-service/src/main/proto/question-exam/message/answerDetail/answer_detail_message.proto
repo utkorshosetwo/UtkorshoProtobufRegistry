@@ -14,3 +14,7 @@ message AnswerDetailMessage {
   core.message.UuidMessageList givenQuestionDetailIds = 5;
   core.message.UuidMessageList markedQuestionDetailIds = 6;
 }
+
+message AnswerDetailListMessage {
+  repeated AnswerDetailMessage answerDetails = 1;
+}

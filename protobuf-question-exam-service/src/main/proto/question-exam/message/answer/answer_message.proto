@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answer;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "question-exam/message/answerDetail/answer_detail_message.proto";
+import "question-exam/message/misc/user_message.proto";
+
+message AnswerMessage {
+  string id = 1;
+  google.protobuf.Timestamp createdAt = 2;
+  google.protobuf.Timestamp updatedAt = 3;
+  string questionSetId = 4;
+  string userId = 5;
+  misc.UserMessage user = 6;
+  int32 takenTime = 7;
+  float averageTime = 8;
+  bool submitted = 9;
+  bool evaluated = 10;
+  answerDetail.AnswerDetailListMessage answerDetails = 11;
+}
