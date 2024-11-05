@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
+
+option java_multiple_files = true;
+
+import "question-exam/message/answerEvaluationDetail/answer_evaluation_detail_create_request.proto";
+
+message AnswerEvaluationMessage {
+  string id = 1;
+  string questionSetId = 2;
+  string answerId = 3;
+  int32 totalMarks = 4;
+  float achievedMarks = 5;
+  float percentage = 6;
+  string grade = 7;
+  int32 takenTime = 8;
+  float averageTime = 9;
+  answerEvaluationDetail.AnswerEvaluationDetailListCreateMessage answerEvaluationDetails = 10;
+}

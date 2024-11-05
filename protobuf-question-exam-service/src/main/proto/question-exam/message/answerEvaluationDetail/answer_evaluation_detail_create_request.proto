@@ -9,3 +9,7 @@ message AnswerEvaluationDetailCreateRequest {
   float marks = 2;
   string questionId = 3;
 }
+
+message AnswerEvaluationDetailListCreateMessage {
+  repeated AnswerEvaluationDetailCreateRequest answerEvaluationDetails = 1;
+}

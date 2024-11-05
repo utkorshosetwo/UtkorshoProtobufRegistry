@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
+
+option java_multiple_files = true;
+
+import "question-exam/message/question/question_message.proto";
+import "question-exam/message/answerDetail/answer_detail_message.proto";
+
+message AnswerEvaluationDetailWithQuestionAnswer {
+  string id = 1;
+  string imageUrl = 2;
+  float marks = 3;
+  string questionId = 4;
+  string answerEvaluationId = 5;
+  question.QuestionMessage question = 6;
+  answerDetail.AnswerDetailMessage answerDetails = 7;
+}
+
+message AnswerEvaluationDetailWithQuestionAnswerList {
+  repeated AnswerEvaluationDetailWithQuestionAnswer answerEvaluationDetails = 1;
+}
