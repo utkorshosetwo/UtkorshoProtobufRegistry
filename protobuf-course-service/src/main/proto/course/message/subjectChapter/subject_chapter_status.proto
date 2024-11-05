@@ -1,0 +1,16 @@
+syntax="proto3";
+
+package tech.utkorsho.protobuf.course.message.subjectChapter;
+
+option java_multiple_files = true;
+
+enum SubjectChapterStatus {
+  ACTIVE = 0;
+  UNLISTED = 1;
+  INACTIVE = 2;
+  DELETED = 3;
+}
+
+message SubjectChapterStatusValue {
+  SubjectChapterStatus value = 1;
+}

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.course;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "core/message/uuid_message.proto";
+import "course/message/course/content_template.proto";
+import "course/message/course/course_pricing_info_message.proto";
+import "course/message/course/course_feature_info_message.proto";
+
+message CourseInfoMessage {
+  string id = 1;
+  string name = 2;
+  string courseCode = 3;
+  string description = 4;
+  string iconUrl = 5;
+  string coverPhotoUrl = 6;
+  CoursePricingInfoMessage pricingInfo = 7;
+  CourseFeatureInfoListMessage featureInfo = 8;
+}
+
+
+message CourseInfoListMessage {
+  repeated CourseInfoMessage courses = 1;
+}

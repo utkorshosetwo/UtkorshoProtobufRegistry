@@ -4,9 +4,18 @@ package tech.utkorsho.protobuf.course.message.course;
 
 import "core/message/pagination_request.proto";
 import "core/message/uuid_message.proto";
+import "google/protobuf/wrappers.proto";
 
 message CourseListRequest {
   core.message.PaginationRequest paginationRequest = 1;
-  bool includeOfferDiscount = 2;
-  core.message.UuidMessageList classIds = 3;
+  google.protobuf.BoolValue includeOfferDiscount = 2;
+  google.protobuf.BoolValue includeFeatures = 3;
+  google.protobuf.BoolValue freeCourses = 4;
+  google.protobuf.BoolValue trialCourses = 5;
+  google.protobuf.BoolValue featuredCourses = 6;
+  core.message.UuidMessageList courseIds = 7;
+  core.message.UuidMessage moduleId = 8;
+  core.message.UuidMessage sessionId = 9;
+  google.protobuf.StringValue search = 10;
+  google.protobuf.StringValue userId = 11;
 }

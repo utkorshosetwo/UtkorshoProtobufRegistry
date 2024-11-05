@@ -4,13 +4,19 @@ package tech.utkorsho.protobuf.course.message.subjectChapter;
 
 option java_multiple_files = true;
 
+import "core/message/pagination_result.proto";
+import "course/message/subjectChapter/subject_chapter_status.proto";
+
 message SubjectChapterMessage {
-  string name = 1;
-  string label = 2;
-  string description = 3;
-  string coverPhotoUrl = 4;
+  string id = 1;
+  string name = 2;
+  string label = 3;
+  string description = 4;
+  string coverPhotoUrl = 5;
+  course.message.subjectChapter.SubjectChapterStatus status = 6;
 }
 
 message SubjectChapterListMessage {
   repeated SubjectChapterMessage subjectChapters = 1;
+  optional core.message.PaginationResult paginationResult = 2;
 }
