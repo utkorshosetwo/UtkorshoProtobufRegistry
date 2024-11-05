@@ -17,4 +17,5 @@ message CourseListRequest {
   core.message.UuidMessage moduleId = 8;
   core.message.UuidMessage sessionId = 9;
   google.protobuf.StringValue search = 10;
+  google.protobuf.StringValue userId = 11;
 }
