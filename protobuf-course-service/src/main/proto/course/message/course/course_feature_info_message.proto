@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.course;
+
+option java_multiple_files = true;
+
+message CourseFeatureInfoMessage {
+
+}
+
+message CourseFeatureInfoListMessage {
+  repeated CourseFeatureInfoMessage features = 1;
+}
