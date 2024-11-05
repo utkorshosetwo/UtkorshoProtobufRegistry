@@ -16,7 +16,7 @@ import "user/message/user/user_update_request.proto";
 import "user/message/user/password_change_request.proto";
 
 service UserService {
-  rpc createUser(message.user.UserCreateMessage) returns (message.user.UserCreatedMessage) {};
+  rpc createUser(message.user.UserCreateMessage) returns (message.user.UserMessage) {};
 
   rpc findUserById(core.message.UuidMessage) returns (message.user.UserMessage) {};
 
