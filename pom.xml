@@ -12,7 +12,7 @@
         <module>protobuf-storage-service</module>
         <module>protobuf-question-exam-service</module>
     </modules>
-    <version>1.0.8-SNAPSHOT</version>
+    <version>1.0.9-SNAPSHOT</version>
     <name>ProtobufRegistry</name>
 
     <properties>

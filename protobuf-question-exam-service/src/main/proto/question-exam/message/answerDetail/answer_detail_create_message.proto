@@ -12,6 +12,7 @@ message AnswerDetailCreateMessage {
   string imageUrl = 3;
   core.message.UuidMessageList givenQuestionDetailIds = 4;
   core.message.UuidMessageList markedQuestionDetailIds = 5;
+  string answerId = 6;
 }
 
 message AnswerDetailListCreateMessage {

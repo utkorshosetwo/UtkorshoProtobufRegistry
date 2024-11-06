@@ -21,3 +21,7 @@ message AnswerMessage {
   bool evaluated = 10;
   answerDetail.AnswerDetailListMessage answerDetails = 11;
 }
+
+message AnswerListMessage {
+  repeated AnswerMessage answers = 1;
+}
