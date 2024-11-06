@@ -10,6 +10,7 @@ import "course/message/syllabus/syllabus_list_request.proto";
 import "course/message/syllabus/syllabus_update_message.proto";
 import "course/message/syllabus/syllabus_tree.proto";
 import "core/message/uuid_message.proto";
+import "google/protobuf/empty.proto";
 
 service SyllabusService {
   rpc createSyllabus(message.syllabus.SyllabusCreateMessage) returns (message.syllabus.SyllabusMessage) {};
@@ -19,6 +20,8 @@ service SyllabusService {
   rpc getSyllabusById(core.message.UuidMessage) returns (message.syllabus.SyllabusMessage) {};
 
   rpc updateSyllabus(message.syllabus.SyllabusUpdateMessage) returns (message.syllabus.SyllabusMessage) {};
+
+  rpc deleteSyllabus(core.message.UuidMessage) returns (google.protobuf.Empty) {};
 
   rpc getCourseSyllabusTree(core.message.UuidMessage) returns (message.syllabus.SyllabusTree) {};
 }
