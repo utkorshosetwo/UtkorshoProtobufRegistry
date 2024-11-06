@@ -8,6 +8,7 @@ message AnswerEvaluationDetailCreateRequest {
   string imageUrl = 1;
   float marks = 2;
   string questionId = 3;
+  string answerEvaluationId = 4;
 }
 
 message AnswerEvaluationDetailListCreateMessage {

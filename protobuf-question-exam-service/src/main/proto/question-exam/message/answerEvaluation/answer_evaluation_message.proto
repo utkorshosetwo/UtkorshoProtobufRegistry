@@ -18,3 +18,7 @@ message AnswerEvaluationMessage {
   float averageTime = 9;
   answerEvaluationDetail.AnswerEvaluationDetailListCreateMessage answerEvaluationDetails = 10;
 }
+
+message AnswerEvaluationListMessage {
+  repeated AnswerEvaluationMessage answerEvaluations = 1;
+}
