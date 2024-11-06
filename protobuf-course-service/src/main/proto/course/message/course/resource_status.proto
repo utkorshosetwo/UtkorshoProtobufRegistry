@@ -10,3 +10,7 @@ enum ResourceStatus {
   UNPUBLISHED = 2;
   DELETED = 3;
 }
+
+message ResourceStatusValue {
+  ResourceStatus value = 1;
+}
