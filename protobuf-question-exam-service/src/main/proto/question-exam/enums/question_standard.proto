@@ -15,3 +15,7 @@ enum QuestionStandard {
   ACADEMIC = 7;
   //  NO_LIMIT = 8;
 }
+
+message QuestionStandardList {
+  repeated QuestionStandard questionStandards = 1;
+}

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "core/message/uuid_message.proto";
+import "question-exam/message/question/question_message.proto";
+import "question-exam/message/question/question_create_message.proto";
+import "question-exam/message/question/question_list_request.proto";
+import "question-exam/message/question/question_update_message.proto";
+
+service QuestionService {
+  rpc create(message.question.QuestionCreateMessage) returns (message.question.QuestionMessage) {};
+
+  rpc read(core.message.UuidMessage) returns (message.question.QuestionMessage) {};
+
+  rpc readAll(message.question.QuestionListRequest) returns (message.question.QuestionListMessage) {};
+
+  rpc update(message.question.QuestionUpdateMessage) returns (message.question.QuestionMessage) {};
+
+  rpc delete(core.message.UuidMessage) returns (google.protobuf.StringValue) {};
+}

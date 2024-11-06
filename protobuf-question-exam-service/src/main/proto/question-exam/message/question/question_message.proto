@@ -33,3 +33,7 @@ message QuestionMessage {
   tag.TagListCreateMessage tags = 17;
   enums.QuestionStandard questionStandards = 18;
 }
+
+message QuestionListMessage {
+  repeated QuestionMessage questions = 1;
+}
