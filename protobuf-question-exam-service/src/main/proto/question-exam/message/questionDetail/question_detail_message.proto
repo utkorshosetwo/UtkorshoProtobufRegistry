@@ -14,3 +14,7 @@ message QuestionDetailMessage {
   int32 marks = 7;
   string questionId = 8;
 }
+
+message QuestionDetailListMessage {
+  repeated QuestionDetailMessage questions = 1;
+}

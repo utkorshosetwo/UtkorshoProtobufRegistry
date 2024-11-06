@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.service;
+
+option java_multiple_files = true;
+
+import "core/message/uuid_message.proto";
+import "question-exam/message/questionDetail/question_detail_message.proto";
+import "question-exam/message/questionDetail/question_detail_create_message.proto";
+
+service QuestionDetailService {
+  rpc read(core.message.UuidMessage) returns (message.questionDetail.QuestionDetailMessage) {};
+
+  rpc listCreateOrUpdate(message.questionDetail.QuestionDetailListCreateMessage) returns (message.questionDetail.QuestionDetailListMessage) {};
+}
