@@ -10,3 +10,7 @@ enum SyllabusType {
   CLASS = 2;
   LESSON = 3;
 }
+
+message SyllabusTypeValue {
+  SyllabusType value = 1;
+}
