@@ -31,3 +31,7 @@ message QuestionSetMessage {
   tag.TagListMessage tags = 17;
   string answerEvaluationId = 18;
 }
+
+message QuestionSetListMessage {
+  repeated QuestionSetMessage questionSets = 1;
+}
