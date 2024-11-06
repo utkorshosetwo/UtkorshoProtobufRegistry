@@ -9,6 +9,7 @@ import "core/message/uuid_message.proto";
 import "course/message/course/content_template.proto";
 import "course/message/course/course_pricing_info_message.proto";
 import "course/message/course/course_feature_info_message.proto";
+import "core/message/pagination_result.proto";
 
 message CourseInfoMessage {
   string id = 1;
@@ -24,4 +25,5 @@ message CourseInfoMessage {
 
 message CourseInfoListMessage {
   repeated CourseInfoMessage courses = 1;
+  optional core.message.PaginationResult paginationResult = 2;
 }
