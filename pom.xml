@@ -11,7 +11,7 @@
         <module>protobuf-user-service</module>
         <module>protobuf-storage-service</module>
     </modules>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
     <name>ProtobufRegistry</name>
 
     <properties>

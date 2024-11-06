@@ -6,6 +6,7 @@ option java_multiple_files = true;
 
 import "course/message/syllabus/syllabus_type.proto";
 import "google/protobuf/wrappers.proto";
+import "core/message/status_enum.proto";
 
 message SyllabusUpdateMessage {
   google.protobuf.StringValue id = 1;
@@ -16,4 +17,5 @@ message SyllabusUpdateMessage {
   google.protobuf.StringValue coverPhotoUrl = 6;
   google.protobuf.StringValue courseId = 7;
   syllabus.SyllabusTypeValue syllabusType = 8;
+  core.message.StatusValue status = 9;
 }
