@@ -10,6 +10,6 @@ message RoleDtoMessage {
   string description = 3;
 }
 
-//message RoleDtoListMessage {
-//  repeated RoleDtoMessage roles = 1;
-//}
+message RoleDtoListMessage {
+  repeated RoleDtoMessage roles = 1;
+}

@@ -11,6 +11,6 @@ message PermissionMessage {
   string description = 4;
 }
 
-//message PermissionListMessage {
-//  repeated PermissionMessage permissions = 1;
-//}
+message PermissionListMessage {
+  repeated PermissionMessage permissions = 1;
+}
