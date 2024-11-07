@@ -22,6 +22,6 @@ message UserMessage {
   enums.Gender gender = 9;
   enums.Religion religion = 10;
   string district = 11;
-  role.RoleDtoListMessage roles = 12;
-  permission.PermissionListMessage permissions = 13;
+  repeated role.RoleDtoMessage roles = 12;
+  repeated permission.PermissionMessage permissions = 13;
 }
