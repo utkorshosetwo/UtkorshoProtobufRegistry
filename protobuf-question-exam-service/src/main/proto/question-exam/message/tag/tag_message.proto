@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.tag;
+
+option java_multiple_files = true;
+
+message TagMessage {
+  string id = 1;
+  string name = 2;
+}
+
+message TagListMessage {
+  repeated TagMessage tags = 1;
+}

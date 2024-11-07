@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.question;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "core/message/uuid_message.proto";
+import "core/message/pagination_request.proto";
+import "core/message/status_enum.proto";
+import "question-exam/enums/publish_status.proto";
+import "question-exam/enums/question_type.proto";
+import "question-exam/enums/difficulty_level.proto";
+import "question-exam/enums/question_standard.proto";
+
+message QuestionListRequest {
+  core.message.PaginationRequest paginationRequest = 1;
+  core.message.Status status = 2;
+  enums.PublishStatus publishStatus = 3;
+  enums.QuestionType questionType = 4;
+  string subjectId = 5;
+  string fileName = 6;
+  enums.DifficultyLevel difficultyLevel = 7;
+  repeated google.protobuf.StringValue tagNames = 8;
+  core.message.UuidMessageList subjectLessonIds = 9;
+  enums.QuestionStandardList questionStandards = 10;
+}

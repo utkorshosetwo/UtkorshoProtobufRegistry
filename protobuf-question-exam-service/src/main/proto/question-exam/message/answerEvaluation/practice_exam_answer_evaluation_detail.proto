@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
+
+option java_multiple_files = true;
+
+import "core/message/uuid_message.proto";
+import "question-exam/message/question/question_message.proto";
+
+message PracticeExamAnswerEvaluationDetail {
+  float marks = 1;
+  question.QuestionMessage question = 2;
+  core.message.UuidMessageList givenQuestionDetailIds = 3;
+  core.message.UuidMessageList markedQuestionDetailIds = 4;
+}
+
+message PracticeExamAnswerEvaluationDetailList {
+  repeated PracticeExamAnswerEvaluationDetail answerEvaluationDetails = 1;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.questionSet;
+
+option java_multiple_files = true;
+
+import "question-exam/message/question/practice_exam_question_message.proto";
+
+message PracticeExamQuestionSetResponse {
+  string id = 1;
+  int32 marks = 2;
+  int32 noOfQuestions = 3;
+  int32 totalTime = 4;
+  string createdAt = 5;
+  question.PracticeExamQuestionListMessage questions = 6;
+}
