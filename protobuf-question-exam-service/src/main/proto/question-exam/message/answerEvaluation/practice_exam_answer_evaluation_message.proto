@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
+
+option java_multiple_files = true;
+
+import "question-exam/message/answerEvaluation/practice_exam_answer_evaluation_detail.proto";
+
+message PracticeExamAnswerEvaluationMessage {
+  int32 totalMarks = 1;
+  float achievedMarks = 2;
+  float accuracy = 3;
+  string grade = 4;
+  int32 takenTime = 5;
+  float averageTime = 6;
+  answerEvaluation.PracticeExamAnswerEvaluationDetailList answerEvaluationDetails = 7;
+}

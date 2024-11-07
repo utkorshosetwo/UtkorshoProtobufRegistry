@@ -5,14 +5,17 @@ package tech.utkorsho.protobuf.course.message.syllabus;
 option java_multiple_files = true;
 
 import "course/message/syllabus/syllabus_type.proto";
+import "google/protobuf/wrappers.proto";
+import "core/message/status_enum.proto";
 
 message SyllabusUpdateMessage {
-  string id = 1;
-  string label = 2;
-  string name = 3;
-  string description = 4;
-  string iconUrl = 5;
-  string coverPhotoUrl = 6;
-  string courseId = 7;
-  syllabus.SyllabusType syllabusType = 8;
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue label = 2;
+  google.protobuf.StringValue name = 3;
+  google.protobuf.StringValue description = 4;
+  google.protobuf.StringValue iconUrl = 5;
+  google.protobuf.StringValue coverPhotoUrl = 6;
+  google.protobuf.StringValue courseId = 7;
+  syllabus.SyllabusTypeValue syllabusType = 8;
+  core.message.StatusValue status = 9;
 }

@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.question;
+
+option java_multiple_files = true;
+
+import "core/message/uuid_message.proto";
+import "question-exam/enums/difficulty_level.proto";
+import "question-exam/enums/question_type.proto";
+import "question-exam/enums/question_template.proto";
+import "question-exam/enums/publish_status.proto";
+import "question-exam/enums/question_standard.proto";
+import "question-exam/message/questionDetail/question_detail_create_message.proto";
+import "question-exam/message/tag/tag_create_message.proto";
+
+message QuestionMessage {
+  string id = 1;
+  string questionNo = 2;
+  string description = 3;
+  string explanation = 4;
+  string imageUrl = 5;
+  int32 marks = 6;
+  int32 noOfOption = 7;
+  enums.DifficultyLevel difficultyLevel = 8;
+  enums.QuestionType questionType = 9;
+  enums.QuestionTemplate template = 10;
+  enums.PublishStatus publishStatus = 11;
+  string subjectId = 12;
+  string fileName = 13;
+  core.message.UuidMessageList subjectLessonIds = 14;
+  bool multi = 15;
+  questionDetail.QuestionDetailListCreateMessage questionDetails = 16;
+  tag.TagListCreateMessage tags = 17;
+  enums.QuestionStandard questionStandards = 18;
+}
+
+message QuestionListMessage {
+  repeated QuestionMessage questions = 1;
+}

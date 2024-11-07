@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answerDetail;
+
+option java_multiple_files = true;
+
+import "core/message/uuid_message.proto";
+
+message AnswerDetailCreateMessage {
+  string questionId = 1;
+  string answerText = 2;
+  string imageUrl = 3;
+  core.message.UuidMessageList givenQuestionDetailIds = 4;
+  core.message.UuidMessageList markedQuestionDetailIds = 5;
+  string answerId = 6;
+}
+
+message AnswerDetailListCreateMessage {
+  repeated AnswerDetailCreateMessage answerDetails = 1;
+}

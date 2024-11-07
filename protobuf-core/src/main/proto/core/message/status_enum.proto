@@ -9,3 +9,7 @@ enum Status {
   INACTIVE = 1;
   DELETED = 2;
 }
+
+message StatusValue {
+  Status value = 1;
+}

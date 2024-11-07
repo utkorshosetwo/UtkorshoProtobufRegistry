@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.service;
+
+option java_multiple_files = true;
+
+import "question-exam/message/answerEvaluationDetail/answer_evaluation_detail_create_request.proto";
+import "question-exam/message/answerEvaluationDetail/answer_evaluation_detail_message.proto";
+
+service AnswerEvaluationDetailService {
+  rpc listCreate(message.answerEvaluationDetail.AnswerEvaluationDetailListCreateMessage) returns (message.answerEvaluationDetail.AnswerEvaluationDetailListMessage) {};
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answer;
+
+option java_multiple_files = true;
+
+message AnswerReadMessage {
+  string id = 1;
+  bool userDataRequired = 2;
+}
