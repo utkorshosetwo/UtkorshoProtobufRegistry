@@ -7,22 +7,21 @@ option java_multiple_files = true;
 import "google/protobuf/timestamp.proto";
 import "core/message/uuid_message.proto";
 import "course/message/course/content_template.proto";
+import "google/protobuf/wrappers.proto";
+import "course/message/course/resource_status.proto";
 
 message CourseUpdateMessage {
-  string id = 1;
-  string name = 2;
-  string courseCode = 3;
-  string description = 4;
-  string iconUrl = 5;
-  string coverPhotoUrl = 6;
-  string videoUrl = 7;
-  bool isFeatured = 8;
+  core.message.UuidMessage id = 1;
+  google.protobuf.StringValue name = 2;
+  google.protobuf.StringValue courseCode = 3;
+  google.protobuf.StringValue description = 4;
+  google.protobuf.StringValue coverPhotoUrl = 6;
+  google.protobuf.StringValue videoUrl = 7;
+  google.protobuf.BoolValue isFeatured = 8;
   google.protobuf.Timestamp startDate = 9;
-  ContentTemplate contentTemplate = 10;
-  //  string moduleId = 11;
-  core.message.UuidMessageList classIs = 12;
-  core.message.UuidMessageList instructorIds = 13;
-  string sessionId = 14;
-  google.protobuf.Timestamp trialStart = 15;
-  google.protobuf.Timestamp trialEnd = 16;
+  google.protobuf.StringValue moduleId = 10;
+  core.message.UuidMessageList classIds = 11;
+  core.message.UuidMessageList instructorIds = 12;
+  google.protobuf.StringValue sessionId = 13;
+  course.ResourceStatusValue status = 14;
 }

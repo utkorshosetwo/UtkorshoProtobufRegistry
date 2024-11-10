@@ -42,15 +42,7 @@ service CourseService {
 
   rpc getCourseTree(google.protobuf.Empty) returns (course.message.course.CourseTreeListMessage) {};
 
-  rpc getCoursesByModule(core.message.UuidMessage) returns (course.message.course.CourseMessage) {};
-
-  rpc getCoursesBySession(core.message.UuidMessage) returns (course.message.course.CourseListMessage) {};
-
-  rpc getCoursesBySessionAndModule(course.message.course.CourseRequestBySessionAndModule) returns (course.message.course.CourseWithModule) {};
-
   rpc getCourseTreeById(core.message.UuidMessage) returns (course.message.course.CourseTreeMessage) {};
-
-  rpc getUserRecommendedCourses(message.course.UserRecommendedCourseListRequest) returns (course.message.course.CourseListMessage) {};
 
   rpc createCourseFeature(message.course.CourseFeatureCreateRequest) returns (course.message.course.CourseMessage) {};
 
@@ -63,8 +55,4 @@ service CourseService {
   rpc removeSubCourse(message.course.SubCourseRemoveRequest) returns (google.protobuf.Empty) {};
 
   rpc getCourseInstructors(core.message.UuidMessage) returns (core.message.UuidMessageList) {};
-
-  rpc getFreeCourses(message.course.CourseListRequest) returns (message.course.CourseListMessage) {};
-
-  rpc getTrialCourses(message.course.CourseListRequest) returns (message.course.CourseListMessage) {};
 }
