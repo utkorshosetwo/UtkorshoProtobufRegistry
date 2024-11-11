@@ -36,7 +36,7 @@ service CourseService {
 
   rpc deleteCourse(core.message.UuidMessage) returns (google.protobuf.Empty) {};
 
-  rpc updateCoursePrice(message.course.CoursePriceUpdateRequest) returns (course.message.course.CoursePriceUpdateResponse) {};
+  rpc updateCoursePrice(message.course.CoursePriceUpdateRequest) returns (course.message.course.CourseMessage) {};
 
   rpc updateCourseContent(message.course.CourseContentUpdateRequest) returns (google.protobuf.Empty) {};
 

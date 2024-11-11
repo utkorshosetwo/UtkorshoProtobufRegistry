@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>protobuf-course-service</artifactId>
-    <version>1.0.29-SNAPSHOT</version>
+    <version>1.0.31-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>

@@ -8,3 +8,7 @@ enum PricingType {
   FREE = 0;
   PAID = 1;
 }
+
+message PricingTypeValue {
+  PricingType value = 1;
+}

@@ -5,12 +5,13 @@ package tech.utkorsho.protobuf.course.message.course;
 option java_multiple_files = true;
 
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
 import "course/message/priceCalculation/pricing_type.proto";
 
 message CoursePriceUpdateRequest {
   string courseId = 1;
-  double price = 2;
+  google.protobuf.DoubleValue price = 2;
   google.protobuf.Timestamp trialStart = 3;
   google.protobuf.Timestamp trialEnd = 4;
-  priceCalculation.PricingType pricingType = 5;
+  priceCalculation.PricingTypeValue pricingType = 5;
 }
