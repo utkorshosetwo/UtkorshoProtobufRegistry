@@ -14,6 +14,7 @@ import "user/message/user/user_message.proto";
 import "user/message/user/user_basic_info_message.proto";
 import "user/message/user/user_update_request.proto";
 import "user/message/user/password_change_request.proto";
+import "user/message/user/password_reset_request.proto";
 
 service UserService {
   rpc createUser(message.user.UserCreateMessage) returns (message.user.UserCreatedMessage) {};
@@ -34,7 +35,7 @@ service UserService {
 
   rpc checkPhoneNumberAvailability(google.protobuf.StringValue) returns (google.protobuf.BoolValue) {};
 
-  rpc resetPassword(google.protobuf.StringValue) returns (google.protobuf.StringValue) {};
+  rpc resetPassword(message.user.PasswordResetRequest) returns (google.protobuf.StringValue) {};
 
   rpc changePassword(message.user.PasswordChangeRequest) returns (google.protobuf.StringValue) {};
 }
