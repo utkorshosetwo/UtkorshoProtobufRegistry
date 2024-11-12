@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.enrollment;
+
+option java_multiple_files = true;
+
+import "course/message/course/course_info_message.proto";
+
+message UserCourseMessage {
+  string id = 1;
+  string userId = 2;
+  course.CourseInfoListMessage course = 3;
+}

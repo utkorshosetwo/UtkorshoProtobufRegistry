@@ -4,8 +4,6 @@ package tech.utkorsho.protobuf.course.message.module;
 
 option java_multiple_files = true;
 
-import "google/protobuf/wrappers.proto";
-
 message ModuleInfoMessage {
   string id = 1;
   string name = 2;

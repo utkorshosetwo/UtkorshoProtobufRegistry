@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package tech.utkorsho.protobuf.course.message.userCourse;
+package tech.utkorsho.protobuf.course.message.enrollment;
 
 option java_multiple_files = true;
 
-message UserCourseCreateMessage {
+message EnrollCourseMessage {
   string userId = 1;
   string courseId = 2;
 }

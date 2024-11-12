@@ -19,7 +19,6 @@ import "course/message/course/course_feature_update_request.proto";
 import "course/message/course/course_feature_delete_request.proto";
 import "course/message/course/sub_course_assign_request.proto";
 import "course/message/course/sub_course_remove_request.proto";
-import "course/message/feature/feature_message.proto";
 import "course/message/course/course_info_message.proto";
 
 service CourseService {
