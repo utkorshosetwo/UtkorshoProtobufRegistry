@@ -7,6 +7,7 @@ option java_multiple_files = true;
 message FeatureCreateMessage {
   string name = 1;
   string value = 2;
+  string group = 3;
 }
 
 message FeatureListCreateMessage {

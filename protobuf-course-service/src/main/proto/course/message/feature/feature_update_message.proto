@@ -4,13 +4,11 @@ package tech.utkorsho.protobuf.course.message.feature;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
+
 message FeatureUpdateMessage {
   string id = 1;
-  string name = 2;
-  string value = 3;
-}
-
-message FeatureUpdateListMessage {
-  string courseId = 1;
-  repeated FeatureUpdateMessage features = 2;
+  google.protobuf.StringValue name = 2;
+  google.protobuf.StringValue value = 3;
+  google.protobuf.StringValue group = 4;
 }

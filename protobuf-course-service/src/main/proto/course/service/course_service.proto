@@ -14,6 +14,7 @@ import "course/message/course/course_tree_message.proto";
 import "course/message/course/course_price_update_request.proto";
 import "course/message/course/course_content_update_request.proto";
 import "course/message/course/course_feature_create_request.proto";
+import "course/message/course/course_feature_info_message.proto";
 import "course/message/course/course_feature_update_request.proto";
 import "course/message/course/course_feature_delete_request.proto";
 import "course/message/course/sub_course_assign_request.proto";
@@ -40,9 +41,9 @@ service CourseService {
 
   rpc getCourseTreeById(core.message.UuidMessage) returns (course.message.course.CourseTreeMessage) {};
 
-  rpc createCourseFeature(message.course.CourseFeatureCreateRequest) returns (course.message.course.CourseMessage) {};
+  rpc createCourseFeature(message.course.CourseFeatureCreateRequest) returns (course.message.course.CourseFeatureInfoListMessage) {};
 
-  rpc updateCourseFeatures(message.course.CourseFeatureUpdateRequest) returns (course.message.feature.FeatureListMessage) {};
+  rpc updateCourseFeatures(message.course.CourseFeatureUpdateRequest) returns (course.message.course.CourseFeatureInfoListMessage) {};
 
   rpc deleteCourseFeature(message.course.CourseFeatureDeleteRequest) returns (google.protobuf.Empty) {};
 
