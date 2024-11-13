@@ -6,14 +6,16 @@ option java_multiple_files = true;
 
 import "google/protobuf/empty.proto";
 import "core/message/uuid_message.proto";
+import "course/message/enrollment/enrolled_students_request_message.proto";
 import "course/message/course/course_info_message.proto";
-import "course/message/enrollment/enrolled_courses_request.proto";
+import "course/message/enrollment/enrolled_courses_request_message.proto";
 import "course/message/enrollment/enroll_course_message.proto";
+import "course/message/enrollment/enrolled_students_response_message.proto";
 
 service CourseEnrollmentService {
-  rpc getEnrolledCourses(course.message.enrollment.EnrolledCoursesRequest) returns (course.message.course.CourseInfoListMessage) {};
+  rpc getEnrolledCourses(course.message.enrollment.EnrolledCoursesRequestMessage) returns (course.message.course.CourseInfoListMessage) {};
 
-  rpc getEnrolledStudents(core.message.UuidMessage) returns (core.message.UuidMessageList) {};
+  rpc getEnrolledStudents(course.message.enrollment.EnrolledStudentsRequestMessage) returns (course.message.enrollment.EnrolledStudentsResponseMessage) {};
 
   rpc enrollUserToCourse(course.message.enrollment.EnrollCourseMessage) returns (google.protobuf.Empty) {};
 }
