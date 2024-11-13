@@ -5,7 +5,7 @@ package tech.utkorsho.protobuf.course.message.content;
 option java_multiple_files = true;
 
 import "course/message/content/content_type.proto";
-import "course/message/content/live_class_content_message.proto";
+import "course/message/content/live_class_content_create_message.proto";
 import "course/message/content/video_content_create_message.proto";
 import "course/message/content/url_content_create_message.proto";
 import "course/message/content/doc_content_create_message.proto";
