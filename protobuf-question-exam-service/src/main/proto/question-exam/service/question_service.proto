@@ -14,6 +14,8 @@ import "question-exam/message/question/question_update_message.proto";
 service QuestionService {
   rpc create(message.question.QuestionCreateMessage) returns (message.question.QuestionMessage) {};
 
+  rpc listCreate(message.question.QuestionListRequest) returns (message.question.QuestionListMessage) {};
+
   rpc read(core.message.UuidMessage) returns (message.question.QuestionMessage) {};
 
   rpc readAll(message.question.QuestionListRequest) returns (message.question.QuestionListMessage) {};
