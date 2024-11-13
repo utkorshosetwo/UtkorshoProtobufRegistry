@@ -16,7 +16,7 @@ message ContentUpdateMessage {
   google.protobuf.StringValue title = 2;
   google.protobuf.StringValue description = 3;
   oneof content {
-    course.message.content.DocContentUpdateMessage docContentUpdateMessage = 4;
+    DocContentUpdateMessage docContentUpdateMessage = 4;
     UrlContentUpdateMessage urlContentUpdateMessage = 5;
     VideoContentUpdateMessage videoContentUpdateMessage = 6;
     LiveClassContentUpdateMessage liveClassContentUpdateMessage = 7;

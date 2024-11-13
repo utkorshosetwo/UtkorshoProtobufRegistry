@@ -20,9 +20,9 @@ message ContentCreateMessage {
   repeated string syllabusIds = 7;
   string subjectLessonId = 8;
   oneof content {
-    course.message.content.DocContentCreateMessage docContent = 9;
-    course.message.content.UrlContentCreateMessage urlContent = 10;
-    course.message.content.VideoContentCreateMessage videoContent = 11;
-    course.message.content.LiveClassContentCreateMessage liveClassContent = 12;
+    DocContentCreateMessage docContent = 9;
+    UrlContentCreateMessage urlContent = 10;
+    VideoContentCreateMessage videoContent = 11;
+    LiveClassContentCreateMessage liveClassContent = 12;
   }
 }
