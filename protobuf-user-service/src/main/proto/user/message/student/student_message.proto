@@ -10,8 +10,10 @@ import "user/message/utility/board_message.proto";
 import "user/message/utility/class_message.proto";
 import "user/message/utility/group_message.proto";
 import "user/message/utility/session_message.proto";
+import "core/message/pagination_result.proto";
 
 message StudentMessage {
+  string userId = 13;
   string registrationNo = 1;
   string name = 2;
   string phone = 3;
@@ -20,17 +22,17 @@ message StudentMessage {
   string district = 6;
   string email = 7;
   string parentPhone = 8;
-  string boardId = 9;
-  string sessionId = 10;
-  string groupId = 11;
-  string classId = 12;
-  string userId = 13;
-  utility.BoardMessage board = 14;
-  utility.ClassMessage studentClass = 15;
-  utility.GroupMessage group = 16;
-  utility.SessionMessage session = 17;
+//  string boardId = 9;
+//  string sessionId = 10;
+//  string groupId = 11;
+//  string classId = 12;
+//  utility.BoardMessage board = 14;
+//  utility.ClassMessage studentClass = 15;
+//  utility.GroupMessage group = 16;
+//  utility.SessionMessage session = 17;
 }
 
 message StudentListMessage {
   repeated StudentMessage students = 1;
+  optional core.message.PaginationResult paginationResult = 2;
 }
