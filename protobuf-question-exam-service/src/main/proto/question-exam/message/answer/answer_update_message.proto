@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answer;
+
+option java_multiple_files = true;
+
+import "question-exam/message/answerDetail/answer_detail_create_message.proto";
+
+message AnswerUpdateMessage {
+  string id = 1;
+  string questionSetId = 2;
+  answerDetail.AnswerDetailListCreateMessage answerDetails = 3;
+}

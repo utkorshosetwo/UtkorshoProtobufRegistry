@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "question-exam/message/answerEvaluation/answer_evaluation_create_message.proto";
+import "question-exam/message/answerEvaluation/answer_evaluation_message.proto";
+import "question-exam/message/answerEvaluation/answer_evaluation_list_request.proto";
+import "question-exam/message/answerEvaluation/answer_evaluation_update_message.proto";
+
+service AnswerEvaluationService {
+  rpc create(message.answerEvaluation.AnswerEvaluationCreateMessage) returns (message.answerEvaluation.AnswerEvaluationMessage) {};
+
+  rpc read(google.protobuf.StringValue) returns (message.answerEvaluation.AnswerEvaluationMessage) {};
+
+  rpc readAll(message.answerEvaluation.AnswerEvaluationListRequest) returns (message.answerEvaluation.AnswerEvaluationListMessage) {};
+
+  rpc update(message.answerEvaluation.AnswerEvaluationUpdateMessage) returns (message.answerEvaluation.AnswerEvaluationMessage) {};
+
+  rpc delete(google.protobuf.StringValue) returns (google.protobuf.StringValue) {};
+}

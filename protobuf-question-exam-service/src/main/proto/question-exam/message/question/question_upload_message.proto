@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.question;
+
+option java_multiple_files = true;
+
+import "question-exam/enums/question_template.proto";
+import "question-exam/enums/question_type.proto";
+import "question-exam/enums/publish_status.proto";
+
+message QuestionUploadMessage {
+  string subjectId = 1;
+  enums.QuestionTemplate template = 2;
+  enums.QuestionType questionType = 3;
+  enums.PublishStatus publishStatus = 4;
+}

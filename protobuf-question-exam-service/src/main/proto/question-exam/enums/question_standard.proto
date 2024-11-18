@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.enums;
+
+option java_multiple_files = true;
+
+enum QuestionStandard {
+  DU = 0;
+  BUET = 1;
+  MEDICAL = 2;
+  BOARD = 3;
+  ENGINEERING = 4;
+  VERSITY_A = 5;
+  GST = 6;
+  ACADEMIC = 7;
+  //  NO_LIMIT = 8;
+}
+
+message QuestionStandardList {
+  repeated QuestionStandard questionStandards = 1;
+}

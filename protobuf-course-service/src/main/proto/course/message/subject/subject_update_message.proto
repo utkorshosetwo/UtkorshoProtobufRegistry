@@ -4,10 +4,12 @@ package tech.utkorsho.protobuf.course.message.subject;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
+
 message SubjectUpdateMessage {
   string id = 1;
-  string name = 2;
-  string description = 3;
-  string iconUrl = 4;
-  string coverPhotoUrl = 5;
+  google.protobuf.StringValue name = 2;
+  google.protobuf.StringValue description = 3;
+  google.protobuf.StringValue iconUrl = 4;
+  google.protobuf.StringValue coverPhotoUrl = 5;
 }

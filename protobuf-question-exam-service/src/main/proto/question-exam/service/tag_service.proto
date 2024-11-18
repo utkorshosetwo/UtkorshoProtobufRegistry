@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "question-exam/message/tag/tag_message.proto";
+import "question-exam/message/tag/tag_create_message.proto";
+
+service TagService {
+  rpc create(message.tag.TagCreateMessage) returns (message.tag.TagMessage) {};
+
+  rpc read(core.message.UuidMessage) returns (message.tag.TagMessage) {};
+
+  rpc searchByName(google.protobuf.StringValue) returns (message.tag.TagListMessage) {};
+
+  rpc findByName(google.protobuf.StringValue) returns (message.tag.TagMessage) {};
+
+  rpc listCreate(message.tag.TagListMessage) returns (message.tag.TagListMessage) {};
+}

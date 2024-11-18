@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.misc;
+
+option java_multiple_files = true;
+
+message UserMessage {
+  string id = 1;
+  string name = 2;
+  string imageUrl = 3;
+  string phone = 4;
+}

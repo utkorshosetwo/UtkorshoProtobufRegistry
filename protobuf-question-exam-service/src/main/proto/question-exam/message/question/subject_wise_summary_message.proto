@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.question;
+
+option java_multiple_files = true;
+
+message SubjectWiseSummaryMessage {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  string iconUrl = 4;
+  string coverPhotoUrl = 5;
+  int32 noOfMcqQuestions = 6;
+  int32 noOfCreativeQuestions = 7;
+}

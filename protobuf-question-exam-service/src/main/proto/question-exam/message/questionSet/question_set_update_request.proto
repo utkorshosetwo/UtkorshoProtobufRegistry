@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.questionSet;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "core/message/uuid_message.proto";
+import "question-exam/enums/content_type.proto";
+import "question-exam/enums/exam_type.proto";
+import "question-exam/message/tag/tag_message.proto";
+
+message QuestionSetUpdateMessage {
+  string id = 1;
+  string title = 2;
+  string description = 3;
+  enums.ContentType contentType = 4;
+  int32 noOfQuestion = 5;
+  int32 totalTime = 6;
+  google.protobuf.Timestamp startDate = 7;
+  google.protobuf.Timestamp endDate = 8;
+  string section = 9;
+  enums.ExamType examType = 10;
+  int32 attemptLimit = 11;
+  string courseId = 12;
+  core.message.UuidMessageList syllabusIds = 13;
+  core.message.UuidMessageList questionIds = 14;
+  tag.TagListMessage tags = 15;
+}

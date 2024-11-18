@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.enums;
+
+option java_multiple_files = true;
+
+enum DifficultyLevel {
+  EASY = 0;
+  MEDIUM = 1;
+  HARD = 2;
+}

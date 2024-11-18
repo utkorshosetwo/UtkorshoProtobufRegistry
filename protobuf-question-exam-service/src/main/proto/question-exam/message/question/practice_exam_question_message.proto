@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.question;
+
+option java_multiple_files = true;
+
+import "question-exam/message/questionDetail/practice_exam_question_detail_message.proto";
+
+message PracticeExamQuestionMessage {
+  string id = 1;
+  string questionNo = 2;
+  string description = 3;
+  bool multi = 4;
+  questionDetail.PracticeExamQuestionDetailListMessage questionDetails = 5;
+}
+
+message PracticeExamQuestionListMessage {
+  repeated PracticeExamQuestionMessage questions = 1;
+}

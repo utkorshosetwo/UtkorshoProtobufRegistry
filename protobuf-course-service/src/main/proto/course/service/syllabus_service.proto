@@ -4,22 +4,24 @@ package tech.utkorsho.protobuf.course.service;
 
 option java_multiple_files = true;
 
-import "core/message/uuid_message.proto";
 import "course/message/syllabus/syllabus_message.proto";
 import "course/message/syllabus/syllabus_create_message.proto";
 import "course/message/syllabus/syllabus_list_request.proto";
-import "course/message/syllabus/syllabus_get_request.proto";
 import "course/message/syllabus/syllabus_update_message.proto";
 import "course/message/syllabus/syllabus_tree.proto";
+import "core/message/uuid_message.proto";
+import "google/protobuf/empty.proto";
 
 service SyllabusService {
   rpc createSyllabus(message.syllabus.SyllabusCreateMessage) returns (message.syllabus.SyllabusMessage) {};
 
   rpc getAllSyllabus(message.syllabus.SyllabusListRequest) returns (message.syllabus.SyllabusListMessage) {};
 
-  rpc getSyllabusById(message.syllabus.SyllabusGetRequest) returns (message.syllabus.SyllabusMessage) {};
+  rpc getSyllabusById(core.message.UuidMessage) returns (message.syllabus.SyllabusMessage) {};
 
   rpc updateSyllabus(message.syllabus.SyllabusUpdateMessage) returns (message.syllabus.SyllabusMessage) {};
+
+  rpc deleteSyllabus(core.message.UuidMessage) returns (google.protobuf.Empty) {};
 
   rpc getCourseSyllabusTree(core.message.UuidMessage) returns (message.syllabus.SyllabusTree) {};
 }
