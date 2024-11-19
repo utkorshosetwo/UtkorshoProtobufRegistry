@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.message.comment;
+
+option java_multiple_files = true;
+
+
+import "core/message/pagination_request.proto";
+import "core/message/uuid_message.proto";
+
+
+message LiveCommentListRequest {
+  core.message.PaginationRequest paginationRequest = 1;
+  core.message.UuidMessageList routineIds = 2;
+}

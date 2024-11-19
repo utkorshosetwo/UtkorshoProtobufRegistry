@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.message.comment;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "core/message/pagination_result.proto";
+
+
+message LiveCommentMessage {
+  string id = 1;
+  string content = 2;
+  string userId = 3;
+  string userName = 4;
+  string userImageUrl = 5;
+  string routineId = 6;
+  repeated string userTypes = 7;
+  repeated string assetUrls = 8;
+  string updatedBy = 9;
+  string parentId = 10;
+  google.protobuf.Timestamp createdAt = 11;
+  google.protobuf.Timestamp updatedAt = 12;
+}
+
+message LiveCommentListMessage {
+  repeated LiveCommentMessage comments = 1;
+  optional core.message.PaginationResult paginationResult = 2;
+}

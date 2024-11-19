@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.service;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+import "interactive-live/message/live_comment_create_message.proto";
+import "interactive-live/message/live_comment_message.proto";
+
+
+service LiveCommentService {
+  rpc createLiveComment(message.comment.CommentCreateMessage) returns (message.comment.LiveCommentMessage) {};
+
+  rpc getLiveCommentById(core.message.UuidMessage) returns (message.comment.LiveCommentMessage) {};
+
+  rpc getAllLiveComments(google.protobuf.Empty) returns (message.comment.LiveCommentListMessage) {};
+}

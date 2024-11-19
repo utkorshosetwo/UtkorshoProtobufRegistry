@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.message.comment;
+
+option java_multiple_files = true;
+
+
+message CommentCreateMessage {
+  string content = 1;
+  string routineId = 2;
+  string parentId = 3;
+  repeated string userTypes = 4;
+  repeated string assetUrls = 5;
+}
