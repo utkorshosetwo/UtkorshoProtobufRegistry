@@ -9,6 +9,7 @@ enum ContentType {
   DOCUMENT = 1;
   URL = 2;
   LIVE_CLASS = 4;
+  YOUTUBE_VIDEO = 5;
 }
 
 message ContentTypeValue {
