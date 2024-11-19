@@ -10,10 +10,10 @@ enum QuestionStandard {
   MEDICAL = 2;
   BOARD = 3;
   ENGINEERING = 4;
-  VERSITY_A = 5;
+  VARSITY_A = 5;
   GST = 6;
   ACADEMIC = 7;
-  //  NO_LIMIT = 8;
+  NO_LIMIT = 8;
 }
 
 message QuestionStandardList {
