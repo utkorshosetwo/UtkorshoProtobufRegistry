@@ -10,3 +10,7 @@ enum ContentType {
   URL = 2;
   LIVE_CLASS = 4;
 }
+
+message ContentTypeValue {
+  ContentType value = 1;
+}

@@ -8,6 +8,7 @@ import "course/message/content/doc_content_update_message.proto";
 import "course/message/content/url_content_update_message.proto";
 import "course/message/content/video_content_update_message.proto";
 import "course/message/content/live_class_content_update_message.proto";
+import "course/message/content/youtube_video_content_update_message.proto";
 import "core/message/uuid_message.proto";
 import "google/protobuf/wrappers.proto";
 
@@ -20,5 +21,6 @@ message ContentUpdateMessage {
     UrlContentUpdateMessage urlContentUpdateMessage = 5;
     VideoContentUpdateMessage videoContentUpdateMessage = 6;
     LiveClassContentUpdateMessage liveClassContentUpdateMessage = 7;
+    YoutubeVideoContentUpdateMessage youtubeVideoContentUpdateMessage = 8;
   }
 }

@@ -9,6 +9,7 @@ import "course/message/content/live_class_content_create_message.proto";
 import "course/message/content/video_content_create_message.proto";
 import "course/message/content/url_content_create_message.proto";
 import "course/message/content/doc_content_create_message.proto";
+import "course/message/content/youtube_video_content_create_message.proto";
 
 message ContentCreateMessage {
   string sectionId = 1;
@@ -24,5 +25,6 @@ message ContentCreateMessage {
     UrlContentCreateMessage urlContent = 10;
     VideoContentCreateMessage videoContent = 11;
     LiveClassContentCreateMessage liveClassContent = 12;
+    YoutubeVideoContentCreateMessage youtubeVideoContent = 13;
   }
 }

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.content;
+
+option java_multiple_files = true;
+
+import "course/message/content/content_create_message.proto";
+import "course/message/content/content_message.proto";
+import "course/message/content/content_update_message.proto";
+import "core/message/uuid_message.proto";
+import "google/protobuf/empty.proto";
+
+service ContentService {
+  rpc createContent (ContentCreateMessage) returns (ContentMessage) {}
+
+  rpc updateContent (ContentUpdateMessage) returns (ContentMessage) {}
+
+  rpc getContents (content.ContentListRequestMessage) returns (content.ContentListMessage) {}
+
+  rpc getContentDetails (core.message.UuidMessage) returns (ContentMessage) {}
+
+  rpc deleteContent (core.message.UuidMessage) returns (google.protobuf.Empty) {}
+}
