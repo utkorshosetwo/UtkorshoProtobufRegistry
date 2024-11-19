@@ -11,7 +11,7 @@
         <module>protobuf-user-service</module>
         <module>protobuf-storage-service</module>
         <module>protobuf-question-exam-service</module>
-        <module>protobuf-Interactive-live-service</module>
+        <module>protobuf-interactive-live-service</module>
     </modules>
     <version>1.0.4-SNAPSHOT</version>
     <name>ProtobufRegistry</name>
