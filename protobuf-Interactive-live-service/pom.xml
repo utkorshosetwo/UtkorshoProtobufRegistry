@@ -6,7 +6,7 @@
     <parent>
         <groupId>tech.utkorsho</groupId>
         <artifactId>protobuf-registry</artifactId>
-        <version>1.0.4-SNAPSHOT</version>
+        <version>1.0.3-SNAPSHOT</version>
     </parent>
 
     <artifactId>protobuf-Interactive-live-service</artifactId>
@@ -67,10 +67,8 @@
                 <artifactId>protobuf-maven-plugin</artifactId>
                 <version>0.6.1</version>
                 <configuration>
-                    <!--suppress UnresolvedMavenProperty -->
                     <protocArtifact>com.google.protobuf:protoc:3.25.3:exe:${os.detected.classifier}</protocArtifact>
                     <pluginId>grpc-java</pluginId>
-                    <!--suppress UnresolvedMavenProperty -->
                     <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.66.0:exe:${os.detected.classifier}</pluginArtifact>
                 </configuration>
                 <executions>
