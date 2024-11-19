@@ -6,6 +6,7 @@ option java_multiple_files = true;
 
 import "google/protobuf/timestamp.proto";
 import "core/message/pagination_result.proto";
+import "core/message/user_type.proto";
 
 
 message LiveCommentMessage {
@@ -15,7 +16,7 @@ message LiveCommentMessage {
   string userName = 4;
   string userImageUrl = 5;
   string routineId = 6;
-  repeated string userTypes = 7;
+  repeated core.message.UserType userTypes = 7;
   repeated string assetUrls = 8;
   string updatedBy = 9;
   string parentId = 10;
