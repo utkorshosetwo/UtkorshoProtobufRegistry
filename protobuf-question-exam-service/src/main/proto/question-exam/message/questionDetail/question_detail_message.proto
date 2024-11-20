@@ -16,5 +16,5 @@ message QuestionDetailMessage {
 }
 
 message QuestionDetailListMessage {
-  repeated QuestionDetailMessage questions = 1;
+  repeated QuestionDetailMessage questionDetails = 1;
 }
