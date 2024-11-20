@@ -10,7 +10,7 @@ import "question-exam/enums/question_type.proto";
 import "question-exam/enums/question_template.proto";
 import "question-exam/enums/publish_status.proto";
 import "question-exam/enums/question_standard.proto";
-import "question-exam/message/questionDetail/question_detail_create_message.proto";
+import "question-exam/message/questionDetail/question_detail_message.proto";
 import "question-exam/message/tag/tag_message.proto";
 
 message QuestionMessage {
@@ -29,7 +29,7 @@ message QuestionMessage {
   string fileName = 13;
   core.message.UuidMessageList subjectLessonIds = 14;
   bool multi = 15;
-  questionDetail.QuestionDetailListCreateMessage questionDetails = 16;
+  questionDetail.QuestionDetailListMessage questionDetails = 16;
   tag.TagListMessage tags = 17;
   enums.QuestionStandardList questionStandards = 18;
 }
