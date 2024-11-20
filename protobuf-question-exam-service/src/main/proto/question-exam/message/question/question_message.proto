@@ -31,7 +31,7 @@ message QuestionMessage {
   bool multi = 15;
   questionDetail.QuestionDetailListCreateMessage questionDetails = 16;
   tag.TagListCreateMessage tags = 17;
-  enums.QuestionStandard questionStandards = 18;
+  enums.QuestionStandardList questionStandards = 18;
 }
 
 message QuestionListMessage {
