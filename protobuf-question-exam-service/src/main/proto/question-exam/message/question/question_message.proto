@@ -4,6 +4,7 @@ package tech.utkorsho.protobuf.questionexam.message.question;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "core/message/uuid_message.proto";
 import "question-exam/enums/difficulty_level.proto";
 import "question-exam/enums/question_type.proto";
@@ -14,21 +15,21 @@ import "question-exam/message/questionDetail/question_detail_message.proto";
 import "question-exam/message/tag/tag_message.proto";
 
 message QuestionMessage {
-  string id = 1;
-  string questionNo = 2;
-  string description = 3;
-  string explanation = 4;
-  string imageUrl = 5;
-  int32 marks = 6;
-  int32 noOfOption = 7;
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue questionNo = 2;
+  google.protobuf.StringValue description = 3;
+  google.protobuf.StringValue explanation = 4;
+  google.protobuf.StringValue imageUrl = 5;
+  google.protobuf.Int32Value marks = 6;
+  google.protobuf.Int32Value noOfOption = 7;
   enums.DifficultyLevel difficultyLevel = 8;
   enums.QuestionType questionType = 9;
   enums.QuestionTemplate template = 10;
   enums.PublishStatus publishStatus = 11;
-  string subjectId = 12;
-  string fileName = 13;
+  google.protobuf.StringValue subjectId = 12;
+  google.protobuf.StringValue fileName = 13;
   core.message.UuidMessageList subjectLessonIds = 14;
-  bool multi = 15;
+  google.protobuf.BoolValue multi = 15;
   questionDetail.QuestionDetailListMessage questionDetails = 16;
   tag.TagListMessage tags = 17;
   enums.QuestionStandardList questionStandards = 18;

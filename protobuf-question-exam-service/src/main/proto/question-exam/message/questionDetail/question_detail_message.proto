@@ -4,15 +4,17 @@ package tech.utkorsho.protobuf.questionexam.message.questionDetail;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
+
 message QuestionDetailMessage {
-  string id = 1;
-  string serial = 2;
-  string questionText = 3;
-  string imageUrl = 4;
-  string answer = 5;
-  bool isCorrect = 6;
-  int32 marks = 7;
-  string questionId = 8;
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue serial = 2;
+  google.protobuf.StringValue questionText = 3;
+  google.protobuf.StringValue imageUrl = 4;
+  google.protobuf.StringValue answer = 5;
+  google.protobuf.BoolValue isCorrect = 6;
+  google.protobuf.Int32Value marks = 7;
+  google.protobuf.StringValue questionId = 8;
 }
 
 message QuestionDetailListMessage {
