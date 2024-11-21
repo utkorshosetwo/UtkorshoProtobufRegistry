@@ -4,14 +4,15 @@ package tech.utkorsho.protobuf.questionexam.message.answer;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "core/message/pagination_request.proto";
 import "core/message/status_enum.proto";
 
 message AnswerListRequest {
   core.message.PaginationRequest paginationRequest = 1;
   core.message.Status status = 2;
-  string questionSetId = 3;
-  string userId = 4;
+  google.protobuf.StringValue questionSetId = 3;
+  google.protobuf.StringValue userId = 4;
   bool userDataRequired = 5;
   bool evaluated = 6;
 }

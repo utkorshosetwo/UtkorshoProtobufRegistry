@@ -9,5 +9,5 @@ import "question-exam/message/answerDetail/answer_detail_create_message.proto";
 message AnswerUpdateMessage {
   string id = 1;
   string questionSetId = 2;
-  answerDetail.AnswerDetailListCreateMessage answerDetails = 3;
+  repeated answerDetail.AnswerDetailCreateMessage answerDetails = 3;
 }

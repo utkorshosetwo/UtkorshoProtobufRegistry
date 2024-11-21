@@ -9,3 +9,7 @@ enum PublishStatus {
   PUBLISHED_PUBLIC = 1;
   PUBLISHED_PRIVATE = 2;
 }
+
+message PublishStatusValue {
+  PublishStatus value = 1;
+}

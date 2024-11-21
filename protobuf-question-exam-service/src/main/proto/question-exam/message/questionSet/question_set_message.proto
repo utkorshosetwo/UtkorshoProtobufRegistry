@@ -27,8 +27,8 @@ message QuestionSetMessage {
   int32 remainingAttempt = 13;
   string courseId = 14;
   core.message.UuidMessageList syllabusIds = 15;
-  question.QuestionMessage questions = 16;
-  tag.TagListMessage tags = 17;
+  repeated question.QuestionMessage questions = 16;
+  repeated tag.TagMessage tags = 17;
   string answerEvaluationId = 18;
 }
 

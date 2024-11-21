@@ -8,3 +8,7 @@ enum QuestionType {
   CREATIVE = 0;
   MCQ = 1;
 }
+
+message QuestionTypeValue {
+  QuestionType value = 1;
+}

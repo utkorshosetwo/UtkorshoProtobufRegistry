@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>protobuf-question-exam-service</artifactId>
-    <version>1.0.18-SNAPSHOT</version>
+    <version>1.0.19-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>tech.utkorsho</groupId>
             <artifactId>protobuf-core</artifactId>
-            <version>1.0.3-SNAPSHOT</version>
+            <version>1.0.4-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>

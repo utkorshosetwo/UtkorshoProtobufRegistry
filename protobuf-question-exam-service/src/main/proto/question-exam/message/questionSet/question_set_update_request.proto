@@ -25,5 +25,5 @@ message QuestionSetUpdateMessage {
   string courseId = 12;
   core.message.UuidMessageList syllabusIds = 13;
   core.message.UuidMessageList questionIds = 14;
-  tag.TagListMessage tags = 15;
+  repeated tag.TagMessage tags = 15;
 }

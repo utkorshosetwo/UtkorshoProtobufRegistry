@@ -5,7 +5,6 @@ package tech.utkorsho.protobuf.questionexam.message.question;
 option java_multiple_files = true;
 
 import "google/protobuf/wrappers.proto";
-import "core/message/uuid_message.proto";
 import "core/message/pagination_request.proto";
 import "core/message/status_enum.proto";
 import "question-exam/enums/publish_status.proto";
@@ -15,13 +14,13 @@ import "question-exam/enums/question_standard.proto";
 
 message QuestionListRequest {
   core.message.PaginationRequest paginationRequest = 1;
-  core.message.Status status = 2;
-  enums.PublishStatus publishStatus = 3;
-  enums.QuestionType questionType = 4;
+  core.message.StatusValue status = 2;
+  enums.PublishStatusValue publishStatus = 3;
+  enums.QuestionTypeValue questionType = 4;
   google.protobuf.StringValue subjectId = 5;
   google.protobuf.StringValue fileName = 6;
-  enums.DifficultyLevel difficultyLevel = 7;
+  enums.DifficultyLevelValue difficultyLevel = 7;
   repeated google.protobuf.StringValue tagNames = 8;
-  core.message.UuidMessageList subjectLessonIds = 9;
+  repeated google.protobuf.StringValue subjectLessonIds = 9;
   enums.QuestionStandardList questionStandards = 10;
 }

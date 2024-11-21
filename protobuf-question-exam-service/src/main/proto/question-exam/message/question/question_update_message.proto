@@ -5,28 +5,29 @@ package tech.utkorsho.protobuf.questionexam.message.question;
 option java_multiple_files = true;
 
 import "core/message/uuid_message.proto";
+import "google/protobuf/wrappers.proto";
 import "question-exam/enums/difficulty_level.proto";
 import "question-exam/enums/question_type.proto";
 import "question-exam/enums/question_template.proto";
 import "question-exam/enums/publish_status.proto";
 import "question-exam/enums/question_standard.proto";
-import "question-exam/message/questionDetail/question_detail_create_message.proto";
-import "question-exam/message/tag/tag_create_message.proto";
+import "question-exam/message/questionDetail/question_detail_message.proto";
+import "question-exam/message/tag/tag_message.proto";
 
 message QuestionUpdateMessage {
   string id = 1;
   string description = 2;
-  string explanation = 3;
-  string imageUrl = 4;
+  google.protobuf.StringValue explanation = 3;
+  google.protobuf.StringValue imageUrl = 4;
   int32 noOfOption = 5;
   enums.DifficultyLevel difficultyLevel = 6;
   enums.QuestionType questionType = 7;
   enums.QuestionTemplate template = 8;
   enums.PublishStatus publishStatus = 9;
-  string subjectId = 10;
-  string fileName = 11;
+  google.protobuf.StringValue subjectId = 10;
+  google.protobuf.StringValue fileName = 11;
   core.message.UuidMessageList subjectLessonIds = 12;
-  questionDetail.QuestionDetailListCreateMessage questionDetails = 13;
-  tag.TagListCreateMessage tags = 14;
+  repeated questionDetail.QuestionDetailMessage questionDetails = 13;
+  repeated tag.TagMessage tags = 14;
   enums.QuestionStandard questionStandards = 15;
 }

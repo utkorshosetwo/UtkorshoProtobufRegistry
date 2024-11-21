@@ -12,5 +12,5 @@ message PracticeExamQuestionSetPayload {
   enums.DifficultyLevel difficultyLevel = 1;
   int32 noOfQuestions = 2;
   enums.QuestionStandard questionStandard = 3;
-  questionSet.SubjectSyllabusList subjectSyllabuses = 4;
+  repeated questionSet.SubjectSyllabus subjectSyllabuses = 4;
 }

@@ -19,7 +19,7 @@ message AnswerMessage {
   float averageTime = 8;
   bool submitted = 9;
   bool evaluated = 10;
-  answerDetail.AnswerDetailListMessage answerDetails = 11;
+  repeated answerDetail.AnswerDetailMessage answerDetails = 11;
 }
 
 message AnswerListMessage {

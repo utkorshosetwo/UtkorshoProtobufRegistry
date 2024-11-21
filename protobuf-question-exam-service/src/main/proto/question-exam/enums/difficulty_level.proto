@@ -9,3 +9,7 @@ enum DifficultyLevel {
   MEDIUM = 1;
   HARD = 2;
 }
+
+message DifficultyLevelValue {
+  DifficultyLevel value = 1;
+}
