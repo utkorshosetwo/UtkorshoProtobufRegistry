@@ -5,6 +5,7 @@ package tech.utkorsho.protobuf.questionexam.message.answer;
 option java_multiple_files = true;
 
 import "google/protobuf/timestamp.proto";
+import "core/message/pagination_result.proto";
 import "question-exam/message/answerDetail/answer_detail_message.proto";
 import "question-exam/message/misc/user_message.proto";
 
@@ -24,4 +25,5 @@ message AnswerMessage {
 
 message AnswerListMessage {
   repeated AnswerMessage answers = 1;
+  optional core.message.PaginationResult paginationResult = 2;
 }

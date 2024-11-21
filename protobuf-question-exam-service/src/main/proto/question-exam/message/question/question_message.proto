@@ -6,6 +6,7 @@ option java_multiple_files = true;
 
 import "google/protobuf/wrappers.proto";
 import "core/message/uuid_message.proto";
+import "core/message/pagination_result.proto";
 import "question-exam/enums/difficulty_level.proto";
 import "question-exam/enums/question_type.proto";
 import "question-exam/enums/question_template.proto";
@@ -37,4 +38,5 @@ message QuestionMessage {
 
 message QuestionListMessage {
   repeated QuestionMessage questions = 1;
+  optional core.message.PaginationResult paginationResult = 2;
 }

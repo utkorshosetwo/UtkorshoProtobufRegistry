@@ -22,5 +22,5 @@ message QuestionListRequest {
   enums.DifficultyLevelValue difficultyLevel = 7;
   repeated google.protobuf.StringValue tagNames = 8;
   repeated google.protobuf.StringValue subjectLessonIds = 9;
-  enums.QuestionStandardList questionStandards = 10;
+  repeated enums.QuestionStandard questionStandards = 10;
 }

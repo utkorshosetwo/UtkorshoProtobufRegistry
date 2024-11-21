@@ -4,6 +4,7 @@ package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
 
 option java_multiple_files = true;
 
+import "core/message/pagination_result.proto";
 import "question-exam/message/answerEvaluationDetail/answer_evaluation_detail_create_request.proto";
 
 message AnswerEvaluationMessage {
@@ -21,4 +22,5 @@ message AnswerEvaluationMessage {
 
 message AnswerEvaluationListMessage {
   repeated AnswerEvaluationMessage answerEvaluations = 1;
+  optional core.message.PaginationResult paginationResult = 2;
 }

@@ -6,6 +6,7 @@ option java_multiple_files = true;
 
 import "google/protobuf/timestamp.proto";
 import "core/message/uuid_message.proto";
+import "core/message/pagination_result.proto";
 import "question-exam/enums/content_type.proto";
 import "question-exam/enums/exam_type.proto";
 import "question-exam/message/question/question_message.proto";
@@ -34,4 +35,5 @@ message QuestionSetMessage {
 
 message QuestionSetListMessage {
   repeated QuestionSetMessage questionSets = 1;
+  optional core.message.PaginationResult paginationResult = 2;
 }
