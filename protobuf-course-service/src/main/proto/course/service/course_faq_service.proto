@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.service;
+
+option java_multiple_files = true;
+
+import "course/message/course/course_faq_create_message.proto";
+import "course/message/course/course_faq_info_message.proto";
+import "course/message/course/course_faq_update_message.proto";
+import "core/message/uuid_message.proto";
+import "google/protobuf/empty.proto";
+
+service CourseFaqService {
+  rpc createCourseFaq (course.message.course.CourseFaqCreateMessage) returns (course.message.course.CourseFaqInfoMessage) {}
+
+  rpc updateCourseFaq (course.message.course.CourseFaqUpdateMessage) returns (course.message.course.CourseFaqInfoMessage) {}
+
+  rpc deleteCourseFaq (core.message.UuidMessage) returns (google.protobuf.Empty) {}
+
+  rpc getCourseFaq (core.message.UuidMessage) returns (course.message.course.CourseFaqInfoMessageList) {}
+
+}

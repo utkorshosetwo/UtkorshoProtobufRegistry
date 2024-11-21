@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.content;
+
+option java_multiple_files = true;
+
+enum ContentType {
+  VIDEO = 0;
+  DOCUMENT = 1;
+  URL = 2;
+  LIVE_CLASS = 4;
+  YOUTUBE_VIDEO = 5;
+}
+
+message ContentTypeValue {
+  ContentType value = 1;
+}

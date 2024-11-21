@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.course;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "core/message/status_enum.proto";
+
+message CourseFaqInfoMessage {
+  string id = 1;
+  string question = 2;
+  string answer = 3;
+  core.message.Status status = 4;
+  google.protobuf.Timestamp createdDate = 5;
+  google.protobuf.Timestamp updatedDate = 6;
+}
+
+message CourseFaqInfoMessageList {
+  repeated CourseFaqInfoMessage courseFaqInfoMessages = 1;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.course;
+
+option java_multiple_files = true;
+
+import "core/message/uuid_message.proto";
+import "google/protobuf/wrappers.proto";
+
+message CourseFaqUpdateMessage {
+  core.message.UuidMessage courseId = 1;
+  core.message.UuidMessage faqId = 2;
+  google.protobuf.StringValue question = 3;
+  google.protobuf.StringValue answer = 4;
+}
+

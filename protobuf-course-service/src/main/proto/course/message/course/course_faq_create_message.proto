@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.course;
+
+option java_multiple_files = true;
+
+import "core/message/status_enum.proto";
+
+message CourseFaqCreateMessage {
+  string courseId = 1;
+  string question = 2;
+  string answer = 3;
+  core.message.Status status = 4;
+}

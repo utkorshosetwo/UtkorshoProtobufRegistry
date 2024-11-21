@@ -8,5 +8,5 @@ import "course/message/feature/feature_update_message.proto";
 
 message CourseFeatureUpdateRequest {
   string courseId = 1;
-  feature.FeatureUpdateListMessage features = 2;
+  repeated feature.FeatureUpdateMessage features = 2;
 }

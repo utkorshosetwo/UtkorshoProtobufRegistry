@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.course.message.content;
+
+option java_multiple_files = true;
+
+import "course/message/content/content_type.proto";
+import "course/message/section/section_message.proto";
+import "google/protobuf/timestamp.proto";
+import "course/message/content/doc_content_message.proto";
+import "course/message/content/url_content_message.proto";
+import "course/message/content/video_content_message.proto";
+import "course/message/content/live_class_content_message.proto";
+import "course/message/content/youtube_video_content_message.proto";
+import "core/message/pagination_result.proto";
+import "core/message/pagination_request.proto";
+import "google/protobuf/wrappers.proto";
+
+message ContentMessage {
+  string id = 1;
+  string title = 2;
+  string description = 3;
+  content.ContentType contentType = 4;
+  section.SectionMessage section = 5;
+  bool isFree = 6;
+  google.protobuf.Timestamp createdAt = 7;
+  google.protobuf.Timestamp updatedAt = 8;
+
+  oneof content {
+    DocContentMessage docContent = 9;
+    UrlContentMessage urlContent = 10;
+    VideoContentMessage videoContent = 11;
+    LiveClassContentMessage liveClassContent = 12;
+    YoutubeVideoContentMessage youtubeVideoContent = 13;
+  }
+}
+
+message ContentListRequestMessage {
+  core.message.PaginationRequest paginationRequest = 1;
+  google.protobuf.StringValue sectionId = 2;
+  google.protobuf.BoolValue isFree = 3;
+  course.message.content.ContentTypeValue contentType = 4;
+}
+
+message ContentListMessage {
+  repeated ContentMessage content = 1;
+  core.message.PaginationResult paginationResult = 2;
+}
