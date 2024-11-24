@@ -10,3 +10,7 @@ enum Studio {
   studio3 = 2;
   studio4 = 3;
 }
+
+message StudioValue {
+  Studio studio = 1;
+}
