@@ -13,11 +13,11 @@ message RoutineListItemMessage {
   string id = 1;
   string title = 2;
   string description = 3;
-  string key = 4;
-  Visibility visibility = 5;
-  google.protobuf.Timestamp startDate = 6;
-  google.protobuf.Timestamp endDate = 7;
-  string channelName = 8;
-  BroadcastStatus broadcastStatus = 9;
-  Studio studio = 10;
+  google.protobuf.Timestamp startDate = 4;
+  google.protobuf.Timestamp endDate = 5;
+  string channelName = 6;
+  BroadcastStatus broadcastStatus = 7;
+  Studio studio = 8;
+//  string key = 4;
+//  Visibility visibility = 5;
 }
