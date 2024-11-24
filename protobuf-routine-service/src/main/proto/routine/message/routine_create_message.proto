@@ -21,4 +21,5 @@ message RoutineCreateMessage {
   Studio studio = 9;
   core.message.Status status = 10;
   string sectionId = 11;
+  string channelName = 12;
 }

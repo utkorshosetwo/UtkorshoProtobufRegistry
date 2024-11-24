@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.routine.message;
+
+option java_multiple_files = true;
+
+import "routine/message/routine_list_item_message.proto";
+import "core/message/pagination_result.proto";
+
+message RoutineListResponseMessage {
+  repeated RoutineListItemMessage routines = 1;
+  core.message.PaginationResult paginationResult = 2;
+}
