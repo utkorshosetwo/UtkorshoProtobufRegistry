@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.routine.message;
+
+option java_multiple_files = true;
+
+import "routine/message/visibility_message.proto";
+import "google/protobuf/timestamp.proto";
+import "routine/message/studio_message.proto";
+import "routine/message/broadcast_status_message.proto";
+
+message RoutineListItemMessage {
+  string id = 1;
+  string title = 2;
+  string description = 3;
+  google.protobuf.Timestamp startDate = 4;
+  google.protobuf.Timestamp endDate = 5;
+  string channelName = 6;
+  BroadcastStatus broadcastStatus = 7;
+  Studio studio = 8;
+//  string key = 4;
+//  Visibility visibility = 5;
+}

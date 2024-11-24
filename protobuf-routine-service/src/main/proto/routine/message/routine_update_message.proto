@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.routine.message;
+
+option java_multiple_files = true;
+
+import "routine/message/visibility_message.proto";
+import "google/protobuf/timestamp.proto";
+import "routine/message/studio_message.proto";
+import "core/message/status_enum.proto";
+import "google/protobuf/wrappers.proto";
+
+message RoutineUpdateMessage {
+  string id = 1;
+  google.protobuf.StringValue title = 2;
+  google.protobuf.StringValue description = 3;
+  VisibilityValue visibility = 4;
+  google.protobuf.Timestamp startDate = 5;
+  google.protobuf.Timestamp endDate = 6;
+  google.protobuf.StringValue courseId = 7;
+  repeated google.protobuf.StringValue syllabusIds = 8;
+  google.protobuf.StringValue instructorId = 9;
+  StudioValue studio = 10;
+  core.message.StatusValue status = 11;
+  google.protobuf.StringValue sectionId = 12;
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.routine.message;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "core/message/pagination_request.proto";
+import "core/message/status_enum.proto";
+
+message RoutineListRequest {
+  core.message.PaginationRequest paginationRequest = 1;
+  google.protobuf.StringValue search = 2;
+  repeated string courseIds = 3;
+  repeated string syllabusIds = 4;
+  google.protobuf.Timestamp date = 5;
+  core.message.Status status = 6;
+}

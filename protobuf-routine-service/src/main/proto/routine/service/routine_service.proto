@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.routine.message;
+
+option java_multiple_files = true;
+
+import "routine/message/routine_list_request.proto";
+import "routine/message/routine_list_response_message.proto";
+import "routine/message/routine_create_message.proto";
+import "routine/message/routine_detail_message.proto";
+import "core/message/uuid_message.proto";
+import "google/protobuf/empty.proto";
+
+service RoutineService {
+  rpc getAllRoutines(RoutineListRequest) returns (RoutineListResponseMessage) {}
+
+  rpc createRoutine(RoutineCreateMessage) returns (RoutineDetailMessage) {}
+
+  rpc updateRoutine(RoutineCreateMessage) returns (RoutineDetailMessage) {}
+
+  rpc deleteRoutine(core.message.UuidMessage) returns (google.protobuf.Empty) {}
+
+  rpc getRoutineById(core.message.UuidMessage) returns (RoutineDetailMessage) {}
+}
