@@ -12,16 +12,10 @@ import "core/message/user_type.proto";
 message LiveCommentMessage {
   string id = 1;
   string content = 2;
-  string userId = 3;
-  string userName = 4;
-  string userImageUrl = 5;
-  string routineId = 6;
-  repeated core.message.UserType userTypes = 7;
-  repeated string assetUrls = 8;
-  string updatedBy = 9;
-  string parentId = 10;
-  google.protobuf.Timestamp createdAt = 11;
-  google.protobuf.Timestamp updatedAt = 12;
+  repeated string assetUrls = 3;
+  string updatedBy = 4;
+  google.protobuf.Timestamp createdAt = 5;
+  google.protobuf.Timestamp updatedAt = 6;
 }
 
 message LiveCommentListMessage {

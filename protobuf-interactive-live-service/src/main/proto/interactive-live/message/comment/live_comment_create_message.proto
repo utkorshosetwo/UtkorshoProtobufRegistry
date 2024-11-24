@@ -7,10 +7,8 @@ option java_multiple_files = true;
 import "core/message/user_type.proto";
 
 
-message CommentCreateMessage {
+message LiveCommentCreateMessage {
   string content = 1;
   string routineId = 2;
-  string parentId = 3;
-  repeated core.message.UserType userTypes = 4;
-  repeated string assetUrls = 5;
+  repeated string assetUrls = 3;
 }

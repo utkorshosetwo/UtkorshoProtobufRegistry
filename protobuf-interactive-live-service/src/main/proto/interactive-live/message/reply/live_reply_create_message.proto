@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.message.reply;
+
+option java_multiple_files = true;
+
+import "core/message/user_type.proto";
+
+
+message LiveReplyCreateMessage {
+  string content = 1;
+  string commentId = 2;
+  repeated string assetUrls = 3;
+}
