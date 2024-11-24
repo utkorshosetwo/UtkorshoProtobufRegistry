@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.routine.message;
+
+option java_multiple_files = true;
+
+import "routine/message/visibility_message.proto";
+import "google/protobuf/timestamp.proto";
+import "routine/message/studio_message.proto";
+import "core/message/status_enum.proto";
+
+message RoutineCreateMessage {
+  string title = 1;
+  string description = 2;
+  Visibility visibility = 3;
+  google.protobuf.Timestamp startDate = 4;
+  google.protobuf.Timestamp endDate = 5;
+  string courseId = 6;
+  repeated string syllabusIds = 7;
+  string instructorId = 8;
+  Studio studio = 9;
+  core.message.Status status = 10;
+  string sectionId = 11;
+}
