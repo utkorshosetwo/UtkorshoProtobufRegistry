@@ -6,12 +6,13 @@ option java_multiple_files = true;
 
 import "google/protobuf/empty.proto";
 import "core/message/uuid_message.proto";
-import "interactive-live/message/live_comment_create_message.proto";
-import "interactive-live/message/live_comment_message.proto";
+import "interactive-live/message/comment/live_comment_create_message.proto";
+import "interactive-live/message/comment/live_comment_message.proto";
+import "interactive-live/message/comment/live_comment_list_request.proto";
 
 
 service LiveCommentService {
-  rpc createLiveComment(message.comment.CommentCreateMessage) returns (message.comment.LiveCommentMessage) {};
+  rpc createLiveComment(message.comment.LiveCommentCreateMessage) returns (message.comment.LiveCommentMessage) {};
 
   rpc getLiveCommentById(core.message.UuidMessage) returns (message.comment.LiveCommentMessage) {};
 
