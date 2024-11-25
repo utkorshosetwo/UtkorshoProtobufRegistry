@@ -15,5 +15,5 @@ message RoutineListRequest {
   repeated string courseIds = 3;
   repeated string syllabusIds = 4;
   google.protobuf.Timestamp date = 5;
-  core.message.Status status = 6;
+  repeated core.message.Status includeStatus = 6;
 }
