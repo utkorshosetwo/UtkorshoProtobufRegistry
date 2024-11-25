@@ -33,7 +33,7 @@ message QuestionMessage {
   google.protobuf.BoolValue multi = 15;
   repeated questionDetail.QuestionDetailMessage questionDetails = 16;
   repeated tag.TagMessage tags = 17;
-  enums.QuestionStandardList questionStandards = 18;
+  repeated enums.QuestionStandard questionStandards = 18;
 }
 
 message QuestionListMessage {
