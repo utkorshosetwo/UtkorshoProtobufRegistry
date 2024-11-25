@@ -5,10 +5,10 @@ package tech.utkorsho.protobuf.routine.message;
 option java_multiple_files = true;
 
 enum Studio {
-  studio1 = 0;
-  studio2 = 1;
-  studio3 = 2;
-  studio4 = 3;
+  STUDIO1 = 0;
+  STUDIO2 = 1;
+  STUDIO3 = 2;
+  STUDIO4 = 3;
 }
 
 message StudioValue {
