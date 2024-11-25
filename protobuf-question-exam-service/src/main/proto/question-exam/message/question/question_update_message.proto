@@ -16,10 +16,10 @@ import "question-exam/message/tag/tag_message.proto";
 
 message QuestionUpdateMessage {
   string id = 1;
-  string description = 2;
+  google.protobuf.StringValue description = 2;
   google.protobuf.StringValue explanation = 3;
   google.protobuf.StringValue imageUrl = 4;
-  int32 noOfOption = 5;
+  google.protobuf.Int32Value noOfOption = 5;
   enums.DifficultyLevel difficultyLevel = 6;
   enums.QuestionType questionType = 7;
   enums.QuestionTemplate template = 8;
@@ -29,5 +29,5 @@ message QuestionUpdateMessage {
   core.message.UuidMessageList subjectLessonIds = 12;
   repeated questionDetail.QuestionDetailMessage questionDetails = 13;
   repeated tag.TagMessage tags = 14;
-  enums.QuestionStandard questionStandards = 15;
+  repeated enums.QuestionStandard questionStandards = 15;
 }

@@ -15,7 +15,7 @@ import "question-exam/message/questionDetail/question_detail_create_message.prot
 import "question-exam/message/tag/tag_message.proto";
 
 message QuestionCreateMessage {
-  string description = 1;
+  google.protobuf.StringValue description = 1;
   google.protobuf.StringValue explanation = 2;
   google.protobuf.StringValue imageUrl = 3;
   google.protobuf.Int32Value noOfOption = 4;
@@ -23,7 +23,7 @@ message QuestionCreateMessage {
   enums.QuestionType questionType = 6;
   enums.QuestionTemplate template = 7;
   enums.PublishStatus publishStatus = 8;
-  string subjectId = 9;
+  google.protobuf.StringValue subjectId = 9;
   google.protobuf.StringValue fileName = 10;
   core.message.UuidMessageList subjectLessonIds = 11;
   repeated questionDetail.QuestionDetailCreateMessage questionDetails = 12;
