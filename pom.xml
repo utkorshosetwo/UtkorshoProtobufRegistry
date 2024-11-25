@@ -13,6 +13,7 @@
         <module>protobuf-question-exam-service</module>
         <module>protobuf-interactive-live-service</module>
         <module>protobuf-routine-service</module>
+        <module>protobuf-payment-service</module>
     </modules>
     <version>1.0.4-SNAPSHOT</version>
     <name>ProtobufRegistry</name>
