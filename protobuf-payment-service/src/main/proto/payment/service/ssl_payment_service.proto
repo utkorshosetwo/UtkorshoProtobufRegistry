@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.payment.service;
+
+option java_multiple_files = true;
+
+import "payment/message/ssl/create_ssl_payment_message.proto";
+import "google/protobuf/empty.proto";
+
+service SslPaymentService {
+    rpc CreateSslPaymentNotification(payment.message.ssl.CreateSslPaymentNotification) returns (google.protobuf.Empty);
+}
