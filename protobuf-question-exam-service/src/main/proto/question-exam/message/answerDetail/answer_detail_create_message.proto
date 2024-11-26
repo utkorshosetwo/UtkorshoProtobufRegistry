@@ -11,8 +11,8 @@ message AnswerDetailCreateMessage {
   string questionId = 1;
   google.protobuf.StringValue answerText = 2;
   google.protobuf.StringValue imageUrl = 3;
-  core.message.UuidMessageList givenQuestionDetailIds = 4;
-  core.message.UuidMessageList markedQuestionDetailIds = 5;
+  repeated google.protobuf.StringValue givenQuestionDetailIds = 4;
+  repeated google.protobuf.StringValue markedQuestionDetailIds = 5;
   string answerId = 6;
 }
 
