@@ -13,5 +13,5 @@ message PracticeExamAnswerEvaluationMessage {
   string grade = 4;
   int32 takenTime = 5;
   float averageTime = 6;
-  answerEvaluation.PracticeExamAnswerEvaluationDetailList answerEvaluationDetails = 7;
+  repeated answerEvaluation.PracticeExamAnswerEvaluationDetail answerEvaluationDetails = 7;
 }

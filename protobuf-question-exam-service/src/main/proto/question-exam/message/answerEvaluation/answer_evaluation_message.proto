@@ -5,7 +5,7 @@ package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
 option java_multiple_files = true;
 
 import "core/message/pagination_result.proto";
-import "question-exam/message/answerEvaluationDetail/answer_evaluation_detail_create_request.proto";
+import "question-exam/message/answerEvaluationDetail/answer_evaluation_detail_message.proto";
 
 message AnswerEvaluationMessage {
   string id = 1;
@@ -17,7 +17,7 @@ message AnswerEvaluationMessage {
   string grade = 7;
   int32 takenTime = 8;
   float averageTime = 9;
-  answerEvaluationDetail.AnswerEvaluationDetailListCreateMessage answerEvaluationDetails = 10;
+  repeated answerEvaluationDetail.AnswerEvaluationDetailMessage answerEvaluationDetails = 10;
 }
 
 message AnswerEvaluationListMessage {

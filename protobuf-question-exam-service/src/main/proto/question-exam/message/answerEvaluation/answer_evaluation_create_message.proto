@@ -9,5 +9,5 @@ import "question-exam/message/answerEvaluationDetail/answer_evaluation_detail_cr
 message AnswerEvaluationCreateMessage {
   string questionSetId = 1;
   string answerId = 2;
-  answerEvaluationDetail.AnswerEvaluationDetailListCreateMessage answerEvaluationDetails = 3;
+  repeated answerEvaluationDetail.AnswerEvaluationDetailCreateRequest answerEvaluationDetails = 3;
 }

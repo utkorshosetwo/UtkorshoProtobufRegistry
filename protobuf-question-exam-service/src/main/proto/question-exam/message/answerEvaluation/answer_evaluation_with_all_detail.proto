@@ -17,5 +17,5 @@ message AnswerEvaluationWithAllDetail {
   string grade = 8;
   int32 takenTime = 9;
   float averageTime = 10;
-  answerEvaluation.AnswerEvaluationDetailWithQuestionAnswerList answerEvaluationDetails = 11;
+  repeated answerEvaluation.AnswerEvaluationDetailWithQuestionAnswer answerEvaluationDetails = 11;
 }
