@@ -10,9 +10,9 @@ import "core/message/status_enum.proto";
 
 message AnswerListRequest {
   core.message.PaginationRequest paginationRequest = 1;
-  core.message.Status status = 2;
+  core.message.StatusValue status = 2;
   google.protobuf.StringValue questionSetId = 3;
   google.protobuf.StringValue userId = 4;
-  bool userDataRequired = 5;
-  bool evaluated = 6;
+  google.protobuf.BoolValue userDataRequired = 5;
+  google.protobuf.BoolValue evaluated = 6;
 }

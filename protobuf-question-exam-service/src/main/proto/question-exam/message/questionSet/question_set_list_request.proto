@@ -4,6 +4,7 @@ package tech.utkorsho.protobuf.questionexam.message.questionSet;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "core/message/pagination_request.proto";
 import "core/message/status_enum.proto";
 import "core/message/uuid_message.proto";
@@ -11,9 +12,9 @@ import "question-exam/enums/content_type.proto";
 
 message QuestionSetListRequest {
   core.message.PaginationRequest paginationRequest = 1;
-  core.message.Status status = 2;
+  core.message.StatusValue status = 2;
   string courseId = 3;
   core.message.UuidMessageList syllabusIds = 4;
   enums.ContentType contentType = 5;
-  bool answerEvaluationIdRequired = 6;
+  google.protobuf.BoolValue answerEvaluationIdRequired = 6;
 }
