@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answerEvaluationDetail;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+
+message AnswerEvaluationDetailCreateMessage {
+  google.protobuf.StringValue imageUrl = 1;
+  google.protobuf.FloatValue marks = 2;
+  string questionId = 3;
+  string answerEvaluationId = 4;
+}
+
+message AnswerEvaluationDetailListCreateMessage {
+  repeated AnswerEvaluationDetailCreateMessage answerEvaluationDetails = 1;
+}

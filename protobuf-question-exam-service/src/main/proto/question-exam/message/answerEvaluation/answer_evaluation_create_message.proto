@@ -4,10 +4,10 @@ package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
 
 option java_multiple_files = true;
 
-import "question-exam/message/answerEvaluationDetail/answer_evaluation_detail_create_request.proto";
+import "question-exam/message/answerEvaluationDetail/answer_evaluation_detail_create_message.proto";
 
 message AnswerEvaluationCreateMessage {
   string questionSetId = 1;
   string answerId = 2;
-  repeated answerEvaluationDetail.AnswerEvaluationDetailCreateRequest answerEvaluationDetails = 3;
+  repeated answerEvaluationDetail.AnswerEvaluationDetailCreateMessage answerEvaluationDetails = 3;
 }

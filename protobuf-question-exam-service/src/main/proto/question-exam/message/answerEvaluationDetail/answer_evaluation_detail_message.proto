@@ -4,10 +4,12 @@ package tech.utkorsho.protobuf.questionexam.message.answerEvaluationDetail;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
+
 message AnswerEvaluationDetailMessage {
   string id = 1;
-  string imageUrl = 2;
-  float marks = 3;
+  google.protobuf.StringValue imageUrl = 2;
+  google.protobuf.FloatValue marks = 3;
   string questionId = 4;
   string answerEvaluationId = 5;
 }
