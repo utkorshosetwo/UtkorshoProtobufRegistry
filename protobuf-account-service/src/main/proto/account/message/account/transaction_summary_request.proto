@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.account.message.account;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "core/message/pagination_request.proto";
+
+message TransactionSummaryRequest {
+  core.message.PaginationRequest paginationRequest = 1;
+  repeated google.protobuf.StringValue courseIds = 2;
+  repeated google.protobuf.StringValue sources = 3;
+  google.protobuf.Timestamp startDate = 4;
+  google.protobuf.Timestamp endDate = 5;
+  google.protobuf.StringValue reportType = 6;
+  google.protobuf.StringValue searchKey = 7;
+}

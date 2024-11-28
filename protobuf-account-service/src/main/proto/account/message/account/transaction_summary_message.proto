@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.account.message.account;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "core/message/pagination_request.proto";
+
+message TransactionSummaryMessage {
+  google.protobuf.Int32Value serial = 1;
+  google.protobuf.StringValue courseId = 2;
+  google.protobuf.StringValue courseName = 3;
+  google.protobuf.StringValue transactionSource = 4;
+  google.protobuf.DoubleValue transactionAmount = 5;
+  google.protobuf.DoubleValue considerationAmount = 6;
+  google.protobuf.DoubleValue discountAmount = 7;
+  google.protobuf.DoubleValue netAmount = 8;
+  google.protobuf.DoubleValue receivedAmount = 9;
+  google.protobuf.DoubleValue cashBackAmount = 10;
+  google.protobuf.Int32Value totalEnrolled = 11;
+}
