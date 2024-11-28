@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.payment.message.agent;
+
+option java_multiple_files = true;
+
+enum AgentPaymentMethod {
+  CASH = 0;
+  BKASH = 1;
+  NAGAD = 2;
+  ROCKET = 3;
+  INTERNAL = 4;
+}

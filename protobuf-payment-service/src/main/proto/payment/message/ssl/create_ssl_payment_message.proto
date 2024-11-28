@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.payment.message.ssl;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "payment/message/ssl/ssl_transaction_status_message.proto";
+
+message CreateSslPaymentMessage {
+    double amount = 1;
+    string bankTranId = 2;
+    double baseFair = 3;
+    string cardBrand = 4;
+    string cardIssuer = 5;
+    string cardIssuerCountry = 6;
+    string cardIssuerCountryCode = 7;
+    string cardNo = 8;
+    string cardSubBrand = 9;
+    string cardType = 10;
+    string currency = 11;
+    double currencyAmount = 12;
+    double currencyRate = 13;
+    string currencyType = 14;
+    string error = 15;
+    int32 riskLevel = 16;
+    string riskTitle = 17;
+    SslTransactionStatus status = 18;
+    double storeAmount = 19;
+    string storeId = 20;
+    google.protobuf.Timestamp tranDate = 21;
+    string tranId = 22;
+    string valId = 23;
+    string userId = 24;
+    string courseId = 25;
+    string promoCode = 26;
+    string platform = 27;
+    string verifySign = 28;
+    string verifySignSha2 = 29;
+    string verifyKey = 30;
+    double basePrice = 31;
+    double offerDiscount = 32;
+    double specialOfferDiscount = 33;
+    double promoCodeDiscount = 34;
+}
+
