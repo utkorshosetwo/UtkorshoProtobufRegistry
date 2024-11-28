@@ -38,5 +38,9 @@ message CreateSslPaymentMessage {
     string verifySign = 28;
     string verifySignSha2 = 29;
     string verifyKey = 30;
+    double basePrice = 31;
+    double offerDiscount = 32;
+    double specialOfferDiscount = 33;
+    double promoCodeDiscount = 34;
 }
 
