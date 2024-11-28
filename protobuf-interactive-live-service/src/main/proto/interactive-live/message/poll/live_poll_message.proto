@@ -4,8 +4,8 @@ package tech.utkorsho.protobuf.interactiveLive.message.poll;
 
 option java_multiple_files = true;
 
-import "interactive-live/enums/poll_position.proto";
-import "interactive-live/enums/poll_status.proto";
+import "interactive-live/message/poll/poll_position.proto";
+import "interactive-live/message/poll/poll_status.proto";
 import "google/protobuf/timestamp.proto";
 
 message LivePollMessage {
@@ -13,12 +13,12 @@ message LivePollMessage {
   string question = 2;
   string questionImageUrl = 3;
   bool isAbsolutePoll = 4;
-  interactiveLive.enum.PollPosition pollPosition = 5;
+  interactiveLive.message.PollPosition pollPosition = 5;
   int32 expirationTime = 6;
   bool showParticipationDetails = 7;
   bool showFastestFinger = 8;
   int64 totalVotes = 9; // Long in Java
-  interactiveLive.enum.PollStatus status = 10;
+  interactiveLive.message.PollStatus status = 10;
   google.protobuf.Timestamp createdAt = 11;
   google.protobuf.Timestamp updatedAt = 12;
 }

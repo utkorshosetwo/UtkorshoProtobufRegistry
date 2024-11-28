@@ -4,7 +4,7 @@ package tech.utkorsho.protobuf.interactiveLive.message.comment;
 
 option java_multiple_files = true;
 
-import "interactive-live/enums/user_type.proto";
+import "interactive-live/message/reply/user_type.proto";
 import "interactive-live/message/reply/live_reply_message.proto";
 
 
@@ -15,5 +15,5 @@ message LiveCommentCreateMessage {
   string userName = 4;
   string userImageUrl = 5;
   repeated string assetUrls = 6;
-  repeated enum.UserType userTypes = 7;
+  repeated interactiveLive.message.UserType userTypes = 7;
 }
