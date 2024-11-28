@@ -15,4 +15,8 @@ message CreateAgentSalesMessage {
   string promoCode = 6;
   string remark = 7;
   string reference = 8;
+  double basePrice = 9;
+  double offerDiscount = 10;
+  double specialOfferDiscount = 11;
+  double promoCodeDiscount = 12;
 }
