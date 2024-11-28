@@ -7,7 +7,7 @@ option java_multiple_files = true;
 import "google/protobuf/timestamp.proto";
 import "payment/message/ssl/ssl_transaction_status_message.proto";
 
-message CreateSslPaymentNotification {
+message CreateSslPaymentMessage {
     double amount = 1;
     string bankTranId = 2;
     double baseFair = 3;
