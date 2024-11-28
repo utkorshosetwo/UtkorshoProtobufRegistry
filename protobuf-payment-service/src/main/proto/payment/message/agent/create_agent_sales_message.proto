@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.payment.message.agent;
+
+option java_multiple_files = true;
+
+import "payment/message/agent/agent_payment_method.proto";
+
+message CreateAgentSalesMessage {
+  string transactionId = 1;
+  payment.message.agent.AgentPaymentMethod paymentMethod = 2;
+  double paidAmount = 3;
+  string userId = 4;
+  string courseId = 5;
+  string promoCode = 6;
+  string remark = 7;
+  string reference = 8;
+}
