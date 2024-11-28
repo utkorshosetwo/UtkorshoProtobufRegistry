@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.enum;
+
+option java_multiple_files = true;
+
+enum PollStatus {
+  UNPUBLISHED = 0;
+  PUBLISHED = 1;
+  EXPIRE = 2;
+  DELETED = 3;
+}
