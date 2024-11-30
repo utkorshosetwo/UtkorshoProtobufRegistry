@@ -11,5 +11,6 @@ import "core/message/uuid_message.proto";
 
 message LiveCommentListRequest {
   core.message.PaginationRequest paginationRequest = 1;
-  core.message.UuidMessageList routineIds = 2;
+  core.message.UuidMessage routineId = 2;
+  core.message.UuidMessage userId = 3;
 }
