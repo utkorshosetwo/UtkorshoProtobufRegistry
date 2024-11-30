@@ -6,7 +6,7 @@ option java_multiple_files = true;
 
 import "google/protobuf/timestamp.proto";
 import "core/message/pagination_result.proto";
-import "interactive-live/enums/user_type.proto";
+import "interactive-live/enum/user_type.proto";
 import "interactive-live/message/reply/live_reply_message.proto";
 
 
@@ -15,12 +15,13 @@ message LiveCommentMessage {
   string content = 2;
   string userId = 3;
   repeated string assetUrls = 4;
-  repeated enum.UserType userTypes = 7;
+  repeated UserType userTypes = 7;
   google.protobuf.Timestamp createdAt = 5;
   google.protobuf.Timestamp updatedAt = 6;
 }
 
 message LiveCommentListMessage {
   repeated LiveCommentMessage comments = 1;
-  optional core.message.PaginationResult paginationResult = 2;
+  repeated LiveCommentMessage instructorComments = 2;
+  optional core.message.PaginationResult paginationResult = 3;
 }

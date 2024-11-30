@@ -5,13 +5,15 @@ package tech.utkorsho.protobuf.interactiveLive.message.reply;
 option java_multiple_files = true;
 
 import "google/protobuf/timestamp.proto";
+import "interactive-live/enum/user_type.proto";
 
 message LiveReplyMessage {
   string id = 1;
   string content = 2;
   string commentId = 3;
-  repeated string assetUrls = 4;
-  string updatedBy = 5;
-  google.protobuf.Timestamp createdAt = 6;
-  google.protobuf.Timestamp updatedAt = 7;
+  string userId = 4;
+  repeated string assetUrls = 5;
+  repeated UserType userTypes = 6;
+  google.protobuf.Timestamp createdAt = 7;
+  google.protobuf.Timestamp updatedAt = 8;
 }

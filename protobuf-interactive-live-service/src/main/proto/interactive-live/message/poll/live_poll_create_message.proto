@@ -4,10 +4,9 @@ package tech.utkorsho.protobuf.interactiveLive.message.poll;
 
 option java_multiple_files = true;
 
-import "interactive-live/message/poll/poll_position.proto";
-import "interactive-live/message/poll/poll_status.proto";
+import "interactive-live/enum/poll_position.proto";
+import "interactive-live/enum/poll_status.proto";
 import "interactive-live/message/pollOption/live_poll_option_create_message.proto";
-
 
 
 
@@ -15,11 +14,11 @@ message LivePollCreateMessage {
   string routineId = 1;
   string question = 2;
   string questionImageUrl = 3;
-  interactiveLive.message.PollPosition pollPosition = 4;
+  PollPosition pollPosition = 4;
   bool isAbsolutePoll = 5;
   bool showParticipationDetails = 6;
   bool showFastestFinger = 7;
   int32 expirationTime = 8;
-  interactiveLive.message.PollStatus status = 9;
-  repeated interactiveLive.message.pollOption.LiveCreatePollOptionMessage pollOptions = 10;
+  PollStatus status = 9;
+  repeated pollOption.LiveCreatePollOptionMessage pollOptions = 10;
 }
