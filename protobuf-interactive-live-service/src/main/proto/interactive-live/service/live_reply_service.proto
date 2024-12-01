@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.service;
+
+option java_multiple_files = true;
+
+
+import "interactive-live/message/reply/live_reply_create_message.proto";
+import "interactive-live/message/reply/live_reply_message.proto";
+
+
+service LiveReplyService {
+  rpc createLiveReply(message.reply.LiveReplyCreateMessage) returns (message.reply.LiveReplyMessage) {};
+}

@@ -8,8 +8,6 @@ import "interactive-live/enum/poll_position.proto";
 import "interactive-live/enum/poll_status.proto";
 import "interactive-live/message/pollOption/live_poll_option_create_message.proto";
 
-
-
 message LivePollCreateMessage {
   string routineId = 1;
   string question = 2;

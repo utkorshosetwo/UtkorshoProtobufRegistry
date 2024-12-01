@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.message.poll;
+
+option java_multiple_files = true;
+
+import "interactive-live/enum/poll_status.proto";
+
+
+message LivePollUpdateMessage {
+  PollStatus status = 1;
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.service;
+
+option java_multiple_files = true;
+
+import "interactive-live/message/poll/live_poll_create_message.proto";
+import "interactive-live/message/poll/live_poll_update_message.proto";
+import "interactive-live/message/poll/live_poll_list_request.proto";
+import "interactive-live/message/poll/live_poll_message.proto";
+import "google/protobuf/empty.proto";
+import "core/message/uuid_message.proto";
+
+
+service LivePollService {
+  rpc createLivePoll(message.poll.LivePollCreateMessage) returns (message.poll.LivePollMessage) {}
+
+  rpc getLivePollById(core.message.UuidMessage) returns (message.poll.LivePollMessage) {}
+
+  rpc getLivePollsByRoutineId(message.poll.LivePollListRequest) returns (message.poll.LivePollListMessage);
+
+  rpc updateLivePoll(message.poll.LivePollUpdateMessage) returns (google.protobuf.Empty);
+}

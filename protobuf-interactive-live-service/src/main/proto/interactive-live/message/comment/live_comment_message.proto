@@ -10,18 +10,28 @@ import "interactive-live/enum/user_type.proto";
 import "interactive-live/message/reply/live_reply_message.proto";
 
 
+message InstructorComments {
+  string id = 1;
+  string content = 2;
+  string userId = 3;
+  repeated string assetUrls = 4;
+  google.protobuf.Timestamp createdAt = 5;
+  google.protobuf.Timestamp updatedAt = 6;
+}
+
 message LiveCommentMessage {
   string id = 1;
   string content = 2;
   string userId = 3;
   repeated string assetUrls = 4;
-  repeated UserType userTypes = 7;
-  google.protobuf.Timestamp createdAt = 5;
-  google.protobuf.Timestamp updatedAt = 6;
+  repeated UserType userTypes = 5;
+  google.protobuf.Timestamp createdAt = 6;
+  google.protobuf.Timestamp updatedAt = 7;
+  repeated reply.LiveReplyMessage replies = 8;
 }
 
 message LiveCommentListMessage {
-  repeated LiveCommentMessage comments = 1;
-  repeated LiveCommentMessage instructorComments = 2;
+  repeated InstructorComments instructorComments = 1;
+  repeated LiveCommentMessage comments = 2;
   optional core.message.PaginationResult paginationResult = 3;
 }

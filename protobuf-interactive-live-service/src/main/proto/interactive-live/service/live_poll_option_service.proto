@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.service;
+
+option java_multiple_files = true;
+
+import "core/message/uuid_message.proto";
+import "interactive-live/message/pollOption/live_poll_option_message.proto";
+
+service LivePollOptionService {
+  rpc getPollOptionById(core.message.UuidMessage) returns (message.pollOption.LivePollOptionMessage) {}
+}

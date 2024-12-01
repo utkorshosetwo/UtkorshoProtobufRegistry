@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.service;
+
+option java_multiple_files = true;
+
+import "interactive-live/message/vote/live_vote_create_message.proto";
+import "interactive-live/message/vote/live_vote_message.proto";
+
+service LivePollVoteService {
+    rpc createPollVote(message.vote.LiveCreateVoteMessage) returns (message.vote.LiveVoteMessage) {}
+
+    rpc getVotes()
+}

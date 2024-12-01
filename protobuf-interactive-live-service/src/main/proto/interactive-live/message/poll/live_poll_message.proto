@@ -22,3 +22,8 @@ message LivePollMessage {
   google.protobuf.Timestamp createdAt = 11;
   google.protobuf.Timestamp updatedAt = 12;
 }
+
+
+message LivePollListMessage {
+  repeated LivePollMessage polls = 1;
+}
