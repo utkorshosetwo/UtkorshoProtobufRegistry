@@ -4,10 +4,12 @@ package core.message;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
+
 message PaginationResult {
-  int32 page_no = 1;
-  int32 records_per_page = 2;
-  int32 next_page = 3;
-  int32 total_pages = 4;
-  int32 total_records = 5;
+  google.protobuf.Int32Value page_no = 1;
+  google.protobuf.Int32Value records_per_page = 2;
+  google.protobuf.Int32Value next_page = 3;
+  google.protobuf.Int32Value total_pages = 4;
+  google.protobuf.Int32Value total_records = 5;
 }
