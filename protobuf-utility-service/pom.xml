@@ -6,7 +6,7 @@
     <parent>
         <groupId>tech.utkorsho</groupId>
         <artifactId>protobuf-registry</artifactId>
-        <version>1.0.3-SNAPSHOT</version>
+        <version>1.0.4-SNAPSHOT</version>
     </parent>
 
     <artifactId>protobuf-utility-service</artifactId>
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>tech.utkorsho</groupId>
             <artifactId>protobuf-core</artifactId>
-            <version>1.0.3-SNAPSHOT</version>
+            <version>1.0.5-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
