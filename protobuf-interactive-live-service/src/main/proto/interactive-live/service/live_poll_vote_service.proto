@@ -9,6 +9,4 @@ import "interactive-live/message/vote/live_vote_message.proto";
 
 service LivePollVoteService {
     rpc createPollVote(message.vote.LiveCreateVoteMessage) returns (message.vote.LiveVoteMessage) {}
-
-    rpc getVotes()
 }
