@@ -16,5 +16,5 @@ service LiveCommentService {
 
   rpc getLiveCommentById(core.message.UuidMessage) returns (message.comment.LiveCommentMessage) {};
 
-  rpc getAllLiveComments(google.protobuf.Empty) returns (message.comment.LiveCommentListMessage) {};
+  rpc getAllLiveComments(message.comment.LiveCommentListRequest) returns (message.comment.LiveCommentListMessage) {};
 }
