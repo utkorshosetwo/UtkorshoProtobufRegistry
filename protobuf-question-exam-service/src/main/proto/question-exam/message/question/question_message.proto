@@ -29,7 +29,7 @@ message QuestionMessage {
   enums.PublishStatus publishStatus = 11;
   google.protobuf.StringValue subjectId = 12;
   google.protobuf.StringValue fileName = 13;
-  core.message.UuidMessageList subjectLessonIds = 14;
+  repeated google.protobuf.StringValue subjectLessonIds = 14;
   google.protobuf.BoolValue multi = 15;
   repeated questionDetail.QuestionDetailMessage questionDetails = 16;
   repeated tag.TagMessage tags = 17;

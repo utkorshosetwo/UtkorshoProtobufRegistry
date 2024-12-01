@@ -26,7 +26,7 @@ message QuestionUpdateMessage {
   enums.PublishStatus publishStatus = 9;
   google.protobuf.StringValue subjectId = 10;
   google.protobuf.StringValue fileName = 11;
-  core.message.UuidMessageList subjectLessonIds = 12;
+  repeated google.protobuf.StringValue subjectLessonIds = 12;
   repeated questionDetail.QuestionDetailMessage questionDetails = 13;
   repeated tag.TagMessage tags = 14;
   repeated enums.QuestionStandard questionStandards = 15;

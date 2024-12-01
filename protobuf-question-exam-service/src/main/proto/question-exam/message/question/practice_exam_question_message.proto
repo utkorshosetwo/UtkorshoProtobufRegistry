@@ -11,7 +11,7 @@ message PracticeExamQuestionMessage {
   string questionNo = 2;
   string description = 3;
   bool multi = 4;
-  questionDetail.PracticeExamQuestionDetailListMessage questionDetails = 5;
+  repeated questionDetail.PracticeExamQuestionDetailMessage questionDetails = 5;
 }
 
 message PracticeExamQuestionListMessage {
