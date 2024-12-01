@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.payment.message.transaction;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "payment/message/transaction/transaction_source.proto";
+import "core/message/pagination_result.proto";
+
+message TransactionReportMessage {
+  string userId = 1;
+  google.protobuf.Timestamp transactionDate = 2;
+  string courseId = 3;
+  string merchantReferenceNumber = 4;
+  string customerReferenceNumber = 5;
+  TransactionSource transactionSource = 6;
+  double receivedAmount = 7;
+  double cashBackAmount = 8;
+}
+
+message TransactionReportResponseMessage {
+  repeated TransactionReportMessage transactionReportMessages = 1;
+  core.message.PaginationResult paginationResult = 2;
+}

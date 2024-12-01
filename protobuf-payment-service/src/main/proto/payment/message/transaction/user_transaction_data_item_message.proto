@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.payment.message.transaction;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "payment/message/transaction/transaction_source.proto";
+import "core/message/pagination_result.proto";
+
+message UserTransactionDataItemMessage {
+  int32 serial = 1;
+  int64 id = 2;
+  string userId = 3;
+  string courseId = 4;
+  string courseName = 5;
+  string platform = 6;
+  double transactionAmount = 7;
+  TransactionSource source = 8;
+  google.protobuf.Timestamp transactionDate = 9;
+  bool confirmed = 10;
+}
+
+message UserTransactionDataResponseMessage {
+  repeated UserTransactionDataItemMessage userTransactionDataItemMessages = 1;
+  core.message.PaginationResult paginationResult = 2;
+}

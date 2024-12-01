@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.payment.message.transaction;
+
+option java_multiple_files = true;
+
+import "core/message/pagination_result.proto";
+import "google/protobuf/timestamp.proto";
+import "payment/message/transaction/transaction_source.proto";
+
+message TransactionSummaryMessage {
+  string courseId = 1;
+  TransactionSource transactionSource = 2;
+  double transactionAmount = 3;
+  double considerationAmount = 4;
+  double totalDiscount = 5;
+  double netIncome = 6;
+  double receivedAmount = 7;
+  double totalRefund = 8;
+  int32  totalEnrolled = 9;
+}
+
+message TransactionSummaryResponseMessage {
+  repeated TransactionSummaryMessage transactionSummaryMessages = 1;
+  core.message.PaginationResult paginationResult = 2;
+}
