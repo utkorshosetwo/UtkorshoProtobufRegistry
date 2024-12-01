@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.payment.service;
+
+option java_multiple_files = true;
+
+import "payment/message/transaction/user_transaction_list_request.proto";
+import "payment/message/transaction/user_transaction_data_item_message.proto";
+import "payment/message/transaction/transaction_summary_report_request.proto";
+import "payment/message/transaction/transaction_summary_message.proto";
+import "payment/message/transaction/transaction_report_list_request.proto";
+import "payment/message/transaction/transaction_report_message.proto";
+
+service TransactionService {
+  rpc getUserTransactions(payment.message.transaction.UserTransactionListRequest) returns (payment.message.transaction.UserTransactionDataResponseMessage);
+
+  rpc getTransactionReport(payment.message.transaction.TransactionReportRequest) returns (payment.message.transaction.TransactionReportResponseMessage);
+
+  rpc getTransactionSummary(payment.message.transaction.TransactionSummaryReportRequest) returns (payment.message.transaction.TransactionSummaryResponseMessage);
+}

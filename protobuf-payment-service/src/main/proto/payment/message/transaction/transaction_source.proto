@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.payment.message.transaction;
+
+option java_multiple_files = true;
+
+enum TransactionSource {
+  SSL = 0;
+  BKASH = 1;
+  AGENT = 2;
+}
+
+message TransactionSourceValue {
+  TransactionSource value = 1;
+}
