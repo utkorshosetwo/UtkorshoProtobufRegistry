@@ -12,9 +12,10 @@ import "user/message/student/student_created_message.proto";
 import "user/message/user/phone_availability_response.proto";
 import "user/message/user/otp_verification_request.proto";
 import "user/message/user/otp_verification_response.proto";
+import "user/message/user/authorized_user_message.proto";
 
 service AuthenticationService {
-  rpc authenticate(message.user.AuthenticationRequest) returns (message.user.TokenResponse) {};
+  rpc authenticate(message.user.AuthenticationRequest) returns (message.user.AuthorizedUserMessage) {};
 
   rpc register(message.user.UserRegisterRequest) returns (message.student.StudentCreatedMessage) {};
 
