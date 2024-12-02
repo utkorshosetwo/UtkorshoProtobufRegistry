@@ -13,3 +13,7 @@ message SubjectWiseSummaryMessage {
   int32 noOfMcqQuestions = 6;
   int32 noOfCreativeQuestions = 7;
 }
+
+message SubjectWiseSummaryListMessage {
+  repeated SubjectWiseSummaryMessage summaries = 1;
+}

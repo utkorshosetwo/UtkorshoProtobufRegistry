@@ -18,3 +18,7 @@ message QuestionSummaryMessage {
   core.message.Status status = 7;
   google.protobuf.Timestamp updatedAt = 8;
 }
+
+message QuestionSummaryListMessage {
+  repeated QuestionSummaryMessage summaries = 1;
+}

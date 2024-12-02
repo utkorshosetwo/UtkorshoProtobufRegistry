@@ -28,9 +28,9 @@ service QuestionService {
 
   rpc delete(core.message.UuidMessage) returns (google.protobuf.StringValue) {};
 
-  rpc summarize(core.message.UuidMessage) returns (message.question.QuestionSummaryMessage) {};
+  rpc summarize(core.message.UuidMessage) returns (message.question.QuestionSummaryListMessage) {};
 
-  rpc subjectWiseSummarize(core.message.UuidMessage) returns (message.question.SubjectWiseSummaryMessage) {};
+  rpc subjectWiseSummarize(core.message.UuidMessage) returns (message.question.SubjectWiseSummaryListMessage) {};
 
-  rpc syllabusWiseSummarize(message.question.SyllabusWiseSummaryRequest) returns (message.question.SyllabusWiseSummaryMessage) {};
+  rpc syllabusWiseSummarize(message.question.SyllabusWiseSummaryRequest) returns (message.question.SyllabusWiseSummaryListMessage) {};
 }

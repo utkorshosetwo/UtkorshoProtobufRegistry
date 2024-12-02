@@ -13,3 +13,7 @@ message SyllabusWiseSummaryMessage {
   int32 noOfMcqQuestions = 6;
   int32 noOfCreativeQuestions = 7;
 }
+
+message SyllabusWiseSummaryListMessage {
+  repeated SyllabusWiseSummaryMessage summaries = 1;
+}
