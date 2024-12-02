@@ -4,7 +4,6 @@ package tech.utkorsho.protobuf.questionexam.message.question;
 
 option java_multiple_files = true;
 
-import "core/message/uuid_message.proto";
 import "google/protobuf/wrappers.proto";
 import "question-exam/enums/difficulty_level.proto";
 import "question-exam/enums/question_type.proto";
