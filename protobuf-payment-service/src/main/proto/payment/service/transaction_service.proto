@@ -8,7 +8,7 @@ import "payment/message/transaction/user_transaction_list_request.proto";
 import "payment/message/transaction/user_transaction_data_item_message.proto";
 import "payment/message/transaction/transaction_summary_report_request.proto";
 import "payment/message/transaction/transaction_summary_message.proto";
-import "payment/message/transaction/transaction_report_list_request.proto";
+import "payment/message/transaction/transaction_report_request.proto";
 import "payment/message/transaction/transaction_report_message.proto";
 
 service TransactionService {
