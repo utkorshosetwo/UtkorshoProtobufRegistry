@@ -7,6 +7,5 @@ option java_multiple_files = true;
 import "google/protobuf/wrappers.proto";
 
 message SyllabusWiseSummaryRequest {
-  google.protobuf.StringValue syllabusId = 1;
-  google.protobuf.StringValue syllabusType = 2;
+  repeated google.protobuf.StringValue syllabusIds = 1;
 }
