@@ -10,6 +10,10 @@ import "question-exam/message/question/question_message.proto";
 import "question-exam/message/question/question_create_message.proto";
 import "question-exam/message/question/question_list_request.proto";
 import "question-exam/message/question/question_update_message.proto";
+import "question-exam/message/question/question_summary_message.proto";
+import "question-exam/message/question/subject_wise_summary_message.proto";
+import "question-exam/message/question/syllabus_wise_summary_message.proto";
+import "question-exam/message/question/syllabus_wise_summary_request.proto";
 
 service QuestionService {
   rpc create(message.question.QuestionCreateMessage) returns (message.question.QuestionMessage) {};
@@ -23,4 +27,10 @@ service QuestionService {
   rpc update(message.question.QuestionUpdateMessage) returns (message.question.QuestionMessage) {};
 
   rpc delete(core.message.UuidMessage) returns (google.protobuf.StringValue) {};
+
+  rpc summarize(core.message.UuidMessage) returns (message.question.QuestionSummaryMessage) {};
+
+  rpc subjectWiseSummarize(core.message.UuidMessage) returns (message.question.SubjectWiseSummaryMessage) {};
+
+  rpc syllabusWiseSummarize(message.question.SyllabusWiseSummaryRequest) returns (message.question.SyllabusWiseSummaryMessage) {};
 }
