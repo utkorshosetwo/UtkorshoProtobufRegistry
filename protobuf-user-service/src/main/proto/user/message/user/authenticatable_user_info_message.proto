@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.user;
+
+option java_multiple_files = true;
+
+import "user/enums/user_type.proto";
+
+message AuthenticatableUserInfoMessage {
+  string id = 1;
+  string email = 2;
+  string phone = 3;
+  string password = 4;
+  repeated string permissions = 5;
+  repeated enums.UserType userTypes = 6;
+}

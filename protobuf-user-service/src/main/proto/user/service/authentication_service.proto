@@ -13,9 +13,13 @@ import "user/message/user/phone_availability_response.proto";
 import "user/message/user/otp_verification_request.proto";
 import "user/message/user/otp_verification_response.proto";
 import "user/message/user/authorized_user_message.proto";
+import "user/message/user/authenticatable_user_info_message.proto";
 
 service AuthenticationService {
+  // could be deprecated
   rpc authenticate(message.user.AuthenticationRequest) returns (message.user.AuthorizedUserMessage) {};
+
+  rpc loadAuthenticatableUser(google.protobuf.StringValue) returns (message.user.AuthenticatableUserInfoMessage) {};
 
   rpc register(message.user.UserRegisterRequest) returns (message.student.StudentCreatedMessage) {};
 
