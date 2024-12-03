@@ -7,6 +7,7 @@ option java_multiple_files = true;
 import "interactive-live/enum/poll_position.proto";
 import "interactive-live/enum/poll_status.proto";
 import "google/protobuf/timestamp.proto";
+import "interactive-live/message/pollOption/live_poll_option_message.proto";
 
 message LivePollMessage {
   string routineId = 1; // UUID in Java
@@ -17,11 +18,28 @@ message LivePollMessage {
   int32 expirationTime = 6;
   bool showParticipationDetails = 7;
   bool showFastestFinger = 8;
-  int64 totalVotes = 9; // Long in Java
+  int64 totalVotes = 9;
   PollStatus status = 10;
-  google.protobuf.Timestamp createdAt = 11;
-  google.protobuf.Timestamp updatedAt = 12;
+  repeated message.pollOption.LivePollOptionMessage pollOptions = 11;
+  google.protobuf.Timestamp createdAt = 12;
+  google.protobuf.Timestamp updatedAt = 13;
 }
+
+//message LivePollCreateWithPollOptionMessage {
+//  string routineId = 1; // UUID in Java
+//  string question = 2;
+//  string questionImageUrl = 3;
+//  bool isAbsolutePoll = 4;
+//  PollPosition pollPosition = 5;
+//  int32 expirationTime = 6;
+//  bool showParticipationDetails = 7;
+//  bool showFastestFinger = 8;
+//  int64 totalVotes = 9;
+//  PollStatus status = 10;
+//  repeated message.pollOption.LivePollOptionMessage pollOptions = 11;
+//  google.protobuf.Timestamp createdAt = 12;
+//  google.protobuf.Timestamp updatedAt = 13;
+//}
 
 
 message LivePollListMessage {
