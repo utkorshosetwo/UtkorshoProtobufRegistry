@@ -5,6 +5,7 @@ package tech.utkorsho.protobuf.questionexam.service;
 option java_multiple_files = true;
 
 import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
 import "core/message/uuid_message.proto";
 import "question-exam/message/question/question_message.proto";
 import "question-exam/message/question/question_create_message.proto";
@@ -30,7 +31,7 @@ service QuestionService {
 
   rpc summarize(core.message.UuidMessage) returns (message.question.QuestionSummaryListMessage) {};
 
-  rpc subjectWiseSummarize(core.message.UuidMessage) returns (message.question.SubjectWiseSummaryListMessage) {};
+  rpc subjectWiseSummarize(google.protobuf.Empty) returns (message.question.SubjectWiseSummaryListMessage) {};
 
   rpc syllabusWiseSummarize(message.question.SyllabusWiseSummaryRequest) returns (message.question.SyllabusWiseSummaryListMessage) {};
 }
