@@ -6,7 +6,8 @@ option java_multiple_files = true;
 
 import "google/protobuf/timestamp.proto";
 import "core/message/pagination_result.proto";
-import "interactive-live/enum/user_type.proto";
+//import "interactive-live/enum/user_type.proto";
+import "core/message/user_type_enum.proto";
 import "interactive-live/message/reply/live_reply_message.proto";
 
 
