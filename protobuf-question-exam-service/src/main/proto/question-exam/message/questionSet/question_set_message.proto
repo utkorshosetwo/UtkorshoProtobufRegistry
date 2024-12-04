@@ -4,6 +4,7 @@ package tech.utkorsho.protobuf.questionexam.message.questionSet;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
 import "core/message/uuid_message.proto";
 import "core/message/pagination_result.proto";
@@ -27,10 +28,10 @@ message QuestionSetMessage {
   int32 attemptLimit = 12;
   int32 remainingAttempt = 13;
   string courseId = 14;
-  core.message.UuidMessageList syllabusIds = 15;
+  repeated google.protobuf.StringValue syllabusIds = 15;
   repeated question.QuestionMessage questions = 16;
   repeated tag.TagMessage tags = 17;
-  string answerEvaluationId = 18;
+  google.protobuf.StringValue answerEvaluationId = 18;
 }
 
 message QuestionSetListMessage {
