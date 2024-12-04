@@ -20,26 +20,10 @@ message LivePollMessage {
   bool showFastestFinger = 8;
   int64 totalVotes = 9;
   PollStatus status = 10;
-  repeated message.pollOption.LivePollOptionMessage pollOptions = 11;
+  repeated pollOption.LivePollOptionMessage pollOptions = 11;
   google.protobuf.Timestamp createdAt = 12;
   google.protobuf.Timestamp updatedAt = 13;
 }
-
-//message LivePollCreateWithPollOptionMessage {
-//  string routineId = 1; // UUID in Java
-//  string question = 2;
-//  string questionImageUrl = 3;
-//  bool isAbsolutePoll = 4;
-//  PollPosition pollPosition = 5;
-//  int32 expirationTime = 6;
-//  bool showParticipationDetails = 7;
-//  bool showFastestFinger = 8;
-//  int64 totalVotes = 9;
-//  PollStatus status = 10;
-//  repeated message.pollOption.LivePollOptionMessage pollOptions = 11;
-//  google.protobuf.Timestamp createdAt = 12;
-//  google.protobuf.Timestamp updatedAt = 13;
-//}
 
 
 message LivePollListMessage {
