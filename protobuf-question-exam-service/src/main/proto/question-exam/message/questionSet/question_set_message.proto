@@ -18,13 +18,13 @@ message QuestionSetMessage {
   google.protobuf.StringValue title = 2;
   google.protobuf.StringValue description = 3;
   google.protobuf.Int32Value marks = 4;
-  enums.ContentType contentType = 5;
+  enums.ContentTypeValue contentType = 5;
   google.protobuf.Int32Value noOfQuestion = 6;
   google.protobuf.Int32Value totalTime = 7;
   google.protobuf.Timestamp startDate = 8;
   google.protobuf.Timestamp endDate = 9;
   google.protobuf.StringValue section = 10;
-  enums.ExamType examType = 11;
+  enums.ExamTypeValue examType = 11;
   google.protobuf.Int32Value attemptLimit = 12;
   google.protobuf.Int32Value remainingAttempt = 13;
   google.protobuf.StringValue courseId = 14;

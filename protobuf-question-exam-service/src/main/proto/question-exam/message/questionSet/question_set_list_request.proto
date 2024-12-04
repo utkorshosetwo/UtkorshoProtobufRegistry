@@ -14,6 +14,6 @@ message QuestionSetListRequest {
   core.message.StatusValue status = 2;
   string courseId = 3;
   repeated google.protobuf.StringValue syllabusIds = 4;
-  enums.ContentType contentType = 5;
+  enums.ContentTypeValue contentType = 5;
   google.protobuf.BoolValue answerEvaluationIdRequired = 6;
 }

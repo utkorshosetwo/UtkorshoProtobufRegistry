@@ -8,3 +8,7 @@ enum SyllabusType {
   SUBJECT = 0;
   CHAPTER = 1;
 }
+
+message SyllabusTypeValue {
+  SyllabusType value = 1;
+}

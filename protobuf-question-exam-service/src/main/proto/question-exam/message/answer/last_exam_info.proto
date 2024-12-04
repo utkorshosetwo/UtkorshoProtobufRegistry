@@ -12,7 +12,7 @@ message LastExamInfo {
   google.protobuf.Timestamp createdAt = 2;
   string questionSetId = 3;
   string questionSetTitle = 4;
-  enums.ContentType contentType = 5;
+  enums.ContentTypeValue contentType = 5;
   int32 totalTime = 6;
   bool submitted = 7;
 }

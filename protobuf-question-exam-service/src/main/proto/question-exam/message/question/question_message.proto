@@ -22,17 +22,17 @@ message QuestionMessage {
   google.protobuf.StringValue imageUrl = 5;
   google.protobuf.Int32Value marks = 6;
   google.protobuf.Int32Value noOfOption = 7;
-  enums.DifficultyLevel difficultyLevel = 8;
-  enums.QuestionType questionType = 9;
-  enums.QuestionTemplate template = 10;
-  enums.PublishStatus publishStatus = 11;
+  enums.DifficultyLevelValue difficultyLevel = 8;
+  enums.QuestionTypeValue questionType = 9;
+  enums.QuestionTemplateValue template = 10;
+  enums.PublishStatusValue publishStatus = 11;
   google.protobuf.StringValue subjectId = 12;
   google.protobuf.StringValue fileName = 13;
   repeated google.protobuf.StringValue subjectLessonIds = 14;
   google.protobuf.BoolValue multi = 15;
   repeated questionDetail.QuestionDetailMessage questionDetails = 16;
   repeated tag.TagMessage tags = 17;
-  repeated enums.QuestionStandard questionStandards = 18;
+  repeated enums.QuestionStandardValue questionStandards = 18;
 }
 
 message QuestionListMessage {

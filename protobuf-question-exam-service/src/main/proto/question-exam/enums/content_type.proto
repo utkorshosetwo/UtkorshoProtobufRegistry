@@ -9,3 +9,7 @@ enum ContentType {
   CT_CREATIVE = 1;
   CT_MCQ_AND_CREATIVE = 2;
 }
+
+message ContentTypeValue {
+  ContentType value = 1;
+}

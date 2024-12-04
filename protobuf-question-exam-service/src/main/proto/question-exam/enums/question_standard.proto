@@ -16,6 +16,6 @@ enum QuestionStandard {
   NO_LIMIT = 8;
 }
 
-message QuestionStandardList {
-  repeated QuestionStandard questionStandards = 1;
+message QuestionStandardValue {
+  QuestionStandard value = 1;
 }

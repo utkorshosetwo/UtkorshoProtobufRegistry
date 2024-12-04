@@ -18,16 +18,16 @@ message QuestionCreateMessage {
   google.protobuf.StringValue explanation = 2;
   google.protobuf.StringValue imageUrl = 3;
   google.protobuf.Int32Value noOfOption = 4;
-  enums.DifficultyLevel difficultyLevel = 5;
-  enums.QuestionType questionType = 6;
-  enums.QuestionTemplate template = 7;
-  enums.PublishStatus publishStatus = 8;
+  enums.DifficultyLevelValue difficultyLevel = 5;
+  enums.QuestionTypeValue questionType = 6;
+  enums.QuestionTemplateValue template = 7;
+  enums.PublishStatusValue publishStatus = 8;
   google.protobuf.StringValue subjectId = 9;
   google.protobuf.StringValue fileName = 10;
   repeated google.protobuf.StringValue subjectLessonIds = 11;
   repeated questionDetail.QuestionDetailCreateMessage questionDetails = 12;
   repeated tag.TagMessage tags = 13;
-  repeated enums.QuestionStandard questionStandards = 14;
+  repeated enums.QuestionStandardValue questionStandards = 14;
 }
 
 message QuestionListCreateMessage {

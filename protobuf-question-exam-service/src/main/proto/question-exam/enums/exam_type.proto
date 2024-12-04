@@ -8,3 +8,7 @@ enum ExamType {
   DAILY = 0;
   PRACTICE = 1;
 }
+
+message ExamTypeValue {
+  ExamType value = 1;
+}

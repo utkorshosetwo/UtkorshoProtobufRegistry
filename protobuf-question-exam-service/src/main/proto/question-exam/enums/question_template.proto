@@ -9,3 +9,7 @@ enum QuestionTemplate {
   QT_MATH = 1;
   QT_MCQ = 2;
 }
+
+message QuestionTemplateValue {
+  QuestionTemplate value = 1;
+}

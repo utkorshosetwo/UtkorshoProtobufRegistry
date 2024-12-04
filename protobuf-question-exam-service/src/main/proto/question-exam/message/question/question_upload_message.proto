@@ -10,7 +10,7 @@ import "question-exam/enums/publish_status.proto";
 
 message QuestionUploadMessage {
   string subjectId = 1;
-  enums.QuestionTemplate template = 2;
-  enums.QuestionType questionType = 3;
-  enums.PublishStatus publishStatus = 4;
+  enums.QuestionTemplateValue template = 2;
+  enums.QuestionTypeValue questionType = 3;
+  enums.PublishStatusValue publishStatus = 4;
 }

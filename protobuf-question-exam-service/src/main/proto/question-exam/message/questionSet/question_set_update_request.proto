@@ -15,16 +15,16 @@ message QuestionSetUpdateMessage {
   google.protobuf.StringValue id = 1;
   google.protobuf.StringValue title = 2;
   google.protobuf.StringValue description = 3;
-  enums.ContentType contentType = 4;
+  enums.ContentTypeValue contentType = 4;
   google.protobuf.Int32Value noOfQuestion = 5;
   google.protobuf.Int32Value totalTime = 6;
   google.protobuf.Timestamp startDate = 7;
   google.protobuf.Timestamp endDate = 8;
   google.protobuf.StringValue section = 9;
-  enums.ExamType examType = 10;
+  enums.ExamTypeValue examType = 10;
   google.protobuf.Int32Value attemptLimit = 11;
   google.protobuf.StringValue courseId = 12;
-  core.message.UuidMessageList syllabusIds = 13;
-  core.message.UuidMessageList questionIds = 14;
+  repeated google.protobuf.StringValue syllabusIds = 13;
+  repeated google.protobuf.StringValue questionIds = 14;
   repeated tag.TagMessage tags = 15;
 }

@@ -19,14 +19,14 @@ message QuestionUpdateMessage {
   google.protobuf.StringValue explanation = 3;
   google.protobuf.StringValue imageUrl = 4;
   google.protobuf.Int32Value noOfOption = 5;
-  enums.DifficultyLevel difficultyLevel = 6;
-  enums.QuestionType questionType = 7;
-  enums.QuestionTemplate template = 8;
-  enums.PublishStatus publishStatus = 9;
+  enums.DifficultyLevelValue difficultyLevel = 6;
+  enums.QuestionTypeValue questionType = 7;
+  enums.QuestionTemplateValue template = 8;
+  enums.PublishStatusValue publishStatus = 9;
   google.protobuf.StringValue subjectId = 10;
   google.protobuf.StringValue fileName = 11;
   repeated google.protobuf.StringValue subjectLessonIds = 12;
   repeated questionDetail.QuestionDetailMessage questionDetails = 13;
   repeated tag.TagMessage tags = 14;
-  repeated enums.QuestionStandard questionStandards = 15;
+  repeated enums.QuestionStandardValue questionStandards = 15;
 }

@@ -9,8 +9,8 @@ import "question-exam/enums/question_standard.proto";
 import "question-exam/message/questionSet/subject_syllabus.proto";
 
 message PracticeExamQuestionSetPayload {
-  enums.DifficultyLevel difficultyLevel = 1;
+  enums.DifficultyLevelValue difficultyLevel = 1;
   int32 noOfQuestions = 2;
-  enums.QuestionStandard questionStandard = 3;
+  enums.QuestionStandardValue questionStandard = 3;
   repeated questionSet.SubjectSyllabus subjectSyllabuses = 4;
 }

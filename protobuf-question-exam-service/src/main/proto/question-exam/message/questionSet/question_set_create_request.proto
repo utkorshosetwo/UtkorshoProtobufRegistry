@@ -14,13 +14,13 @@ import "question-exam/message/tag/tag_message.proto";
 message QuestionSetCreateMessage {
   google.protobuf.StringValue title = 1;
   google.protobuf.StringValue description = 2;
-  enums.ContentType contentType = 3;
+  enums.ContentTypeValue contentType = 3;
   google.protobuf.Int32Value noOfQuestion = 4;
   google.protobuf.Int32Value totalTime = 5;
   google.protobuf.Timestamp startDate = 6;
   google.protobuf.Timestamp endDate = 7;
   google.protobuf.StringValue section = 8;
-  enums.ExamType examType = 9;
+  enums.ExamTypeValue examType = 9;
   google.protobuf.Int32Value attemptLimit = 10;
   google.protobuf.StringValue courseId = 11;
   repeated google.protobuf.StringValue syllabusIds = 12;
