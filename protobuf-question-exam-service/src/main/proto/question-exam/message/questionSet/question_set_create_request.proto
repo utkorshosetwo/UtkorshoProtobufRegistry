@@ -4,6 +4,7 @@ package tech.utkorsho.protobuf.questionexam.message.questionSet;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
 import "core/message/uuid_message.proto";
 import "question-exam/enums/content_type.proto";
@@ -11,18 +12,18 @@ import "question-exam/enums/exam_type.proto";
 import "question-exam/message/tag/tag_message.proto";
 
 message QuestionSetCreateMessage {
-  string title = 1;
-  string description = 2;
+  google.protobuf.StringValue title = 1;
+  google.protobuf.StringValue description = 2;
   enums.ContentType contentType = 3;
-  int32 noOfQuestion = 4;
-  int32 totalTime = 5;
+  google.protobuf.Int32Value noOfQuestion = 4;
+  google.protobuf.Int32Value totalTime = 5;
   google.protobuf.Timestamp startDate = 6;
   google.protobuf.Timestamp endDate = 7;
-  string section = 8;
+  google.protobuf.StringValue section = 8;
   enums.ExamType examType = 9;
-  int32 attemptLimit = 10;
-  string courseId = 11;
-  core.message.UuidMessageList syllabusIds = 12;
-  core.message.UuidMessageList questionIds = 13;
+  google.protobuf.Int32Value attemptLimit = 10;
+  google.protobuf.StringValue courseId = 11;
+  repeated google.protobuf.StringValue syllabusIds = 12;
+  repeated google.protobuf.StringValue questionIds = 13;
   repeated tag.TagMessage tags = 14;
 }

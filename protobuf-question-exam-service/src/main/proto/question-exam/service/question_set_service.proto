@@ -10,6 +10,10 @@ import "question-exam/message/questionSet/question_set_message.proto";
 import "question-exam/message/questionSet/question_set_create_request.proto";
 import "question-exam/message/questionSet/question_set_list_request.proto";
 import "question-exam/message/questionSet/question_set_update_request.proto";
+import "question-exam/message/questionSet/participant_count.proto";
+import "question-exam/message/questionSet/practice_exam_question_set_payload.proto";
+import "question-exam/message/questionSet/practice_exam_question_set_response.proto";
+import "question-exam/message/questionSet/practice_exam_question_set.proto";
 
 service QuestionSetService {
   rpc create(message.questionSet.QuestionSetCreateMessage) returns (message.questionSet.QuestionSetMessage) {};
@@ -21,4 +25,10 @@ service QuestionSetService {
   rpc update(message.questionSet.QuestionSetUpdateMessage) returns (message.questionSet.QuestionSetMessage) {};
 
   rpc delete(core.message.UuidMessage) returns (google.protobuf.StringValue) {};
+
+  rpc getParticipantCount(core.message.UuidMessage) returns (message.questionSet.ParticipantCount) {};
+
+  rpc getPracticeExamQuestionSet(message.questionSet.PracticeExamQuestionSetPayload) returns (message.questionSet.PracticeExamQuestionSetResponse) {};
+
+  rpc getPracticeExamQuestionSetById(google.protobuf.StringValue) returns (message.questionSet.PracticeExamQuestionSetResponse) {};
 }

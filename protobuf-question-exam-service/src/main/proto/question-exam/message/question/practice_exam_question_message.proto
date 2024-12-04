@@ -4,13 +4,14 @@ package tech.utkorsho.protobuf.questionexam.message.question;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "question-exam/message/questionDetail/practice_exam_question_detail_message.proto";
 
 message PracticeExamQuestionMessage {
-  string id = 1;
-  string questionNo = 2;
-  string description = 3;
-  bool multi = 4;
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue questionNo = 2;
+  google.protobuf.StringValue description = 3;
+  google.protobuf.BoolValue multi = 4;
   repeated questionDetail.PracticeExamQuestionDetailMessage questionDetails = 5;
 }
 
