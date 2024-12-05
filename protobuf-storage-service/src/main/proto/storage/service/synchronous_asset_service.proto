@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package tech.utkorsho.protobuf.upload.service;
+
+import "storage/message/asset/synchronous_asset_create_message.proto";
+import "storage/message/asset/synchronous_asset_update_message.proto";
+import "storage/message/asset/synchronous_asset_message.proto";
+import "storage/message/asset/asset_request.proto";
+import "core/message/uuid_message.proto";
+
+service SynchronousAssetService {
+  rpc createAsset (storage.message.asset.SynchronousAssetCreateMessage) returns (storage.message.asset.SynchronousAssetMessage) {}
+
+  rpc getAssets (storage.message.asset.AssetRequest) returns (storage.message.asset.SynchronousAssetListMessage) {}
+
+  rpc getAssetById (core.message.UuidMessage) returns (storage.message.asset.SynchronousAssetMessage) {}
+
+  rpc updateAssetById (storage.message.asset.SynchronousAssetUpdateMessage) returns (storage.message.asset.SynchronousAssetMessage) {}
+}

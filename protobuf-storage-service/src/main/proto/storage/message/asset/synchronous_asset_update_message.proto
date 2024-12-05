@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.storage.message.asset;
+
+option java_multiple_files = true;
+
+import "storage/message/upload/file_upload_sync_request.proto";
+import "google/protobuf/wrappers.proto";
+
+message SynchronousAssetUpdateMessage {
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue name = 2;
+  storage.message.upload.FileUploadSyncRequest file = 3;
+}
