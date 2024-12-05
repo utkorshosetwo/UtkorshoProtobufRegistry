@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.storage.message.upload;
+
+option java_multiple_files = true;
+
+import "storage/message/upload/raw_file_message.proto";
+
+message FileUploadSyncRequest {
+  repeated RawFileMessage fileMessages = 1;
+}

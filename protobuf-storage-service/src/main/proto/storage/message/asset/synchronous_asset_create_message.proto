@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.storage.message.asset;
+
+option java_multiple_files = true;
+
+import "storage/message/upload/file_upload_sync_request.proto";
+
+message SynchronousAssetCreateMessage {
+  string name = 1;
+  storage.message.upload.FileUploadSyncRequest file = 2;
+}
