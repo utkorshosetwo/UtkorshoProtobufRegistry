@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.storage.message.upload;
+
+option java_multiple_files = true;
+
+message StoredFileMessage {
+  string key = 1;
+  string name = 2;
+  string extension = 3;
+}
