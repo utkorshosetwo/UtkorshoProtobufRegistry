@@ -13,7 +13,7 @@ import "core/message/uuid_message.proto";
 
 
 service LivePollService {
-  rpc createLivePoll(message.poll.LivePollCreateMessage) returns (message.poll.LivePollMessage) {}
+  rpc createLivePoll(message.poll.LivePollCreateMessage) returns (google.protobuf.Empty) {}
 
   rpc getLivePollById(core.message.UuidMessage) returns (message.poll.LivePollMessage) {}
 

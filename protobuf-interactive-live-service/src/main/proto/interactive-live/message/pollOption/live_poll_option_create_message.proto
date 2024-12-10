@@ -6,6 +6,7 @@ option java_multiple_files = true;
 
 
 message LiveCreatePollOptionMessage {
-  string option = 1;
-  bool isCorrectOption = 2;
+  string id = 1;
+  string option = 2;
+  bool isCorrectOption = 3;
 }
