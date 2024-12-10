@@ -12,7 +12,7 @@ import "interactive-live/message/comment/live_comment_list_request.proto";
 
 
 service LiveCommentService {
-  rpc createLiveComment(message.comment.LiveCommentCreateMessage) returns (message.comment.LiveCommentMessage) {};
+  rpc createLiveComment(message.comment.LiveCommentCreateMessage) returns (google.protobuf.Empty) {};
 
   rpc getLiveCommentById(core.message.UuidMessage) returns (message.comment.LiveCommentMessage) {};
 
