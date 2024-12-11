@@ -4,10 +4,12 @@ package tech.utkorsho.protobuf.questionexam.message.question;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
+
 message SyllabusWiseSummaryMessage {
-  string id = 1;
-  int32 noOfMcqQuestions = 2;
-  int32 noOfCreativeQuestions = 3;
+  google.protobuf.StringValue id = 1;
+  google.protobuf.Int32Value noOfMcqQuestions = 2;
+  google.protobuf.Int32Value noOfCreativeQuestions = 3;
 }
 
 message SyllabusWiseSummaryListMessage {

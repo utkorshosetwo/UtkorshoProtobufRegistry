@@ -7,28 +7,28 @@ option java_multiple_files = true;
 import "google/protobuf/wrappers.proto";
 import "core/message/uuid_message.proto";
 import "question-exam/message/questionSet/question_set_message.proto";
-import "question-exam/message/questionSet/question_set_create_request.proto";
-import "question-exam/message/questionSet/question_set_list_request.proto";
-import "question-exam/message/questionSet/question_set_update_request.proto";
-import "question-exam/message/questionSet/participant_count.proto";
-import "question-exam/message/questionSet/practice_exam_question_set_payload.proto";
-import "question-exam/message/questionSet/practice_exam_question_set_response.proto";
-import "question-exam/message/questionSet/practice_exam_question_set.proto";
+import "question-exam/message/questionSet/question_set_create_message.proto";
+import "question-exam/message/questionSet/question_set_list_request_message.proto";
+import "question-exam/message/questionSet/question_set_update_request_message.proto";
+import "question-exam/message/questionSet/participant_count_message.proto";
+import "question-exam/message/questionSet/practice_exam_question_set_payload_message.proto";
+import "question-exam/message/questionSet/practice_exam_question_set_response_message.proto";
+import "question-exam/message/questionSet/practice_exam_question_set_message.proto";
 
 service QuestionSetService {
   rpc create(message.questionSet.QuestionSetCreateMessage) returns (message.questionSet.QuestionSetMessage) {};
 
   rpc read(core.message.UuidMessage) returns (message.questionSet.QuestionSetMessage) {};
 
-  rpc readAll(message.questionSet.QuestionSetListRequest) returns (message.questionSet.QuestionSetListMessage) {};
+  rpc readAll(message.questionSet.QuestionSetListRequestMessage) returns (message.questionSet.QuestionSetListMessage) {};
 
   rpc update(message.questionSet.QuestionSetUpdateMessage) returns (message.questionSet.QuestionSetMessage) {};
 
   rpc delete(core.message.UuidMessage) returns (google.protobuf.StringValue) {};
 
-  rpc getParticipantCount(core.message.UuidMessage) returns (message.questionSet.ParticipantCount) {};
+  rpc getParticipantCount(core.message.UuidMessage) returns (message.questionSet.ParticipantCountMessage) {};
 
-  rpc getPracticeExamQuestionSet(message.questionSet.PracticeExamQuestionSetPayload) returns (message.questionSet.PracticeExamQuestionSetResponse) {};
+  rpc getPracticeExamQuestionSet(message.questionSet.PracticeExamQuestionSetPayloadMessage) returns (message.questionSet.PracticeExamQuestionSetResponseMessage) {};
 
-  rpc getPracticeExamQuestionSetById(google.protobuf.StringValue) returns (message.questionSet.PracticeExamQuestionSetResponse) {};
+  rpc getPracticeExamQuestionSetById(google.protobuf.StringValue) returns (message.questionSet.PracticeExamQuestionSetResponseMessage) {};
 }

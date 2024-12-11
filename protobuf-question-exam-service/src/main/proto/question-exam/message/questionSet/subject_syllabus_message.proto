@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.questionSet;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+
+message SubjectSyllabusMessage {
+  google.protobuf.StringValue subjectId = 1;
+  repeated google.protobuf.StringValue syllabusIds = 2;
+}
+
+message SubjectSyllabusList {
+  repeated SubjectSyllabusMessage subjectSyllabuses = 1;
+}

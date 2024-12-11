@@ -4,7 +4,9 @@ package tech.utkorsho.protobuf.questionexam.message.answer;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
+
 message AnswerReadMessage {
-  string id = 1;
-  bool userDataRequired = 2;
+  google.protobuf.StringValue id = 1;
+  google.protobuf.BoolValue userDataRequired = 2;
 }

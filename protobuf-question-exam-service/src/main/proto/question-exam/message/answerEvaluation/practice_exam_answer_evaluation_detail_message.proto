@@ -4,14 +4,15 @@ package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "core/message/uuid_message.proto";
 import "question-exam/message/question/question_message.proto";
 
 message PracticeExamAnswerEvaluationDetail {
-  float marks = 1;
+  google.protobuf.FloatValue marks = 1;
   question.QuestionMessage question = 2;
-  core.message.UuidMessageList givenQuestionDetailIds = 3;
-  core.message.UuidMessageList markedQuestionDetailIds = 4;
+  repeated google.protobuf.StringValue givenQuestionDetailIds = 3;
+  repeated google.protobuf.StringValue markedQuestionDetailIds = 4;
 }
 
 message PracticeExamAnswerEvaluationDetailList {

@@ -14,7 +14,7 @@ import "question-exam/message/questionDetail/question_detail_message.proto";
 import "question-exam/message/tag/tag_message.proto";
 
 message QuestionUpdateMessage {
-  string id = 1;
+  google.protobuf.StringValue id = 1;
   google.protobuf.StringValue description = 2;
   google.protobuf.StringValue explanation = 3;
   google.protobuf.StringValue imageUrl = 4;

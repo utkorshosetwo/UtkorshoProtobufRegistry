@@ -4,17 +4,18 @@ package tech.utkorsho.protobuf.questionexam.message.question;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
 import "core/message/status_enum.proto";
 import "question-exam/enums/question_type.proto";
 
 message QuestionSummaryMessage {
   enums.QuestionTypeValue questionType = 1;
-  int32 noOfQuestion = 2;
-  int32 unpublished = 3;
-  int32 publishedPublic = 4;
-  int32 publishedPrivate = 5;
-  int32 flagAndIssue = 6;
+  google.protobuf.Int32Value noOfQuestion = 2;
+  google.protobuf.Int32Value unpublished = 3;
+  google.protobuf.Int32Value publishedPublic = 4;
+  google.protobuf.Int32Value publishedPrivate = 5;
+  google.protobuf.Int32Value flagAndIssue = 6;
   core.message.Status status = 7;
   google.protobuf.Timestamp updatedAt = 8;
 }

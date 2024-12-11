@@ -4,12 +4,13 @@ package tech.utkorsho.protobuf.questionexam.message.question;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "question-exam/enums/question_template.proto";
 import "question-exam/enums/question_type.proto";
 import "question-exam/enums/publish_status.proto";
 
 message QuestionUploadMessage {
-  string subjectId = 1;
+  google.protobuf.StringValue subjectId = 1;
   enums.QuestionTemplateValue template = 2;
   enums.QuestionTypeValue questionType = 3;
   enums.PublishStatusValue publishStatus = 4;

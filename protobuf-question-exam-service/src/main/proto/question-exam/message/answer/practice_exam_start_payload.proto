@@ -4,7 +4,9 @@ package tech.utkorsho.protobuf.questionexam.message.answer;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
+
 message PracticeExamStartPayload {
-  string questionSetId = 1;
-  string userId = 2;
+  google.protobuf.StringValue questionSetId = 1;
+  google.protobuf.StringValue userId = 2;
 }

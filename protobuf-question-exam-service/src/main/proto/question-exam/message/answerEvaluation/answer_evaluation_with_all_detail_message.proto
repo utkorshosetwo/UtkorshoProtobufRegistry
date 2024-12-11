@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "question-exam/message/answerEvaluation/answer_evaluation_detail_with_question_answer_message.proto";
+
+message AnswerEvaluationWithAllDetailMessage {
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue questionSetId = 2;
+  google.protobuf.StringValue questionSetTitle = 3;
+  google.protobuf.StringValue answerId = 4;
+  google.protobuf.Int32Value totalMarks = 5;
+  google.protobuf.FloatValue achievedMarks = 6;
+  google.protobuf.FloatValue percentage = 7;
+  google.protobuf.StringValue grade = 8;
+  google.protobuf.Int32Value takenTime = 9;
+  google.protobuf.FloatValue averageTime = 10;
+  repeated answerEvaluation.AnswerEvaluationDetailWithQuestionAnswerMessage answerEvaluationDetails = 11;
+}

@@ -8,9 +8,9 @@ import "google/protobuf/wrappers.proto";
 import "core/message/pagination_request.proto";
 import "core/message/status_enum.proto";
 
-message AnswerEvaluationListRequest {
+message AnswerEvaluationListRequestMessage {
   core.message.PaginationRequest paginationRequest = 1;
   core.message.StatusValue status = 2;
-  string questionSetId = 3;
+  google.protobuf.StringValue questionSetId = 3;
   google.protobuf.StringValue userId = 4;
 }

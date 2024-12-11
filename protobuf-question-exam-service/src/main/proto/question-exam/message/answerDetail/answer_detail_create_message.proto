@@ -7,12 +7,12 @@ option java_multiple_files = true;
 import "google/protobuf/wrappers.proto";
 
 message AnswerDetailCreateMessage {
-  string questionId = 1;
+  google.protobuf.StringValue questionId = 1;
   google.protobuf.StringValue answerText = 2;
   google.protobuf.StringValue imageUrl = 3;
   repeated google.protobuf.StringValue givenQuestionDetailIds = 4;
   repeated google.protobuf.StringValue markedQuestionDetailIds = 5;
-  string answerId = 6;
+  google.protobuf.StringValue answerId = 6;
 }
 
 message AnswerDetailListCreateMessage {

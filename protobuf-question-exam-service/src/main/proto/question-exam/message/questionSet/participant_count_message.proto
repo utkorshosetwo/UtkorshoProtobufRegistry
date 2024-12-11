@@ -4,6 +4,8 @@ package tech.utkorsho.protobuf.questionexam.message.questionSet;
 
 option java_multiple_files = true;
 
-message ParticipantCount {
-  int32 participant = 1;
+import "google/protobuf/wrappers.proto";
+
+message ParticipantCountMessage {
+  google.protobuf.Int32Value participant = 1;
 }

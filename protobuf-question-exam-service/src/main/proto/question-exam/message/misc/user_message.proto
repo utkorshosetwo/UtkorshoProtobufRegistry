@@ -7,8 +7,8 @@ option java_multiple_files = true;
 import "google/protobuf/wrappers.proto";
 
 message UserMessage {
-  string id = 1;
-  string name = 2;
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue name = 2;
   google.protobuf.StringValue imageUrl = 3;
-  string phone = 4;
+  google.protobuf.StringValue phone = 4;
 }

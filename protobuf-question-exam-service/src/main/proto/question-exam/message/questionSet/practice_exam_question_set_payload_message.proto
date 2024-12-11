@@ -4,13 +4,14 @@ package tech.utkorsho.protobuf.questionexam.message.questionSet;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "question-exam/enums/difficulty_level.proto";
 import "question-exam/enums/question_standard.proto";
-import "question-exam/message/questionSet/subject_syllabus.proto";
+import "question-exam/message/questionSet/subject_syllabus_message.proto";
 
-message PracticeExamQuestionSetPayload {
+message PracticeExamQuestionSetPayloadMessage {
   enums.DifficultyLevelValue difficultyLevel = 1;
-  int32 noOfQuestions = 2;
+  google.protobuf.Int32Value noOfQuestions = 2;
   enums.QuestionStandardValue questionStandard = 3;
-  repeated questionSet.SubjectSyllabus subjectSyllabuses = 4;
+  repeated questionSet.SubjectSyllabusMessage subjectSyllabuses = 4;
 }

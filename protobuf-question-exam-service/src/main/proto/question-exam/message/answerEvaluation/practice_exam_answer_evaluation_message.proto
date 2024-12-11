@@ -4,14 +4,15 @@ package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
 
 option java_multiple_files = true;
 
-import "question-exam/message/answerEvaluation/practice_exam_answer_evaluation_detail.proto";
+import "google/protobuf/wrappers.proto";
+import "question-exam/message/answerEvaluation/practice_exam_answer_evaluation_detail_message.proto";
 
 message PracticeExamAnswerEvaluationMessage {
-  int32 totalMarks = 1;
-  float achievedMarks = 2;
-  float accuracy = 3;
-  string grade = 4;
-  int32 takenTime = 5;
-  float averageTime = 6;
+  google.protobuf.Int32Value totalMarks = 1;
+  google.protobuf.FloatValue achievedMarks = 2;
+  google.protobuf.FloatValue accuracy = 3;
+  google.protobuf.StringValue grade = 4;
+  google.protobuf.Int32Value takenTime = 5;
+  google.protobuf.FloatValue averageTime = 6;
   repeated answerEvaluation.PracticeExamAnswerEvaluationDetail answerEvaluationDetails = 7;
 }

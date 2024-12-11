@@ -4,9 +4,11 @@ package tech.utkorsho.protobuf.questionexam.message.questionDetail;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
+
 message PracticeExamQuestionDetailMessage {
-  string id = 1;
-  string questionText = 2;
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue questionText = 2;
 }
 
 message PracticeExamQuestionDetailListMessage {

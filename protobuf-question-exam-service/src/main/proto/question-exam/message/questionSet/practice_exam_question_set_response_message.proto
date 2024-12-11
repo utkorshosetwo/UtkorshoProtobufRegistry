@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.questionSet;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "question-exam/message/question/practice_exam_question_message.proto";
+
+message PracticeExamQuestionSetResponseMessage {
+  google.protobuf.StringValue id = 1;
+  google.protobuf.Int32Value marks = 2;
+  google.protobuf.Int32Value noOfQuestions = 3;
+  google.protobuf.Int32Value totalTime = 4;
+  google.protobuf.StringValue createdAt = 5;
+  repeated question.PracticeExamQuestionMessage questions = 6;
+}

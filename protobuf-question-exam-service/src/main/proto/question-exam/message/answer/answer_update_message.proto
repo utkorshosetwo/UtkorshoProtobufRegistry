@@ -4,10 +4,11 @@ package tech.utkorsho.protobuf.questionexam.message.answer;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "question-exam/message/answerDetail/answer_detail_create_message.proto";
 
 message AnswerUpdateMessage {
-  string id = 1;
-  string questionSetId = 2;
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue questionSetId = 2;
   repeated answerDetail.AnswerDetailCreateMessage answerDetails = 3;
 }

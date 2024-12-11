@@ -9,10 +9,10 @@ import "core/message/pagination_request.proto";
 import "core/message/status_enum.proto";
 import "question-exam/enums/content_type.proto";
 
-message QuestionSetListRequest {
+message QuestionSetListRequestMessage {
   core.message.PaginationRequest paginationRequest = 1;
   core.message.StatusValue status = 2;
-  string courseId = 3;
+  google.protobuf.StringValue courseId = 3;
   repeated google.protobuf.StringValue syllabusIds = 4;
   enums.ContentTypeValue contentType = 5;
   google.protobuf.BoolValue answerEvaluationIdRequired = 6;

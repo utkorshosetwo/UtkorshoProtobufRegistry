@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answer;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "question-exam/enums/content_type.proto";
+
+message LastExamInfoMessage {
+  google.protobuf.StringValue id = 1;
+  google.protobuf.Timestamp createdAt = 2;
+  google.protobuf.StringValue questionSetId = 3;
+  google.protobuf.StringValue questionSetTitle = 4;
+  enums.ContentTypeValue contentType = 5;
+  google.protobuf.Int32Value totalTime = 6;
+  google.protobuf.BoolValue submitted = 7;
+}

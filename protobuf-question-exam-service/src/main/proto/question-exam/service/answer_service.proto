@@ -9,15 +9,15 @@ import "core/message/uuid_message.proto";
 import "question-exam/message/answer/answer_create_message.proto";
 import "question-exam/message/answer/answer_message.proto";
 import "question-exam/message/answer/answer_read_message.proto";
-import "question-exam/message/answer/answer_list_request.proto";
+import "question-exam/message/answer/answer_list_request_message.proto";
 import "question-exam/message/answer/answer_update_message.proto";
 
 service AnswerService {
   rpc create(message.answer.AnswerCreateMessage) returns (message.answer.AnswerMessage) {};
 
-  rpc read(message.answer.AnswerReadMessage) returns (message.answer.AnswerMessage) {};
+  rpc read(core.message.UuidMessage) returns (message.answer.AnswerMessage) {};
 
-  rpc readAll(message.answer.AnswerListRequest) returns (message.answer.AnswerListMessage) {};
+  rpc readAll(message.answer.AnswerListRequestMessage) returns (message.answer.AnswerListMessage) {};
 
   rpc update(message.answer.AnswerUpdateMessage) returns (message.answer.AnswerMessage) {};
 

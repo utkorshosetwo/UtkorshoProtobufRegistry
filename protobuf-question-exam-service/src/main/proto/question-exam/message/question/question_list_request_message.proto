@@ -12,7 +12,7 @@ import "question-exam/enums/question_type.proto";
 import "question-exam/enums/difficulty_level.proto";
 import "question-exam/enums/question_standard.proto";
 
-message QuestionListRequest {
+message QuestionListRequestMessage {
   core.message.PaginationRequest paginationRequest = 1;
   core.message.StatusValue status = 2;
   enums.PublishStatusValue publishStatus = 3;

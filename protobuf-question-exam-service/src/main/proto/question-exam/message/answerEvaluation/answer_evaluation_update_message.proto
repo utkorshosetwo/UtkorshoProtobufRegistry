@@ -4,11 +4,12 @@ package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "question-exam/message/answerEvaluationDetail/answer_evaluation_detail_create_message.proto";
 
 message AnswerEvaluationUpdateMessage {
-  string id = 1;
-  string questionSetId = 2;
-  string answerId = 3;
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue questionSetId = 2;
+  google.protobuf.StringValue answerId = 3;
   repeated answerEvaluationDetail.AnswerEvaluationDetailCreateMessage answerEvaluationDetails = 4;
 }

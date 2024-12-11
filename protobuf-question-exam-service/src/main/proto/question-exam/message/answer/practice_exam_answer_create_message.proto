@@ -4,12 +4,13 @@ package tech.utkorsho.protobuf.questionexam.message.answer;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
 import "question-exam/message/answerDetail/practice_exam_answer_detail_create_message.proto";
 
-message PracticeExamAnswerCreateRequest {
+message PracticeExamAnswerCreateMessage {
   google.protobuf.Timestamp createdAt = 1;
-  string questionSetId = 2;
-  string userId = 3;
-  answerDetail.PracticeExamAnswerDetailListCreateMessage answerDetails = 4;
+  google.protobuf.StringValue questionSetId = 2;
+  google.protobuf.StringValue userId = 3;
+  repeated answerDetail.PracticeExamAnswerDetailCreateMessage answerDetails = 4;
 }

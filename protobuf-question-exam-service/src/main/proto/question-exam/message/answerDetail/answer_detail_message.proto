@@ -7,8 +7,8 @@ option java_multiple_files = true;
 import "google/protobuf/wrappers.proto";
 
 message AnswerDetailMessage {
-  string id = 1;
-  string questionId = 2;
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue questionId = 2;
   google.protobuf.StringValue answerText = 3;
   google.protobuf.StringValue imageUrl = 4;
   repeated google.protobuf.StringValue givenQuestionDetailIds = 5;
