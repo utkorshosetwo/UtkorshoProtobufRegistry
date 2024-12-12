@@ -5,8 +5,7 @@ package tech.utkorsho.protobuf.interactiveLive.message.vote;
 option java_multiple_files = true;
 
 
-message LiveSubmitPollVote {
-  string userId = 1;
-  string pollId = 2;
-  string voteOptionId = 3;
+message PollVoteMessage {
+  string id = 1;
+  string userId = 2;
 }

@@ -10,19 +10,20 @@ import "google/protobuf/timestamp.proto";
 import "interactive-live/message/pollOption/live_poll_option_message.proto";
 
 message LivePollMessage {
-  string routineId = 1; // UUID in Java
-  string question = 2;
-  string questionImageUrl = 3;
-  bool isAbsolutePoll = 4;
-  PollPosition pollPosition = 5;
-  int32 expirationTime = 6;
-  bool showParticipationDetails = 7;
-  bool showFastestFinger = 8;
-  int64 totalVotes = 9;
-  PollStatus status = 10;
-  repeated pollOption.LivePollOptionMessage pollOptions = 11;
-  google.protobuf.Timestamp createdAt = 12;
-  google.protobuf.Timestamp updatedAt = 13;
+  string id = 1;
+  string routineId = 2;
+  string question = 3;
+  string questionImageUrl = 4;
+  bool isAbsolutePoll = 5;
+  PollPosition pollPosition = 6;
+  int32 expirationTime = 7;
+  bool showParticipationDetails = 8;
+  bool showFastestFinger = 9;
+  int64 totalVotes = 10;
+  PollStatus status = 11;
+  repeated pollOption.LivePollOptionMessage pollOptions = 12;
+  google.protobuf.Timestamp createdAt = 13;
+  google.protobuf.Timestamp updatedAt = 14;
 }
 
 

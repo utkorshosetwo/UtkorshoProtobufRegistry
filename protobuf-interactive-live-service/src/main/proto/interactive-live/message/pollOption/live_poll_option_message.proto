@@ -4,10 +4,13 @@ package tech.utkorsho.protobuf.interactiveLive.message.pollOption;
 
 option java_multiple_files = true;
 
+import "interactive-live/message/vote/poll_vote_message.proto";
+
 
 message LivePollOptionMessage {
   string id = 1;
   string option = 2;
   bool isCorrectOption = 3;
   double votePercentStage = 4;
+  repeated vote.PollVoteMessage votes = 5;
 }
