@@ -40,5 +40,5 @@ service UserService {
 
   rpc changePassword(message.user.PasswordChangeRequest) returns (google.protobuf.StringValue) {};
 
-  rpc getUsersBasicInfo(message.user.UserListRequest) returns (message.user.UserBasicInfoMessage) {};
+  rpc getUsersBasicInfo(message.user.UserListRequest) returns (message.user.UserBasicInfoListMessage) {};
 }
