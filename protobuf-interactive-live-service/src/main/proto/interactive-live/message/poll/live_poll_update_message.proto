@@ -8,5 +8,6 @@ import "core/message/poll_status_enum.proto";
 
 
 message LivePollUpdateMessage {
-  PollStatus status = 1;
+  string pollId = 1;
+  PollStatus status = 2;
 }
