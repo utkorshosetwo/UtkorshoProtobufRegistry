@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.message.vote;
+
+option java_multiple_files = true;
+
+message PollVoteDetailsMessage {
+  string userName = 1;
+  string userImage = 2;
+  int32  votePosition = 3;
+  int32  votingTime = 4;
+  string userSelectedPollOptionId = 5;
+}
+
+  message PollVoteDetailsListMessage {
+       repeated PollVoteDetailsMessage votes= 1;
+    }

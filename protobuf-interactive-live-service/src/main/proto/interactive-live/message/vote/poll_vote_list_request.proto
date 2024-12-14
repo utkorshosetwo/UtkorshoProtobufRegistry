@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.interactiveLive.message.vote;
+
+option java_multiple_files = true;
+
+
+import "core/message/pagination_request.proto";
+import "core/message/uuid_message.proto";
+
+
+message PollVoteListRequest {
+  core.message.PaginationRequest paginationRequest = 1;
+  core.message.UuidMessage routineId = 2;
+  core.message.UuidMessage pollId = 3;
+}
