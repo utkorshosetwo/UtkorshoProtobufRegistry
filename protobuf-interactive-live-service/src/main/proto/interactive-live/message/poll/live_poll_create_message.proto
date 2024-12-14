@@ -17,6 +17,5 @@ message LivePollCreateMessage {
   bool showParticipationDetails = 6;
   bool showFastestFinger = 7;
   int32 expirationTime = 8;
-  PollStatus status = 9;
-  repeated pollOption.LiveCreatePollOptionMessage pollOptions = 10;
+  repeated pollOption.LiveCreatePollOptionMessage pollOptions = 9;
 }
