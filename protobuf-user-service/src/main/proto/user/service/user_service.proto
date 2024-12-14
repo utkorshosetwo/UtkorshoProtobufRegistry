@@ -15,6 +15,7 @@ import "user/message/user/user_basic_info_message.proto";
 import "user/message/user/user_update_request.proto";
 import "user/message/user/password_change_request.proto";
 import "user/message/user/password_reset_request.proto";
+import "user/message/user/user_list_request.proto";
 
 service UserService {
   rpc createUser(message.user.UserCreateMessage) returns (message.user.UserCreatedMessage) {};
@@ -38,4 +39,6 @@ service UserService {
   rpc resetPassword(message.user.PasswordResetRequest) returns (google.protobuf.StringValue) {};
 
   rpc changePassword(message.user.PasswordChangeRequest) returns (google.protobuf.StringValue) {};
+
+  rpc getUsersBasicInfo(message.user.UserListRequest) returns (message.user.UserBasicInfoMessage) {};
 }
