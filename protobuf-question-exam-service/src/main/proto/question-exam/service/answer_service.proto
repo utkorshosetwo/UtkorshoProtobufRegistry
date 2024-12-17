@@ -32,5 +32,5 @@ service AnswerService {
 
   rpc getLastExamInfo(core.message.UuidMessage) returns (message.answer.LastExamInfoMessage) {};
 
-  rpc startPracticeExam(message.answer.PracticeExamStartPayload) returns (message.questionSet.PracticeExamMessage) {};
+  rpc startPracticeExam(message.answer.PracticeExamStartPayloadMessage) returns (message.questionSet.PracticeExamMessage) {};
 }
