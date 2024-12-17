@@ -4,6 +4,7 @@ package tech.utkorsho.protobuf.questionexam.service;
 
 option java_multiple_files = true;
 
+import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
 import "core/message/uuid_message.proto";
 import "question-exam/message/answer/answer_create_message.proto";
@@ -11,6 +12,10 @@ import "question-exam/message/answer/answer_message.proto";
 import "question-exam/message/answer/answer_read_message.proto";
 import "question-exam/message/answer/answer_list_request_message.proto";
 import "question-exam/message/answer/answer_update_message.proto";
+import "question-exam/message/answer/last_exam_info_message.proto";
+import "question-exam/message/answer/practice_exam_start_payload.proto";
+import "question-exam/message/answerEvaluation/answer_evaluation_message.proto";
+import "question-exam/message/questionSet/practice_exam_message.proto";
 
 service AnswerService {
   rpc create(message.answer.AnswerCreateMessage) returns (message.answer.AnswerMessage) {};
@@ -22,4 +27,10 @@ service AnswerService {
   rpc update(message.answer.AnswerUpdateMessage) returns (message.answer.AnswerMessage) {};
 
   rpc delete(core.message.UuidMessage) returns (google.protobuf.StringValue) {};
+
+  rpc evaluateAnswer(core.message.UuidMessage) returns (message.answerEvaluation.AnswerEvaluationMessage) {};
+
+  rpc getLastExamInfo(core.message.UuidMessage) returns (message.answer.LastExamInfoMessage) {};
+
+  rpc startPracticeExam(message.answer.PracticeExamStartPayload) returns (message.questionSet.PracticeExamMessage) {};
 }

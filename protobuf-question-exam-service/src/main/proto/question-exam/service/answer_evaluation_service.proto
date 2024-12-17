@@ -9,6 +9,12 @@ import "question-exam/message/answerEvaluation/answer_evaluation_create_message.
 import "question-exam/message/answerEvaluation/answer_evaluation_message.proto";
 import "question-exam/message/answerEvaluation/answer_evaluation_list_request_message.proto";
 import "question-exam/message/answerEvaluation/answer_evaluation_update_message.proto";
+import "question-exam/message/answerEvaluation/answer_evaluation_with_all_detail_message.proto";
+import "question-exam/message/answer/practice_exam_answer_create_message.proto";
+import "question-exam/message/answerEvaluation/practice_exam_answer_evaluation_message.proto";
+import "question-exam/message/answerEvaluation/answer_evaluation_statistics_request_message.proto";
+import "question-exam/message/answerEvaluation/answer_evaluation_statistics_message.proto";
+import "question-exam/message/answerEvaluation/answer_evaluation_statistics_for_user_message.proto";
 
 service AnswerEvaluationService {
   rpc create(message.answerEvaluation.AnswerEvaluationCreateMessage) returns (message.answerEvaluation.AnswerEvaluationMessage) {};
@@ -20,4 +26,14 @@ service AnswerEvaluationService {
   rpc update(message.answerEvaluation.AnswerEvaluationUpdateMessage) returns (message.answerEvaluation.AnswerEvaluationMessage) {};
 
   rpc delete(google.protobuf.StringValue) returns (google.protobuf.StringValue) {};
+
+  rpc getAnswerEvaluationWithDetails(google.protobuf.StringValue) returns (message.answerEvaluation.AnswerEvaluationWithAllDetailMessage) {};
+
+  rpc getAnswerEvaluationWithDetailsByQuestionSetId(google.protobuf.StringValue) returns (message.answerEvaluation.AnswerEvaluationWithAllDetailMessage) {};
+
+  rpc getPracticeExamAnswerEvaluation(message.answer.PracticeExamAnswerCreateMessage) returns (message.answerEvaluation.PracticeExamAnswerEvaluationMessage) {};
+
+  rpc getAnswerEvaluationStatistics(message.answerEvaluation.AnswerEvaluationStatisticsRequestMessage) returns (message.answerEvaluation.AnswerEvaluationStatisticsListMessage) {};
+
+  rpc getAnswerEvaluationStatisticsByUserId(google.protobuf.StringValue) returns (message.answerEvaluation.AnswerEvaluationStatisticsForUserMessage) {};
 }

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+
+message AnswerEvaluationStatisticsForUserMessage {
+  google.protobuf.StringValue userId = 1;
+  google.protobuf.Int32Value totalEvaluationCount = 2;
+  google.protobuf.Int32Value todayEvaluationCount = 3;
+  google.protobuf.Int32Value lastSevenDaysEvaluationCount = 4;
+  google.protobuf.Int32Value lastThirtyDaysEvaluationCount = 5;
+}

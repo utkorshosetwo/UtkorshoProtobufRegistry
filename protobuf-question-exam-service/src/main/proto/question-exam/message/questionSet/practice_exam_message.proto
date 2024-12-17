@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.questionSet;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+
+message PracticeExamMessage {
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue userId = 2;
+  google.protobuf.StringValue questionSetId = 3;
+  google.protobuf.StringValue createdAt = 4;
+}

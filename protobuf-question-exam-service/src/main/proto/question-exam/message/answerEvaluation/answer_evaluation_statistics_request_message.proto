@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
+
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+message AnswerEvaluationStatisticsRequestMessage {
+  google.protobuf.Timestamp startDate = 1;
+  google.protobuf.Timestamp endDate = 2;
+  google.protobuf.Int32Value pageNumber = 3;
+  google.protobuf.Int32Value pageSize = 4;
+}
