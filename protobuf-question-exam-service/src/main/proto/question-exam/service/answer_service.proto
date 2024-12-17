@@ -13,7 +13,7 @@ import "question-exam/message/answer/answer_read_message.proto";
 import "question-exam/message/answer/answer_list_request_message.proto";
 import "question-exam/message/answer/answer_update_message.proto";
 import "question-exam/message/answer/last_exam_info_message.proto";
-import "question-exam/message/answer/practice_exam_start_payload.proto";
+import "question-exam/message/answer/practice_exam_start_payload_message.proto";
 import "question-exam/message/answerEvaluation/answer_evaluation_message.proto";
 import "question-exam/message/questionSet/practice_exam_message.proto";
 
