@@ -6,6 +6,7 @@ option java_multiple_files = true;
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
+import "core/message/pagination_result.proto";
 
 message AnswerEvaluationStatisticsMessage {
   google.protobuf.StringValue userId = 1;
@@ -16,4 +17,5 @@ message AnswerEvaluationStatisticsMessage {
 
 message AnswerEvaluationStatisticsListMessage {
   repeated AnswerEvaluationStatisticsMessage statistics = 1;
+  core.message.PaginationResult paginationResult = 2;
 }
