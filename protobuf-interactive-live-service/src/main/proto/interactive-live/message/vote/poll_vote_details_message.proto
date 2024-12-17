@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package tech.utkorsho.protobuf.interactiveLive.message.vote;
 
+import "core/message/pagination_result.proto";
+
 option java_multiple_files = true;
 
 message PollVoteDetailsMessage {
@@ -14,4 +16,5 @@ message PollVoteDetailsMessage {
 
   message PollVoteDetailsListMessage {
        repeated PollVoteDetailsMessage votes= 1;
+       optional core.message.PaginationResult paginationResult = 2;
     }

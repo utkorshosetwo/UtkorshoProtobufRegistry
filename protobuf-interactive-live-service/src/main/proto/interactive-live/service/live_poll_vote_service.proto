@@ -11,7 +11,7 @@ import "interactive-live/message/vote/poll_vote_details_message.proto";
 
 
 service LivePollVoteService {
-    rpc createPollVote(message.vote.LiveSubmitPollVote) returns (message.vote.LivePollVoteMessage) {}
+  rpc createPollVote(message.vote.LiveSubmitPollVote) returns (message.vote.LivePollVoteMessage) {}
 
-    rpc getPollVotes(message.vote.PollVoteListRequest ) returns (message.vote.PollVoteDetailsListMessage) {};
+  rpc getPollVotes(message.vote.PollVoteListRequest) returns (message.vote.PollVoteDetailsListMessage) {};
 }
