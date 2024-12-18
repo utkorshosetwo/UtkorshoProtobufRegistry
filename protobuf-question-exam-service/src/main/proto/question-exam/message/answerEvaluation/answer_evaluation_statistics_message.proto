@@ -4,15 +4,12 @@ package tech.utkorsho.protobuf.questionexam.message.answerEvaluation;
 
 option java_multiple_files = true;
 
-import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
 import "core/message/pagination_result.proto";
 
 message AnswerEvaluationStatisticsMessage {
   google.protobuf.StringValue userId = 1;
-  google.protobuf.StringValue userName = 2;
-  google.protobuf.StringValue userImageUrl = 3;
-  google.protobuf.Int32Value examPaperEvaluationCount = 4;
+  google.protobuf.Int32Value examPaperEvaluationCount = 2;
 }
 
 message AnswerEvaluationStatisticsListMessage {
