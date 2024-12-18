@@ -14,5 +14,5 @@ message PracticeExamAnswerEvaluationMessage {
   google.protobuf.StringValue grade = 4;
   google.protobuf.Int32Value takenTime = 5;
   google.protobuf.FloatValue averageTime = 6;
-  repeated answerEvaluation.PracticeExamAnswerEvaluationDetail answerEvaluationDetails = 7;
+  repeated answerEvaluation.PracticeExamAnswerEvaluationDetailMessage answerEvaluationDetails = 7;
 }

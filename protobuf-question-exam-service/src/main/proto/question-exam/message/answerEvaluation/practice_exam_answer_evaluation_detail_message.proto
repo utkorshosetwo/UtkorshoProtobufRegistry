@@ -8,7 +8,7 @@ import "google/protobuf/wrappers.proto";
 import "core/message/uuid_message.proto";
 import "question-exam/message/question/question_message.proto";
 
-message PracticeExamAnswerEvaluationDetail {
+message PracticeExamAnswerEvaluationDetailMessage {
   google.protobuf.FloatValue marks = 1;
   question.QuestionMessage question = 2;
   repeated google.protobuf.StringValue givenQuestionDetailIds = 3;
@@ -16,5 +16,5 @@ message PracticeExamAnswerEvaluationDetail {
 }
 
 message PracticeExamAnswerEvaluationDetailList {
-  repeated PracticeExamAnswerEvaluationDetail answerEvaluationDetails = 1;
+  repeated PracticeExamAnswerEvaluationDetailMessage answerEvaluationDetails = 1;
 }
