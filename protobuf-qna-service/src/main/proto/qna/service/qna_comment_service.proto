@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.qna.service.comment;
+
+option java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+import "qna/message/comment/qna_comment_create_message.proto";
+import "qna/message/comment/qna_comment_message.proto";
+import "qna/message/comment/qna_comment_list_request.proto";
+import "core/message/uuid_message.proto";
+
+
+
+service QnaCommentService {
+  rpc createQnaComment(message.comment.QnaCommentCreateMessage) returns (message.comment.QnaCommentMessage) {};
+
+  rpc getQnaCommentById(core.message.UuidMessage) returns (message.comment.QnaCommentMessage) {};
+
+  rpc getAllQnaComments(message.comment.QnaCommentListRequest) returns (message.comment.QnaCommentListMessage) {};
+}

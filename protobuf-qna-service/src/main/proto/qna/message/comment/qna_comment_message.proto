@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.qna.message.comment;
+
+option java_multiple_files = true;
+
+import "core/message/user_type_enum.proto";
+import "google/protobuf/timestamp.proto";
+import "core/message/pagination_result.proto";
+
+
+message QnaCommentMessage {
+  string id = 1;
+  string content = 2;
+  string userId = 3;
+  string userName = 4;
+  string userImageUrl = 5;
+  string audioUrl = 6;
+  bool isSolved = 7;
+  repeated string assetUrls = 8;
+//  repeated UserType userTypes = 11;
+  google.protobuf.Timestamp createdAt = 9;
+  google.protobuf.Timestamp updatedAt = 10;
+}
+
+
+message QnaCommentListMessage {
+  repeated QnaCommentMessage comments = 1;
+  optional core.message.PaginationResult paginationResult = 2;
+}

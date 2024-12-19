@@ -15,6 +15,7 @@
         <module>protobuf-routine-service</module>
         <module>protobuf-payment-service</module>
         <module>protobuf-account-service</module>
+        <module>protobuf-qna-service</module>
     </modules>
     <version>1.0.4-SNAPSHOT</version>
     <name>ProtobufRegistry</name>
