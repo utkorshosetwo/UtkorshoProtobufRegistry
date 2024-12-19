@@ -4,15 +4,14 @@ package tech.utkorsho.protobuf.interactiveLive.message.poll;
 
 option java_multiple_files = true;
 
-//import "core/message/poll_position_enum.proto";
-//import "core/message/poll_status_enum.proto";
+import "core/common/poll_position_enum.proto";
 import "interactive-live/message/pollOption/live_poll_option_create_message.proto";
 
 message LivePollCreateMessage {
   string routineId = 1;
   string question = 2;
   string questionImageUrl = 3;
-//  PollPosition pollPosition = 4;
+  core.common.PollPosition pollPosition = 4;
   bool isAbsolutePoll = 5;
   bool showParticipationDetails = 6;
   bool showFastestFinger = 7;

@@ -4,7 +4,7 @@ package tech.utkorsho.protobuf.qna.message.comment;
 
 option java_multiple_files = true;
 
-import "core/message/user_type_enum.proto";
+import "core/common/user_type_enum.proto";
 
 
 message QnaCommentCreateMessage {
@@ -16,5 +16,5 @@ message QnaCommentCreateMessage {
   string userImageUrl = 6;
   string audioUrl = 7;
   repeated string assetUrls = 8;
-  repeated UserType userTypes = 9;
+  repeated core.common.UserType userTypes = 9;
 }

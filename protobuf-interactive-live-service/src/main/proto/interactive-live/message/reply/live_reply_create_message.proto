@@ -4,7 +4,7 @@ package tech.utkorsho.protobuf.interactiveLive.message.reply;
 
 option java_multiple_files = true;
 
-//import "core/message/user_type_enum.proto";
+import "core/common/user_type_enum.proto";
 
 message LiveReplyCreateMessage {
   string content = 1;
@@ -13,5 +13,5 @@ message LiveReplyCreateMessage {
   string userName = 4;
   string userImageUrl = 5;
   repeated string assetUrls = 6;
-//  repeated UserType userTypes = 7;
+  repeated core.common.UserType userTypes = 7;
 }
