@@ -7,7 +7,6 @@ option java_multiple_files = true;
 import "core/message/user_type_enum.proto";
 
 
-
 message QnaCommentCreateMessage {
   string content = 1;
   string courseId = 2;
@@ -17,5 +16,5 @@ message QnaCommentCreateMessage {
   string userImageUrl = 6;
   string audioUrl = 7;
   repeated string assetUrls = 8;
-//  repeated UserType userTypes = 9;
+  repeated UserType userTypes = 9;
 }
