@@ -8,10 +8,11 @@ import "interactive-live/message/vote/live_vote_create_message.proto";
 import "interactive-live/message/vote/live_poll_vote_message.proto";
 import "interactive-live/message/vote/poll_vote_list_request.proto";
 import "interactive-live/message/vote/poll_vote_details_message.proto";
+import "google/protobuf/empty.proto";
 
 
 service LivePollVoteService {
-  rpc createPollVote(message.vote.LiveSubmitPollVote) returns (message.vote.LivePollVoteMessage) {}
+  rpc createPollVote(message.vote.LiveSubmitPollVote) returns (google.protobuf.Empty) {}
 
   rpc getPollVotes(message.vote.PollVoteListRequest) returns (message.vote.PollVoteDetailsListMessage) {};
 }
