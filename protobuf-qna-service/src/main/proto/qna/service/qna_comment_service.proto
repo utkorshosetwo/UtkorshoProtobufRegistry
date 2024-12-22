@@ -9,6 +9,8 @@ import "qna/message/comment/qna_comment_create_message.proto";
 import "qna/message/comment/qna_comment_message.proto";
 import "qna/message/comment/qna_comment_list_request.proto";
 import "core/message/uuid_message.proto";
+import "qna/message/comment/qna_comment_update_message.proto";
+import "qna/message/comment/qna_comment_solved_message.proto";
 
 
 
@@ -18,4 +20,14 @@ service QnaCommentService {
   rpc getQnaCommentById(core.message.UuidMessage) returns (message.comment.QnaCommentMessage) {};
 
   rpc getAllQnaComments(message.comment.QnaCommentListRequest) returns (message.comment.QnaCommentListMessage) {};
+
+  rpc updateQnaComment(message.comment.QnaCommentUpdateMessage) returns (message.comment.QnaCommentMessage) {};
+
+  rpc markCommentAsSolved(core.message.UuidMessage) returns (google.protobuf.Empty) {};
+
+  rpc deleteQnaComment(core.message.UuidMessage) returns (google.protobuf.Empty) {};
+
+  rpc getCommentCountsByUser(core.message.UuidMessage) returns (message.comment.QnaCommentSolvedMessage) {};
+
+  rpc getCommentCountsByCourseIds(message.comment.QnaCommentListRequest) returns (message.comment.QnaCommentListSolvedMessage) {};
 }

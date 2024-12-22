@@ -16,3 +16,8 @@ message QnaCommentListRequest {
   bool isReplyIncluded = 6;
   core.message.PaginationRequest paginationRequest = 7;
 }
+
+message QnaCommentCountRequest {
+ repeated string courseIds = 1;
+}
+

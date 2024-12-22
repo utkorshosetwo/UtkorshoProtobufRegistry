@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.qna.message.comment;
+
+option java_multiple_files = true;
+
+import "core/message/status_enum.proto";
+
+
+message QnaCommentUpdateMessage {
+  string commentId = 1;
+  string content = 2;
+  string audioUrl = 3;
+  core.message.Status status = 4;
+  repeated string assetUrls = 5;
+}
