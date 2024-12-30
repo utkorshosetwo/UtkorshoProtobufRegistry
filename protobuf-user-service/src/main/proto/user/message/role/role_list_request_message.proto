@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.role;
+
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "core/message/pagination_request.proto";
+
+message RoleListRequestMessage {
+  core.message.PaginationRequest paginationRequest = 1;
+  repeated string ids = 2;
+  google.protobuf.StringValue search = 3;
+}

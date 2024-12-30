@@ -7,25 +7,24 @@ option java_multiple_files = true;
 import "google/protobuf/empty.proto";
 import "core/message/uuid_message.proto";
 import "user/message/role/role_message.proto";
+import "user/message/role/role_dto_message.proto";
 import "user/message/role/role_assign_request.proto";
 import "user/message/role/role_create_message.proto";
 import "user/message/role/role_update_message.proto";
 import "user/message/utility/message.proto";
+import "user/message/role/role_list_request_message.proto";
+import "user/message/role/role_summary_message.proto";
 
 service RoleService {
   rpc createRole(message.role.RoleCreateMessage) returns (message.role.RoleMessage) {};
 
   rpc getRoleById(core.message.UuidMessage) returns (message.role.RoleMessage) {};
 
-  rpc getAllRoles(core.message.UuidMessageList) returns (message.role.RoleListMessage) {};
-
-//  rpc getAllRolesByIds(core.message.UuidMessageList) returns (message.role.RoleListMessage) {};
+  rpc getAllRoles(message.role.RoleListRequestMessage) returns (message.role.RoleSummaryListMessage) {};
 
   rpc updateRole(message.role.RoleUpdateMessage) returns (message.role.RoleMessage) {};
 
   rpc deleteRole(core.message.UuidMessage) returns (google.protobuf.Empty) {};
-
-//  rpc findRoleByName(message.Message) returns (message.role.RoleMessage) {};
 
   rpc assignRoleToUser(message.role.RoleAssignRequest) returns (message.Message) {};
 

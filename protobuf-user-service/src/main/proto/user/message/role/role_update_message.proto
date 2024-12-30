@@ -4,9 +4,11 @@ package tech.utkorsho.protobuf.user.message.role;
 
 option java_multiple_files = true;
 
+import "google/protobuf/wrappers.proto";
+
 message RoleUpdateMessage {
   string id = 1;
-  string name = 2;
-  string description = 3;
+  google.protobuf.StringValue name = 2;
+  google.protobuf.StringValue description = 3;
   repeated string permissionIds = 4;
 }

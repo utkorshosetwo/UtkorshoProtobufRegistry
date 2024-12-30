@@ -9,7 +9,6 @@ message RoleMessage {
   string name = 2;
   string description = 3;
   repeated string permissionIds = 4;
-  repeated string permissionKeys = 5;
 }
 
 message RoleListMessage {

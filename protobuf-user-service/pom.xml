@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>protobuf-user-service</artifactId>
-    <version>1.0.32-SNAPSHOT</version>
+    <version>1.0.33-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>tech.utkorsho</groupId>
             <artifactId>protobuf-core</artifactId>
-            <version>1.0.5-SNAPSHOT</version>
+            <version>1.0.8-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package tech.utkorsho.protobuf.user.message.role;
+
+option java_multiple_files = true;
+
+import "core/message/pagination_result.proto";
+import "core/message/status_enum.proto";
+
+message RoleSummaryMessage {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  core.message.Status status = 4;
+}
+
+message RoleSummaryListMessage {
+  repeated RoleSummaryMessage roles = 1;
+  core.message.PaginationResult paginationResult = 2;
+}
